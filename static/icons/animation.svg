@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <g stroke-width="5">
+    <path d="
+      m45 10c-5.5228 0-10 4.4772-10 10v80c0 5.5228 4.4772 10 10
+      10h30c5.5228 0 10-4.4772 10-10v-80c0-5.5228-4.4772-10-10-10zm5
+      10h20c2.7614 0 5 2.2386 5 5v70c0 2.7614-2.2386 5-5 5h-20c-2.7614
+      0-5-2.2386-5-5v-70c0-2.7614 2.2386-5 5-5z"
+      style="paint-order:markers stroke fill"
+    />
+    <path d="
+      m95 20c-2.7614 0-5 2.2386-5 5v70c0 2.7614 2.2386 5 5
+      5s5-2.2386 5-5v-70c0-2.7614-2.2386-5-5-5z"
+      style="paint-order:markers stroke fill"
+    />
+    <path d="
+      m110 35c-2.7614 0-5 2.2386-5 5v40c0 2.7614 2.2386 5 5
+      5s5-2.2386 5-5v-40c0-2.7614-2.2386-5-5-5z"
+      style="paint-order:markers stroke fill"
+    />
+    <path d="
+      m25 20c2.7614 0 5 2.2386 5 5v70c0 2.7614-2.2386 5-5
+      5s-5-2.2386-5-5v-70c0-2.7614 2.2386-5 5-5z"
+      style="paint-order:markers stroke fill"
+    />
+    <path d="
+      m10 35c2.7614 0 5 2.2386 5 5v40c0 2.7614-2.2386 5-5
+      5s-5-2.2386-5-5v-40c0-2.7614 2.2386-5 5-5z"
+      style="paint-order:markers stroke fill"
+    />
+  </g>
+</svg>

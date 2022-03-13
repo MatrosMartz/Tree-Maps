@@ -1,0 +1,122 @@
+:root {
+	--g-b-bg:   #000803;  --g-h-bg:   #0d1a11; 
+	--g-s-bg:   #015928;  --g-s-bd:   #5c9975;
+	--g-icon:   #45e589;  --g-s-sh:   #b6d6c3;
+	--g-s-fg:   #d0f5e1;  --g-h-fg:   #eefaf3;
+
+	--o-b-bg:   #080300;  --o-h-bg:   #1a120d;
+	--o-s-bg:   #592600;  --o-s-bd:   #99755c;
+	--o-icon:   #e58745;  --o-s-sh:   #d6c3b6;
+	--o-s-fg:   #f5d0d5;  --o-h-fg:   #faf3ee;
+
+	--r-b-bg:   #080003;  --r-h-bg:   #1a0d0e;
+	--r-s-bg:   #59000b;  --r-s-bd:   #995c62;
+	--r-icon:   #e54557;  --r-s-sh:   #d6b6b9;
+	--r-s-fg:   #f5d0d5;  --r-h-fg:   #faeeef;
+
+	--b-b-bg:   #000408;  --b-h-bg:   #0d141a;
+	--b-s-bg:   #003159;  --b-s-bd:   #5c7d99;
+	--b-icon:   #459ce5;  --b-s-sh:   #b6c9d6;
+	--b-s-fg:   #d0e5f5;  --b-h-fg:   #eef5fa;
+
+	--b-bg: var(--g-b-bg);  --h-bg: var(--g-h-bg);
+	--s-bg: var(--g-s-bg);  --s-bd: var(--g-s-bd);
+	--icon: var(--g-icon);  --s-sh: var(--g-s-sh);
+	--s-fg: var(--g-s-fg);  --h-fg: var(--g-h-fg);
+}
+
+html,
+body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	overflow-x: hidden;
+	color: var(--s-fg);
+	background-color: var(--b-bg);
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+		'Helvetica Neue', sans-serif;
+}
+main {
+	padding: .5em;
+}
+
+a {
+	color: var(--s-sh);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: var(--s-sh);
+}
+
+label {
+	display: block;
+}
+
+input,
+button,
+select,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-padding: 0.4em 0;
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+input:disabled {
+	color: #ccc;
+}
+
+button {
+	color: #333;
+	background-color: #f4f4f4;
+	outline: none;
+	cursor: pointer;
+}
+
+button:disabled {
+	color: #999;
+}
+
+button:not(:disabled):active {
+	background-color: #ddd;
+}
+
+button:focus {
+	border-color: #666;
+}
+
+h2 {
+	position: relative;
+}
+
+h2::after {
+	content: '';
+
+	position: absolute;
+	bottom: -50%;
+	left: 50%;
+
+	min-width: 105%;
+	width: 80vw;
+	height: 2px;
+
+	transform: translateX(-50%);
+	opacity: 50%;
+
+	background-color: var(--main-inverse-color);
+}

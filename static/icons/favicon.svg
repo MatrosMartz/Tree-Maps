@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="120"
+   height="120"
+   viewBox="0 0 120 120"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="favicon.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   inkscape:export-filename="C:\Users\Mateo\OneDrive\Documentos\deno\deno-svelte\deno-tree-map\public\img\favicon-1024.png"
+   inkscape:export-xdpi="819.20001"
+   inkscape:export-ydpi="819.20001"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="false"
+     inkscape:snap-bbox-midpoints="false"
+     inkscape:bbox-paths="false"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="13.788582"
+     inkscape:cy="56.922096"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="false"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:guide-bbox="true"
+     inkscape:showpageshadow="false"
+     inkscape:lockguides="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid824" />
+    <sodipodi:guide
+       position="0,65"
+       orientation="0,-1"
+       id="guide18020"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="65,0"
+       orientation="1,0"
+       id="guide18022"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect12539"
+       is_visible="true"
+       lpeversion="1"
+       satellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,7,0,1 @ F,0,0,1,0,7,0,1"
+       unit="px"
+       method="auto"
+       mode="F"
+       radius="0"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path9146"
+       style="fill:#292612;fill-opacity:1;stroke-width:5.60448;paint-order:markers stroke fill"
+       d="M 35 0 C 15.670034 0 0 15.670034 0 35 L 0 85 C 0 104.32997 15.670034 120 35 120 L 85 120 C 104.32997 120 120 104.32997 120 85 L 120 35 C 120 15.67003 104.32997 0 85 0 L 35 0 z " />
+    <path
+       id="path932"
+       style="fill:#e4e0ff;fill-opacity:1;stroke-width:5;paint-order:markers stroke fill"
+       d="M 35,5 C 18.431458,5 5,18.431458 5,35 v 50 c 0,16.56854 13.431458,30 30,30 h 50 c 16.56854,0 30,-13.43146 30,-30 V 35 C 115,18.43146 101.56854,5 85,5 Z"
+       sodipodi:nodetypes="sssssssss" />
+    <path
+       id="path5477"
+       style="opacity:1;vector-effect:none;fill:#9dedaa;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 10.03125,18.376953 C 6.8564197,23.136119 5,28.849826 5,35 v 50 c 0,16.56854 13.431458,30 30,30 H 55 L 28.60147,71.00245 C 27.016475,68.360792 28.919323,65 32,65 h 6 c 2.884119,0 4.530405,-3.292656 2.799887,-5.599916 z"
+       sodipodi:nodetypes="cssscssssc" />
+    <path
+       id="path5942"
+       style="fill:#87132a;fill-opacity:1;stroke-width:5.38462;paint-order:markers stroke fill"
+       d="M 90.716797 5.5585938 C 79.736618 20.3969 70 47.558122 70 65 C 70 84.329966 85.670034 100 105 100 C 107.15285 100 109.25727 99.795983 111.30273 99.423828 C 113.65561 95.14275 115 90.230033 115 85 L 115 79.839844 A 18 18 0 0 1 105 83 A 18 18 0 0 1 87 65 A 18 18 0 0 1 105 47 A 18 18 0 0 1 115 50.050781 L 115 35 C 115 20.387825 104.54903 8.2293823 90.716797 5.5585938 z " />
+  </g>
+</svg>
