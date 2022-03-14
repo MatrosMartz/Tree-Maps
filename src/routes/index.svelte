@@ -1,3 +1,1 @@
-<main>
-    estas en home
-</main>
+<main>estas en home</main>
