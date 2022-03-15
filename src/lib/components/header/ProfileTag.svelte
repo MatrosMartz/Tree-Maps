@@ -4,34 +4,28 @@
 
 <section class="head-tag">
     <ProfileIcon />
-    <span>
-        <h5>Sin sesión</h5>
-        <button class="head-tag">inicar sesión</button>
-    </span>
+    <button class="head-tag">inicar sesión</button>
 </section>
 
 <style>
     section {
         display: flex;
         border-radius: 7px;
+        
+        overflow: hidden;
 
-        max-width: 50vw;
+        max-width: 40vw;
 
         height: 48px;
-
-        padding: .4em .2em;
     }
     h5, p {
-        width: calc(50vw + .4em - 48px);
+        width: calc(50vw + .2em - 48px);
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
     }
-    p, button {
-        font-size: 10px;
-    }
     button {
         box-shadow: none;
-        filter: var(--s-fl)
+        font-size: 14px;
     }
 </style>

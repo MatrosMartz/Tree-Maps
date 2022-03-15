@@ -14,15 +14,18 @@
 
 <style>
     header {
+        position: fixed;
+
         display: flex;
         box-sizing: border-box;
         justify-content: space-between;
         width: 100%;
-        padding: .5em;
+        padding: .7em;
+        color: var(--h-fg);
     }
     section {
         display: flex;
         align-items: center;
-        gap: 1em;
+        gap: .7em;
     }
 </style>

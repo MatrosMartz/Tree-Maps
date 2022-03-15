@@ -1,26 +1,26 @@
 :root {
-	--g-b-bg:   #000803;  --g-h-bg:   #0d1a11; 
+	--g-b-bg:   #000803;  --g-h-bg:   #0f1f14; 
 	--g-s-bg:   #015928;  --g-s-bd:   #5c9975;
-	--g-icon:   #45e589;  --g-s-sh:   #b6d6c3;
-	--g-s-fg:   #d0f5e1;  --g-h-fg:   #eefaf3;
+	--g-icon:   #45e589;  --g-s-sh:   #a3ccb7;
+	--g-s-fg:   #bff5d7;  --g-h-fg:   #eefaf3;
 	--g-i-rs: #01592810;  --g-s-rs: #b6d6c310;
 
-	--o-b-bg:   #080300;  --o-h-bg:   #1a120d;
+	--o-b-bg:   #080300;  --o-h-bg:   #1f150f;
 	--o-s-bg:   #592600;  --o-s-bd:   #99755c;
-	--o-icon:   #e58745;  --o-s-sh:   #d6c3b6;
-	--o-s-fg:   #f5d0d5;  --o-h-fg:   #faf3ee;
+	--o-icon:   #e58745;  --o-s-sh:   #ccb4a3;
+	--o-s-fg:   #f5d7bf;  --o-h-fg:   #faf3ee;
 	--o-i-rs: #59260010;  --o-s-rs: #d6c3b610;
 
-	--r-b-bg:   #080003;  --r-h-bg:   #1a0d0e;
+	--r-b-bg:   #080003;  --r-h-bg:   #1f0f10;
 	--r-s-bg:   #59000b;  --r-s-bd:   #995c62;
-	--r-icon:   #e54557;  --r-s-sh:   #d6b6b9;
-	--r-s-fg:   #f5d0d5;  --r-h-fg:   #faeeef;
+	--r-icon:   #e54557;  --r-s-sh:   #cca3a7;
+	--r-s-fg:   #f5bfc6;  --r-h-fg:   #faeeef;
 	--r-i-rs: #59000120;  --r-s-rs: #d6b6b910;
 
-	--b-b-bg:   #000408;  --b-h-bg:   #0d141a;
+	--b-b-bg:   #000408;  --b-h-bg:   #0f181f;
 	--b-s-bg:   #003159;  --b-s-bd:   #5c7d99;
-	--b-icon:   #459ce5;  --b-s-sh:   #b6c9d6;
-	--b-s-fg:   #d0e5f5;  --b-h-fg:   #eef5fa;
+	--b-icon:   #459ce5;  --b-s-sh:   #a3bccc;
+	--b-s-fg:   #bfddf5;  --b-h-fg:   #eef5fa;
 	--b-i-rs: #00315910;  --b-s-rs: #b6c9d610;
 
 	--l-filt: brightness(130%);
@@ -41,6 +41,7 @@ body {
 }
 
 body {
+	position: relative;
 	overflow-x: hidden;
 	color: var(--s-fg);
 	background-color: var(--b-bg);

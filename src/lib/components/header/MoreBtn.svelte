@@ -9,6 +9,10 @@
 
 <style>
     button {
+        border-radius: 7px;
+
+        overflow: hidden;
+
         padding: 0;
         height: 48px;
         
