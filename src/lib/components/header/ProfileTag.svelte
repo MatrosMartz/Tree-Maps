@@ -1,31 +1,53 @@
 <script>
-    import ProfileIcon from '../icons/Profile.svelte';
+    import ProfileIcon from '../icons/ProfileIcon.svelte';
+
+    import state from '../../stores/state';
+
+    function onClick() {
+        if ($state === 'prof') {
+            state.SetToNone();
+        } else {
+            state.SetToProf();
+        }
+    }
+
+    $: selected = $state === 'prof' ? 'selected' : '';
 </script>
 
-<section class="head-tag">
+<button class="head-tag {selected}" on:click={onClick}>
     <ProfileIcon />
-    <button class="head-tag">inicar sesión</button>
-</section>
+    <p>inicar sesión</p>
+</button>
 
 <style>
-    section {
+    h5, p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-inline: .5em;
+    }
+    button {
         display: flex;
+        align-items: center;
+
         border-radius: 7px;
         
         overflow: hidden;
 
-        max-width: 40vw;
+        max-width: 47vw;
+        padding: 0;
 
         height: 48px;
-    }
-    h5, p {
-        width: calc(50vw + .2em - 48px);
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    button {
         box-shadow: none;
         font-size: 14px;
+
+        filter: none;
+        transition: filter 200ms;
+    }
+    .selected {
+        filter: var(--p-fl);
+    }
+    button > :global(svg) {
+        width: 48px;
     }
 </style>

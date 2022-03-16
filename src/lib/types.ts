@@ -1,0 +1,1 @@
+export type state = 'none' | 'opts' | 'more' | 'add' | 'prof';

@@ -30,7 +30,7 @@
 	--s-bg: var(--g-s-bg);  --s-bd: var(--g-s-bd);
 	--icon: var(--g-icon);  --s-sh: var(--g-s-rs);
 	--s-fg: var(--g-s-fg);  --h-fg: var(--g-h-fg);
-	--p-fl: var(--d-filt);  --s-fl: var(--l-filt);
+	--p-fl: var(--l-filt);  --s-fl: var(--d-filt);
 }
 
 html,
@@ -53,6 +53,7 @@ body {
 }
 main {
 	padding: 0.5em;
+	padding-top: 72px;
 }
 
 a {
@@ -155,4 +156,9 @@ h2, h3, h4, h5, h6, p {
     color: var(--h-sh);
 
     box-shadow: 0 3px 5px var(--s-sh);
+}
+
+.icon-pre-rotate {
+	transform: rotate(0);
+	transition: transform 200ms;
 }

@@ -1,14 +1,19 @@
 <script>
+    import MoreIcon from '../icons/MoreIcon.svelte';
+    import OptionsIcon from '../icons/OptionsIcon.svelte';
+    import HeaderBtn from './HeaderBtn.svelte';
     import ProfileTag from './ProfileTag.svelte';
-    import OptsBtn from './OptsBtn.svelte';
-    import MoreBtn from './MoreBtn.svelte';
 </script>
 
 <header>
     <ProfileTag />
     <section>
-        <OptsBtn />
-        <MoreBtn />
+        <HeaderBtn stateControler="opts">
+            <OptionsIcon />
+        </HeaderBtn>
+        <HeaderBtn stateControler="more">
+            <MoreIcon />
+        </HeaderBtn>
     </section>
 </header>
 

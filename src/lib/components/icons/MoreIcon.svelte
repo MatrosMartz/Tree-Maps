@@ -1,4 +1,4 @@
-<svg viewBox="0 0 120 120" class="svg">
+<svg viewBox="0 0 120 120" class="svg icon-pre-rotate">
 	<path
 		d="m21 87h78c3.3137 0 6 2.6863 6 6v4c0 3.3137-2.6863 6-6 6h-78c-3.3137 0-6-2.6863-6-6v-4c0-3.3137 2.6863-6 6-6z" />
 	<path
