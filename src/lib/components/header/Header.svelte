@@ -25,12 +25,12 @@
         box-sizing: border-box;
         justify-content: space-between;
         width: 100%;
-        padding: .7em;
+        padding: .9em;
         color: var(--h-fg);
     }
     section {
         display: flex;
         align-items: center;
-        gap: .7em;
+        gap: .9em;
     }
 </style>
