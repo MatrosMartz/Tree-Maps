@@ -1,36 +1,49 @@
 :root {
-	--g-b-bg:   #000803;  --g-h-bg:   #0f1f14; 
-	--g-s-bg:   #015928;  --g-s-bd:   #5c9975;
-	--g-icon:   #45e589;  --g-s-sh:   #a3ccb7;
-	--g-s-fg:   #bff5d7;  --g-h-fg:   #eefaf3;
-	--g-i-rs: #01592810;  --g-s-rs: #b6d6c310;
+	--g-bb:   #000803;  --g-lb:   #131f16; 
+	--g-nb:   #050f09;  --g-sb:   #1a3324;
+	--g-sh:   #1a4d2e;  --g-bd:   #1f9952;
+	--g-ic:   #52cc83;  --g-al:   #77d9a7;
+	--g-at:   #b2dec5;  --g-pt:   #cee5d7;
+	--g-t2:   #d2f7e7;  --g-t1:   #eefaf3;
+	--g-is: #1a4d2e10;  --g-rs: #77d9a710;
 
-	--o-b-bg:   #080300;  --o-h-bg:   #1f150f;
-	--o-s-bg:   #592600;  --o-s-bd:   #99755c;
-	--o-icon:   #e58745;  --o-s-sh:   #ccb4a3;
-	--o-s-fg:   #f5d7bf;  --o-h-fg:   #faf3ee;
-	--o-i-rs: #59260010;  --o-s-rs: #d6c3b610;
+	--o-bb:   #080300;  --o-lb:   #1f1713; 
+	--o-nb:   #0f0905;  --o-sb:   #33241a;
+	--o-sh:   #4d2e1a;  --o-bd:   #99511f;
+	--o-ic:   #cc8452;  --o-al:   #d9a077;
+	--o-at:   #dec8b2;  --o-pt:   #e5d8cf;
+	--o-t2:   #f7e1d2;  --o-t1:   #faf3ee;
+	--o-is: #4d2e1a10;  --o-rs: #d9a07710;
 
-	--r-b-bg:   #080003;  --r-h-bg:   #1f0f10;
-	--r-s-bg:   #59000b;  --r-s-bd:   #995c62;
-	--r-icon:   #e54557;  --r-s-sh:   #cca3a7;
-	--r-s-fg:   #f5bfc6;  --r-h-fg:   #faeeef;
-	--r-i-rs: #59000120;  --r-s-rs: #d6b6b910;
+	--r-bb:   #080001;  --r-lb:   #1f1313; 
+	--r-nb:   #0f0506;  --r-sb:   #331a1c;
+	--r-sh:   #4d1a1f;  --r-bd:   #991f2a;
+	--r-ic:   #cc5260;  --r-al:   #d97781;
+	--r-at:   #deb2b6;  --r-pt:   #e5cfd1;
+	--r-t2:   #f7d2d7;  --r-t1:   #faeeef;
+	--r-is: #4d1a1f10;  --r-rs: #d9778110;
 
-	--b-b-bg:   #000408;  --b-h-bg:   #0f181f;
-	--b-s-bg:   #003159;  --b-s-bd:   #5c7d99;
-	--b-icon:   #459ce5;  --b-s-sh:   #a3bccc;
-	--b-s-fg:   #bfddf5;  --b-h-fg:   #eef5fa;
-	--b-i-rs: #00315910;  --b-s-rs: #b6c9d610;
+	--b-bb:   #000508;  --b-lb:   #131a1f; 
+	--b-nb:   #050b0f;  --b-sb:   #1a2833;
+	--b-sh:   #1a384d;  --b-bd:   #1f6199;
+	--b-ic:   #5294cc;  --b-al:   #77afd9;
+	--b-at:   #b1c9de;  --b-pt:   #efdce5;
+	--b-t2:   #d3e7f7;  --b-t1:   #eef5fa;
+	--b-is: #1a384d10;  --b-rs: #77afd910;
 
 	--l-filt: brightness(130%);
 	--d-filt: brightness(70%);
 
-	--b-bg: var(--g-b-bg);  --h-bg: var(--g-h-bg);
-	--s-bg: var(--g-s-bg);  --s-bd: var(--g-s-bd);
-	--icon: var(--g-icon);  --s-sh: var(--g-s-rs);
-	--s-fg: var(--g-s-fg);  --h-fg: var(--g-h-fg);
+	--bb:   var(--g-bb);   --lb:    var(--g-lb);
+	--nb:   var(--g-nb);   --sb:    var(--g-sb);
+	--sh:   var(--g-sh);   --bd:    var(--g-bd);
+	--ic:   var(--g-ic);   --al:    var(--g-al);
+	--at:   var(--g-at);   --pt:    var(--g-pt);
+	--t2:   var(--g-t2);   --t1:    var(--g-t1);
+	--is:   var(--g-is);   --rs:    var(--g-rs);
 	--p-fl: var(--l-filt);  --s-fl: var(--d-filt);
+
+	background-color: var(--bb);
 }
 
 html,
@@ -38,13 +51,14 @@ body {
 	position: relative;
 	width: 100%;
 	height: 100%;
+	color: var(--pt);
+	background-color: var(--bb);
+	overflow: hidden;
 }
 
 body {
 	position: relative;
 	overflow-x: hidden;
-	color: var(--s-fg);
-	background-color: var(--b-bg);
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -56,7 +70,7 @@ main {
 }
 
 a {
-	color: var(--s-sh);
+	color: var(--at);
 	text-decoration: none;
 }
 
@@ -65,7 +79,7 @@ a:hover {
 }
 
 a:visited {
-	color: var(--s-sh);
+	color: var(--at);
 }
 
 label {
@@ -130,7 +144,7 @@ h1::after {
 	transform: translateX(-50%);
 	opacity: 50%;
 
-	background-color: var(--main-inverse-color);
+	background-color: var(--ic);
 }
 
 h2 { font-size: 21px; }
@@ -151,13 +165,46 @@ h2, h3, h4, h5, h6, p {
 }
 
 .head-tag {
-	background-color: var(--h-bg);
-    color: var(--h-sh);
+	background-color: var(--lb);
+    color: var(--t1);
 
-    box-shadow: 0 3px 5px var(--s-sh);
+    box-shadow: 0 3px 5px var(--is);
 }
 
 .icon-pre-rotate {
 	transform: rotate(0);
 	transition: transform 200ms;
+}
+
+.state-sect {
+	position: fixed;
+	box-sizing: border-box;
+
+	top: 72px;
+	left: 0;
+
+	border-radius: 7px;
+
+	margin-inline: 4vw;
+	padding: .5em 1em;
+
+	width: 92vw;
+	height: 75vh;
+
+	background-color: var(--nb);
+	box-shadow: 2px 4px 7px var(--is);
+	
+	transition: transform 400ms cubic-bezier(0.5, -0.3, 0.5, 1.3), filter 400ms cubic-bezier(0.5, -0.3, 0.5, 1.3);
+}
+.state-sect.left {
+	filter: opacity(0);
+	transform: translateX(-110%) scale(80%);
+}
+.state-sect.right {
+	filter: opacity(0);
+	transform: translateX(110%) scale(80%);
+}
+.state-sect.active {
+	filter: opacity(100%);
+	transform: rotateX(0) scale(100%);
 }

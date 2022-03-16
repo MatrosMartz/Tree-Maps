@@ -26,7 +26,7 @@
         justify-content: space-between;
         width: 100%;
         padding: .9em;
-        color: var(--h-fg);
+        color: var(--t1);
     }
     section {
         display: flex;

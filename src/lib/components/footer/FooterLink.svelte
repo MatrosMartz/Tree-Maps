@@ -9,7 +9,7 @@
 
 <style>
     a {
-        background-color: var(--h-bg);
+        background-color: var(--lb);
         color: inherit;
         filter: none;
 

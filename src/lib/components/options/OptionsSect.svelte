@@ -1,7 +1,7 @@
 <script>
     import store from '../../stores/state';
 
-    $: active = $store === 'prof' ? 'active' : '';
+    $: active = $store === 'opts' ? 'active' : '';
 </script>
 
 <section class="state-sect left {active}">

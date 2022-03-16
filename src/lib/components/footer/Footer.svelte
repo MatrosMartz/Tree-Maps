@@ -38,7 +38,7 @@
 		height: 48px;
 		width: 100vw;
         
-		background-color: var(--h-bg);
+		background-color: var(--lb);
         
 		bottom: 0;
 	}
