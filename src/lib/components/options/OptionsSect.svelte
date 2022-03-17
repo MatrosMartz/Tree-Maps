@@ -5,5 +5,5 @@
 </script>
 
 <section class="state-sect left {active}">
-    hola UwU
+    opciones
 </section>
