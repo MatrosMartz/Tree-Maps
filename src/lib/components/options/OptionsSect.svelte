@@ -4,22 +4,27 @@
     import DarkmodeIcon from '../icons/DarkmodeIcon.svelte';
     import LightmodeIcon from '../icons/LightmodeIcon.svelte';
     import NonAnimationIcon from '../icons/NonAnimationIcon.svelte';
+    import RadioColors from './RadioColors.svelte';
     import SwitchBtn from './SwitchBtn.svelte';
 
     $: active = $store === 'opts' ? 'active' : '';
 </script>
 
 <section class="state-sect left {active}">
+    <h5>Opciones</h5>
     <SwitchBtn id="theme">
-        <h5 slot="name">tema</h5>
+        <legend slot="name">tema</legend>
         <DarkmodeIcon slot="first"/>
         <LightmodeIcon slot="last"/>
     </SwitchBtn>
+
     <SwitchBtn id="animations">
-        <h5 slot="name">animaciones</h5>
+        <legend slot="name">animaciones</legend>
         <AnimationIcon slot="first"/>
         <NonAnimationIcon slot="last"/>
     </SwitchBtn>
+
+    <RadioColors />
 </section>
 
 <style>

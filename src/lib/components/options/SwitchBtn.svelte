@@ -3,17 +3,17 @@
     let checked: boolean;
 </script>
 
-<section>
+<fieldset>
     <slot name="name" />
     <input type="checkbox" name={id} {id} bind:checked />
     <label for={id}>
         <slot name="first"/>
         <slot name="last" />
     </label>
-</section>
+</fieldset>
 
 <style>
-    section {
+    fieldset {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -43,13 +43,15 @@
         position: absolute;
         top: 0;
         left: 0;
-
+        
         width: var(--img-size);
         height: var(--img-size);
-
+        
         border-radius: 7px;
-
+        
+        color: var(--sh);
         background-color: var(--sh);
+        box-shadow: 0 0 15px currentColor;
 
         transform: translateX(0);
         transition: transform 200ms ease-in-out;

@@ -6,9 +6,9 @@
 
     function onClick() {
         if ($state === stateControler) {
-            state.SetToNone();
+            state.setToNone();
         } else {
-            state[`SetTo${stateCapitalize}`]();
+            state[`setTo${stateCapitalize}`]();
         }
     }
     $: selected = $state === stateControler ? 'selected' : '';

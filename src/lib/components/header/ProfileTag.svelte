@@ -5,9 +5,9 @@
 
     function onClick() {
         if ($state === 'prof') {
-            state.SetToNone();
+            state.setToNone();
         } else {
-            state.SetToProf();
+            state.setToProf();
         }
     }
 

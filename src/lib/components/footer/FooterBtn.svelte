@@ -3,9 +3,9 @@
 
     function onClick() {
         if ($state === 'add') {
-            state.SetToNone();
+            state.setToNone();
         } else {
-            state.SetToAdd();
+            state.setToAdd();
         }
     }
     $: selected = $state === 'add' ? 'selected' : '';

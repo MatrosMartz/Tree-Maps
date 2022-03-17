@@ -1,36 +1,36 @@
-import type { state } from '../types';
+import type { State } from '../types';
 
 import { writable } from 'svelte/store';
 const time = 250;
 
 export default (() => {
-    const { subscribe, set: setSub } = writable(<state>'none');
+    const { subscribe, set: setSub } = writable(<State>'none');
 	let timeoutID;
-    const SetToNone = () => {
+    const setToNone = () => {
     	if (timeoutID !== undefined) clearTimeout(timeoutID);
     	timeoutID = setTimeout(() => {
     		setSub('none');
     	}, time);
     }
-    const SetToMore = () => {
+    const setToMore = () => {
     	if (timeoutID !== undefined) clearTimeout(timeoutID);
     	timeoutID = setTimeout(() => {
     		setSub('more');
     	}, time);
     }
-    const SetToAdd  = () => {
+    const setToAdd  = () => {
     	if (timeoutID !== undefined) clearTimeout(timeoutID);
     	timeoutID = setTimeout(() => {
     		setSub('add');
     	}, time);
     }
-    const SetToOpts = () => {
+    const setToOpts = () => {
     	if (timeoutID !== undefined) clearTimeout(timeoutID);
     	timeoutID = setTimeout(() => {
     		setSub('opts');
     	}, time);
     }
-    const SetToProf = () => {
+    const setToProf = () => {
     	if (timeoutID !== undefined) clearInterval(timeoutID);
     	timeoutID = setInterval(() => {
     		setSub('prof');
@@ -39,10 +39,10 @@ export default (() => {
 
     return {
         subscribe,
-        SetToNone,
-        SetToMore,
-        SetToAdd,
-        SetToOpts,
-        SetToProf,
+        setToNone,
+        setToMore,
+        setToAdd,
+        setToOpts,
+        setToProf,
     }
 })();

@@ -157,13 +157,22 @@ h4 { font-size: 1.3rem; }
 h5 { font-size: 1.2rem; }
 h6 { font-size: 1.1rem; }
 
-h2, h3, h4, h5, h6, p {
+h2, h3, h4, h5, h6, p, legend {
 	margin-block: 0.1em;
 	color: var(--t2);
 	text-align: center;
 }
-p {
+p, legend {
 	color: var(--pt);
+}
+legend::after {
+	content: ':';
+}
+
+fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
 }
 
 .svg {
