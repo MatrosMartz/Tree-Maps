@@ -168,7 +168,7 @@ p {
 
 .svg {
 	fill: currentColor;
-	min-width: var(--img-size);
+	width: var(--img-size);
 	box-sizing: border-box;
 	padding: 0.5em;
 }
@@ -218,17 +218,17 @@ p {
 	transform: rotateX(0) scale(100%);
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (min-height: 780px) {
 	:root {
 		font-size: 24px;
 	}
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1440px) and (min-height: 1628px) {
 	:root {
 		font-size: 40px;
 	}
 }
-@media only screen and (min-width: 2560px) {
+@media only screen and (min-width: 2560px) and (min-height: 2850px) {
 	:root {
 		font-size: 64px;
 	}

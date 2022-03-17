@@ -1,10 +1,9 @@
 <script>
     import state from '../../stores/state';
-
-    $: active = $state === 'add' ? 'active' : '';
+    $: active = $state === 'add'
 </script>
 
-<section class={active}>
+<section class:active>
     <a href="#_">1</a>
     <a href="#_">2</a>
     <a href="#_">3</a>

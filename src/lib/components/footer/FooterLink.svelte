@@ -1,9 +1,9 @@
 <script lang="ts">
     export let href: string, page: string;
-    $: selected = href === page ? 'selected' : '';
+    $: selected = href === page
 </script>
 
-<a {href} class={selected}>
+<a {href} class:selected>
     <slot />
 </a>
 
