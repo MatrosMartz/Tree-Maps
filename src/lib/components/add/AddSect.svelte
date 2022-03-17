@@ -34,8 +34,8 @@
 
         position: absolute;
         
-        width: 48px;
-        height: 48px;
+        width: var(--img-size);
+        height: var(--img-size);
         
         border-radius: 50%;
         

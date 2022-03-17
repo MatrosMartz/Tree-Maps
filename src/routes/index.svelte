@@ -1,1 +1,3 @@
-<main>estas en home</main>
+<main>
+    <h1>estas en home</h1>
+</main>

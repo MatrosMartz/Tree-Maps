@@ -35,7 +35,7 @@
 		display: flex;
 		justify-content: space-evenly;
         
-		height: 48px;
+		height: var(--img-size);
 		width: 100vw;
         
 		background-color: var(--lb);
@@ -43,6 +43,6 @@
 		bottom: 0;
 	}
     footer :global(svg) {
-        width: 48px;
+        width: var(--img-size);
     }
 </style>

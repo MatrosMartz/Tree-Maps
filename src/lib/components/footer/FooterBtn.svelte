@@ -20,7 +20,7 @@
         overflow: hidden;
 
         padding: 0;
-        height: 48px;
+        height: var(--img-size);
 
         box-shadow: none;
         border-radius: none;

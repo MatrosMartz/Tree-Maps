@@ -19,6 +19,6 @@
         filter: var(--p-fl);
     }
     a > :global(svg) {
-        width: 48px;
+        width: var(--img-size);
     }
 </style>

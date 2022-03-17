@@ -34,12 +34,11 @@
         
         overflow: hidden;
 
-        max-width: 47vw;
+        max-width: 50vw;
         padding: 0;
 
-        height: 48px;
+        height: var(--img-size);
         box-shadow: none;
-        font-size: 14px;
 
         filter: none;
         transition: filter 200ms;
@@ -48,6 +47,6 @@
         filter: var(--p-fl);
     }
     button > :global(svg) {
-        width: 48px;
+        width: var(--img-size);
     }
 </style>

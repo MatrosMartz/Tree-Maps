@@ -26,7 +26,7 @@
         overflow: hidden;
 
         padding: 0;
-        height: 48px;
+        height: var(--img-size);
 
         transform: rotate(0);
         filter: none;
