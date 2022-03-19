@@ -11,7 +11,10 @@
     $: active = $panel === 'opts' ? 'active' : '';
 </script>
 
-<section class="panel-sect right" class:active>
+<section
+    class="panel-sect right"
+    class:active
+    class:animation={$options.animation}>
     <h5>Opciones</h5>
     <SwitchBtn id="theme">
         <legend slot="name">tema</legend>

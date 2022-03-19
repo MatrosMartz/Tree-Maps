@@ -1,9 +1,12 @@
 <script>
     import panel from '../../stores/panel';
+    import options from '../../stores/options';
     $: active = $panel === 'add'
 </script>
 
-<section class:active>
+<section
+    class:active
+    class:animation={$options.animation}>
     <a href="#_">1</a>
     <a href="#_">2</a>
     <a href="#_">3</a>
@@ -20,6 +23,8 @@
 
         transform-origin: center;
         transform: translate(-50%, 0) scale(20%) rotate(-90deg);
+    }
+    .animation {
         transition: transform 400ms cubic-bezier(0.5, -0.3, 0.5, 1.3);
     }
     .active {

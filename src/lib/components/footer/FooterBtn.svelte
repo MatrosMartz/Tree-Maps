@@ -1,5 +1,6 @@
 <script lang="ts">
     import panel from '../../stores/panel';
+    import options from '../../stores/options';
 
     function onClick() {
         if ($panel === 'add') {
@@ -11,7 +12,11 @@
     $: selected = $panel === 'add' ? 'selected' : '';
 </script>
 
-<button class="head-tag" class:selected on:click={onClick}>
+<button
+    class="head-tag filter-transition"
+    class:selected
+    class:animation={$options.animation}
+    on:click={onClick}>
     <slot />
 </button>
 
@@ -26,7 +31,6 @@
         border-radius: none;
 
         filter: none;
-        transition: filter 200ms;
     }
     .selected {
         filter: var(--p-fl);

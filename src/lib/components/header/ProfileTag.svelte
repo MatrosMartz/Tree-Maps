@@ -2,6 +2,7 @@
     import ProfileIcon from '../icons/ProfileIcon.svelte';
 
     import panel from '../../stores/panel';
+    import options from '../../stores/options';
 
     function onClick() {
         if ($panel === 'prof') {
@@ -14,7 +15,11 @@
     $: selected = $panel === 'prof' ? 'selected' : '';
 </script>
 
-<button class="head-tag" class:selected on:click={onClick}>
+<button
+    class="head-tag filter-transition"
+    class:selected
+    class:animation={$options.animation}
+    on:click={onClick}>
     <ProfileIcon />
     <p>inicar sesión</p>
 </button>
@@ -41,7 +46,6 @@
         box-shadow: none;
 
         filter: none;
-        transition: filter 200ms;
     }
     .selected {
         filter: var(--p-fl);

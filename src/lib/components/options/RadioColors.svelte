@@ -18,7 +18,13 @@
     {#each colors as id}
         <label>
             <p>{id}</p>
-            <input type="radio" name="color" {id} bind:group value={id} />
+            <input
+                type="radio"
+                name="color"
+                class="filter-transition"
+                class:animation={$options.animation}
+                {id}
+                bind:group value={id} />
         </label>
     {/each}
 </fieldset>
@@ -48,7 +54,8 @@
 
         border-radius: 7px;
         box-shadow: 0 0 4px transparent;
-
+    }
+    input.animation {
         transition: filter 200ms, box-shadow 200ms, border-radius 200ms ease-in-out;
     }
     input::after {
@@ -65,7 +72,6 @@
         border-radius: 4px;
         transform: translate(-50%,-50%);
         filter: opacity(0);
-        transition: filter 200ms ease-in-out;
     }
     input:checked::after {
         filter: opacity(100%);

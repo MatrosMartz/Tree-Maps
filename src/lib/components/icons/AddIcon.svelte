@@ -1,4 +1,11 @@
-<svg viewBox="0 0 120 120" class="svg icon-pre-rotate">
+<script>
+	import options from '../../stores/options';
+</script>
+
+<svg
+	viewBox="0 0 120 120"
+	class="svg icon-pre-rotate"
+	class:animation={$options.animation}>
 	<path
 		d="m60 5a55 55 0 0 0-55 55 55 55 0 0 0 55 55 55 55 0 0 0 55-55 55 55 0 0 0-55-55zm0 10a45 45 0 0 1 45 45 45 45 0 0 1-45 45 45 45 0 0 1-45-45 45 45 0 0 1 45-45z" />
 	<path

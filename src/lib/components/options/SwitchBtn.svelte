@@ -13,7 +13,10 @@
 <fieldset>
     <slot name="name" />
     <input type="checkbox" name={id} {id} bind:checked />
-    <label for={id}>
+    <label
+        for={id}
+        class="filter-transition"
+        class:animation={$options.animation}>
         <slot name="first"/>
         <slot name="last" />
     </label>
@@ -62,6 +65,8 @@
         background-color: var(--sh);
 
         transform: translate(-50%, -50%);
+    }
+    label.animation::after {
         transition: transform 200ms ease-in-out;
     }
     input:checked + label::after {

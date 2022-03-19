@@ -2,6 +2,8 @@
     export let panelControler: string;
 
     import panel from '../../stores/panel';
+    import options from '../../stores/options';
+
     $: panelCapitalize = panelControler[0].toUpperCase() + panelControler.slice(1);
 
     function onClick() {
@@ -15,7 +17,11 @@
 </script>
 
 
-<button class="head-tag" class:selected on:click={onClick}>
+<button
+    class="head-tag filter-transition"
+    class:selected
+    class:animation={$options.animation}
+    on:click={onClick}>
     <slot />
 </button>
 
@@ -30,7 +36,6 @@
 
         transform: rotate(0);
         filter: none;
-        transition: filter 200ms;
     }
     .selected {
         filter: var(--p-fl);

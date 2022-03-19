@@ -1,9 +1,16 @@
 <script lang="ts">
     export let href: string, page: string;
+
+    import options from '../../stores/options';
+
     $: selected = href === page
 </script>
 
-<a {href} class:selected>
+<a
+    {href}
+    class="filter-transition"
+    class:selected
+    class:animation={$options.animation}>
     <slot />
 </a>
 
@@ -12,8 +19,6 @@
         background-color: var(--lb);
         color: inherit;
         filter: none;
-
-        transition: filter 200ms;
     }
     .selected {
         filter: var(--p-fl);
