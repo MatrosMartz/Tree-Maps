@@ -4,7 +4,7 @@ import { browser } from '$app/env';
 import { writable } from 'svelte/store';
 
 const opts: Options = {
-    theme: 'darkmode',
+    theme: 'lightmode',
     animation: true,
     lang: 'es',
     color: 'green',
@@ -17,6 +17,7 @@ if (browser) {
     const color = localStorage.getItem('color');
 
     if (theme === 'darkmode' || theme === 'lightmode') opts.theme = theme;
+    else if (matchMedia('(prefers-color-scheme: dark)').matches) opts.theme = 'darkmode';
     if (animation === 'true' || animation === 'false') opts.animation = animation === 'true';
     if (lang === 'es' || lang === 'en') opts.lang = lang;
     if (

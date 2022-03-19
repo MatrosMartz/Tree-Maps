@@ -1,39 +1,39 @@
 :root {
-	--g-bb:   hsl(144, 100%, 3%);  --g-lb:   hsl(144, 39%, 15%); 
-	--g-nb:   hsl(144, 66%, 15%);  --g-sb:   hsl(144, 45%, 30%);
-	--g-sh:   hsl(144, 60%, 35%);  --g-bd:   hsl(144, 80%, 60%);
-	--g-ic:   hsl(144, 63%, 80%);  --g-al:   hsl(144, 44%, 74%);
-	--g-at:   hsl(144, 35%, 90%);  --g-pt:   hsl(144, 20%, 87%);
-	--g-t2:   hsl(144, 15%, 95%);  --g-t1:   hsl(144, 05%, 89%);
-	--g-is: hsla(144,60%,35%,.1);  --g-rs: hsla(144,44%,74%,.1);
+	--g-bb:   hsl(144, 100%,03%);  --g-lb:   hsl(144, 70%, 15%); 
+	--g-nb:   hsl(144, 90%, 15%);  --g-sb:   hsl(144, 60%, 27%);
+	--g-sh:   hsl(144, 80%, 35%);  --g-bd:   hsl(144, 50%, 45%);
+	--g-ic:   hsl(144, 80%, 62%);  --g-al:   hsl(144, 50%, 59%);
+	--g-at:   hsl(144, 90%, 85%);  --g-pt:   hsl(144, 60%, 70%);
+	--g-t2:   hsl(144, 100%,97%);  --g-t1:   hsl(144, 70%, 85%);
+	--g-is: hsla(144,80%,35%,.1);  --g-rs: hsla(144,50%,70%,.1);
 
-	--o-bb:   hsl(025, 100%, 3%);  --o-lb:   hsl(025, 39%, 15%); 
-	--o-nb:   hsl(025, 66%, 15%);  --o-sb:   hsl(025, 45%, 30%);
-	--o-sh:   hsl(025, 60%, 35%);  --o-bd:   hsl(025, 80%, 60%);
-	--o-ic:   hsl(025, 63%, 80%);  --o-al:   hsl(025, 44%, 74%);
-	--o-at:   hsl(025, 35%, 90%);  --o-pt:   hsl(025, 20%, 87%);
-	--o-t2:   hsl(025, 15%, 95%);  --o-t1:   hsl(025, 05%, 89%);
-	--o-is: hsla(025,60%,35%,.1);  --o-rs: hsla(025,44%,74%,.1);
+	--o-bb:   hsl(025, 100%,03%);  --o-lb:   hsl(025, 70%, 15%); 
+	--o-nb:   hsl(025, 90%, 15%);  --o-sb:   hsl(025, 60%, 27%);
+	--o-sh:   hsl(025, 80%, 35%);  --o-bd:   hsl(025, 50%, 45%);
+	--o-ic:   hsl(025, 80%, 62%);  --o-al:   hsl(025, 50%, 59%);
+	--o-at:   hsl(025, 90%, 85%);  --o-pt:   hsl(025, 60%, 70%);
+	--o-t2:   hsl(025,100%, 97%);  --o-t1:   hsl(025, 70%, 85%);
+	--o-is: hsla(025,80%,35%,.1);  --o-rs: hsla(025,50%,70%,.1);
 
-	--r-bb:   hsl(353, 100%, 3%);  --r-lb:   hsl(353, 39%, 15%); 
-	--r-nb:   hsl(353, 66%, 15%);  --r-sb:   hsl(353, 45%, 30%);
-	--r-sh:   hsl(353, 60%, 35%);  --r-bd:   hsl(353, 80%, 60%);
-	--r-ic:   hsl(353, 63%, 80%);  --r-al:   hsl(353, 44%, 74%);
-	--r-at:   hsl(353, 35%, 90%);  --r-pt:   hsl(353, 20%, 87%);
-	--r-t2:   hsl(353, 15%, 95%);  --r-t1:   hsl(353, 05%, 89%);
-	--r-is: hsla(353,60%,35%,.1);  --r-rs: hsla(353,44%,74%,.1);
+	--r-bb:   hsl(353, 100%,03%);  --r-lb:   hsl(353, 70%, 15%); 
+	--r-nb:   hsl(353, 90%, 15%);  --r-sb:   hsl(353, 60%, 27%);
+	--r-sh:   hsl(353, 80%, 35%);  --r-bd:   hsl(353, 50%, 45%);
+	--r-ic:   hsl(353, 80%, 62%);  --r-al:   hsl(353, 50%, 59%);
+	--r-at:   hsl(353, 90%, 85%);  --r-pt:   hsl(353, 60%, 70%);
+	--r-t2:   hsl(353,100%, 97%);  --r-t1:   hsl(353, 70%, 85%);
+	--r-is: hsla(353,80%,35%,.1);  --r-rs: hsla(353,50%,70%,.1);
 
-	--b-bb:   hsl(207, 100%, 3%);  --b-lb:   hsl(207, 39%, 15%); 
-	--b-nb:   hsl(207, 66%, 15%);  --b-sb:   hsl(207, 45%, 30%);
-	--b-sh:   hsl(207, 60%, 35%);  --b-bd:   hsl(207, 80%, 60%);
-	--b-ic:   hsl(207, 63%, 80%);  --b-al:   hsl(207, 44%, 74%);
-	--b-at:   hsl(207, 35%, 90%);  --b-pt:   hsl(207, 20%, 87%);
-	--b-t2:   hsl(207, 15%, 95%);  --b-t1:   hsl(207, 05%, 89%);
-	--b-is: hsla(207,60%,35%,.1);  --b-rs: hsla(207,44%,74%,.1);
+	--b-bb:   hsl(207, 100%,03%);  --b-lb:   hsl(207, 70%, 15%); 
+	--b-nb:   hsl(207, 90%, 15%);  --b-sb:   hsl(207, 60%, 27%);
+	--b-sh:   hsl(207, 80%, 35%);  --b-bd:   hsl(207, 50%, 45%);
+	--b-ic:   hsl(207, 80%, 62%);  --b-al:   hsl(207, 50%, 59%);
+	--b-at:   hsl(207, 90%, 85%);  --b-pt:   hsl(207, 60%, 70%);
+	--b-t2:   hsl(207,100%, 97%);  --b-t1:   hsl(207, 70%, 85%);
+	--b-is: hsla(207,80%,35%,.1);  --b-rs: hsla(207,50%,70%,.1);
 
 
 	--l-filt: brightness(130%);
-	--d-filt: brightness(70%);
+	--d-filt: brightness(90%);
 
 	--bb:   var(--g-bb);   --lb:    var(--g-lb);
 	--nb:   var(--g-nb);   --sb:    var(--g-sb);
@@ -50,13 +50,17 @@
 	background-color: var(--bb);
 }
 
+#app {
+	color: var(--pt);
+	background-color: var(--bb);
+	height: 100%;
+}
+
 html,
 body {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	color: var(--pt);
-	background-color: var(--bb);
 	overflow: hidden;
 }
 
@@ -225,6 +229,93 @@ fieldset {
 .panel-sect.active {
 	filter: opacity(100%);
 	transform: rotateX(0) scale(100%);
+}
+
+.darkmode {
+	--p-fl: var(--l-filt);  --s-fl: var(--d-filt);
+}
+.lightmode {
+	--p-fl: var(--d-filt);  --s-fl: var(--l-filt);
+}
+.darkmode.green {
+	--bb:   var(--g-bb);   --lb:    var(--g-lb);
+	--nb:   var(--g-nb);   --sb:    var(--g-sb);
+	--sh:   var(--g-sh);   --bd:    var(--g-bd);
+	--ic:   var(--g-ic);   --al:    var(--g-al);
+	--at:   var(--g-at);   --pt:    var(--g-pt);
+	--t2:   var(--g-t2);   --t1:    var(--g-t1);
+
+	--is:   var(--g-is);   --rs:    var(--g-rs);
+}
+.lightmode.green {
+	--bb:   var(--g-t2);   --lb:    var(--g-t1);
+	--nb:   var(--g-at);   --sb:    var(--g-pt);
+	--sh:   var(--g-ic);   --bd:    var(--g-al);
+	--ic:   var(--g-sh);   --al:    var(--g-bd);
+	--at:   var(--g-nb);   --pt:    var(--g-sb);
+	--t2:   var(--g-bb);   --t1:    var(--g-lb);
+
+	--is:   var(--g-rs);   --rs:    var(--g-is);
+}
+.darkmode.orange {
+	--bb:   var(--o-bb);   --lb:    var(--o-lb);
+	--nb:   var(--o-nb);   --sb:    var(--o-sb);
+	--sh:   var(--o-sh);   --bd:    var(--o-bd);
+	--ic:   var(--o-ic);   --al:    var(--o-al);
+	--at:   var(--o-at);   --pt:    var(--o-pt);
+	--t2:   var(--o-t2);   --t1:    var(--o-t1);
+	
+	--is:   var(--o-is);   --rs:    var(--o-rs);
+}
+.lightmode.orange {
+	--bb:   var(--o-t2);   --lb:    var(--o-t1);
+	--nb:   var(--o-at);   --sb:    var(--o-pt);
+	--sh:   var(--o-ic);   --bd:    var(--o-al);
+	--ic:   var(--o-sh);   --al:    var(--o-bd);
+	--at:   var(--o-nb);   --pt:    var(--o-sb);
+	--t2:   var(--o-bb);   --t1:    var(--o-lb);
+
+	--is:   var(--o-rs);   --rs:    var(--o-is);
+}
+.darkmode.red {
+	--bb:   var(--r-bb);   --lb:    var(--r-lb);
+	--nb:   var(--r-nb);   --sb:    var(--r-sb);
+	--sh:   var(--r-sh);   --bd:    var(--r-bd);
+	--ic:   var(--r-ic);   --al:    var(--r-al);
+	--at:   var(--r-at);   --pt:    var(--r-pt);
+	--t2:   var(--r-t2);   --t1:    var(--r-t1);
+
+	--is:   var(--r-is);   --rs:    var(--r-rs);
+}
+.lightmode.red {
+	--bb:   var(--r-t2);   --lb:    var(--r-t1);
+	--nb:   var(--r-at);   --sb:    var(--r-pt);
+	--sh:   var(--r-ic);   --bd:    var(--r-al);
+	--ic:   var(--r-sh);   --al:    var(--r-bd);
+	--at:   var(--r-nb);   --pt:    var(--r-sb);
+	--t2:   var(--r-bb);   --t1:    var(--r-lb);
+
+	--is:   var(--r-rs);   --rs:    var(--r-is);
+}
+.darkmode.blue {
+	--bb:   var(--b-bb);   --lb:    var(--b-lb);
+	--nb:   var(--b-nb);   --sb:    var(--b-sb);
+	--sh:   var(--b-sh);   --bd:    var(--b-bd);
+	--ic:   var(--b-ic);   --al:    var(--b-al);
+	--at:   var(--b-at);   --pt:    var(--b-pt);
+	--t2:   var(--b-t2);   --t1:    var(--b-t1);
+
+	--is:   var(--b-is);   --rs:    var(--b-rs);
+}
+.lightmode.blue {
+	--bb:   var(--b-t2);   --lb:    var(--b-t1);
+	--nb:   var(--b-at);   --sb:    var(--b-pt);
+	--sh:   var(--b-ic);   --bd:    var(--b-al);
+	--ic:   var(--b-sh);   --al:    var(--b-bd);
+	--at:   var(--b-nb);   --pt:    var(--b-sb);
+	--t2:   var(--b-bb);   --t1:    var(--b-lb);
+
+	--is:   var(--b-rs);   --rs:    var(--b-is);
 }
 
 @media only screen and (min-width: 768px) and (min-height: 780px) {

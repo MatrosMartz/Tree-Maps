@@ -5,15 +5,18 @@
     import OptionsSect from '$lib/components/options/OptionsSect.svelte';
     import MoreSect from '$lib/components/more/MoreSect.svelte';
     import AddSect from '$lib/components/add/AddSect.svelte';
+    import options from '$lib/stores/options';
 </script>
-
-<Header />
-
-<slot />
-
-<ProfileSect />
-<OptionsSect />
-<MoreSect />
-<AddSect />
-
-<Footer />
+<div id="app" class="{$options.theme} {$options.color}">
+    
+    <Header />
+    
+    <slot />
+    
+    <ProfileSect />
+    <OptionsSect />
+    <MoreSect />
+    <AddSect />
+    
+    <Footer />
+</div>

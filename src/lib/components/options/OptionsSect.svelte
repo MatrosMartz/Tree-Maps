@@ -9,7 +9,6 @@
     import options from '../../stores/options';
 
     $: active = $panel === 'opts' ? 'active' : '';
-    $: console.log($options);
 </script>
 
 <section class="panel-sect right" class:active>
