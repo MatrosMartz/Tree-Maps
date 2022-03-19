@@ -3,46 +3,46 @@ import type { Panel } from '../types';
 import { writable } from 'svelte/store';
 const time = 250;
 
-export default (() => {
-    const { subscribe, set: setSub } = writable(<Panel>'none');
-	let timeoutID: ReturnType<typeof setTimeout>;
-    const setToNone = () => {
-    	if (timeoutID !== undefined) clearTimeout(timeoutID);
-    	timeoutID = setTimeout(() => {
-    		setSub('none');
-    	}, time);
-    }
-    const setToMore = () => {
-    	if (timeoutID !== undefined) clearTimeout(timeoutID);
-    	timeoutID = setTimeout(() => {
-    		setSub('more');
-    	}, time);
-    }
-    const setToAdd  = () => {
-    	if (timeoutID !== undefined) clearTimeout(timeoutID);
-    	timeoutID = setTimeout(() => {
-    		setSub('add');
-    	}, time);
-    }
-    const setToOpts = () => {
-    	if (timeoutID !== undefined) clearTimeout(timeoutID);
-    	timeoutID = setTimeout(() => {
-    		setSub('opts');
-    	}, time);
-    }
-    const setToProf = () => {
-    	if (timeoutID !== undefined) clearInterval(timeoutID);
-    	timeoutID = setInterval(() => {
-    		setSub('prof');
-    	}, time);
-    }
+const { subscribe, set: setSub } = writable(<Panel>'none');
 
-    return {
-        subscribe,
-        setToNone,
-        setToMore,
-        setToAdd,
-        setToOpts,
-        setToProf,
-    }
-})();
+let timeoutID: ReturnType<typeof setTimeout>;
+
+function setToNone() {
+	if (timeoutID != undefined) clearTimeout(timeoutID);
+	timeoutID = setTimeout(() => {
+		setSub('none');
+	}, time);
+}
+function setToMore() {
+	if (timeoutID != undefined) clearTimeout(timeoutID);
+	timeoutID = setTimeout(() => {
+		setSub('more');
+	}, time);
+}
+function setToAdd() {
+	if (timeoutID != undefined) clearTimeout(timeoutID);
+	timeoutID = setTimeout(() => {
+		setSub('add');
+	}, time);
+}
+function setToOpts() {
+	if (timeoutID != undefined) clearTimeout(timeoutID);
+	timeoutID = setTimeout(() => {
+		setSub('opts');
+	}, time);
+}
+function setToProf() {
+	if (timeoutID != undefined) clearInterval(timeoutID);
+	timeoutID = setInterval(() => {
+		setSub('prof');
+	}, time);
+}
+
+export default {
+	subscribe,
+	setToNone,
+	setToMore,
+	setToAdd,
+	setToOpts,
+	setToProf,
+}

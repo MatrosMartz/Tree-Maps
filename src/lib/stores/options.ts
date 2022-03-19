@@ -26,55 +26,53 @@ if (browser) {
     ) opts.color = color;
 }
 
-export default (() => {
-    const { subscribe, update } = writable(opts);
+const { subscribe, update } = writable(opts);
 
-    const set_theme = (val: boolean) => {
-        const theme = val ? 'lightmode' : 'darkmode';
-        if (browser) localStorage.setItem('theme', theme);
-        update(d => {
-            return {
-                ...d,
-                theme,
-            }
-        });
-    };
-    const set_animation = (val: boolean) => {
-        if (browser) localStorage.setItem('animation', val+'');
-        update(d => {
-            return {
-                ...d,
-                animation: val,
-            }
-        });
-    };
-    const set_lang = (val: boolean) => {
-        const lang = val ? 'en' : 'es';
-        if (browser) localStorage.setItem('lang', lang);
-        update(d => {
-            return {
-                ...d,
-                lang,
-            }
-        });
-    };
-    const set_color = (val: Color) => {
-        if (browser) localStorage.setItem('color', val);
-        if (val !== undefined) {
-            update(d => {
-                return {
-                    ...d,
-                    color: val,
-                }
-            });
+function set_theme(val: boolean) {
+    const theme = val ? 'lightmode' : 'darkmode';
+    if (browser) localStorage.setItem('theme', theme);
+    update(d => {
+        return {
+            ...d,
+            theme,
         }
-    };
-
-    return {
-        subscribe,
-        set_animation,
-        set_theme,
-        set_lang,
-        set_color,
+    });
+};
+function set_animation(val: boolean) {
+    if (browser) localStorage.setItem('animation', val+'');
+    update(d => {
+        return {
+            ...d,
+            animation: val,
+        }
+    });
+};
+function set_lang(val: boolean) {
+    const lang = val ? 'en' : 'es';
+    if (browser) localStorage.setItem('lang', lang);
+    update(d => {
+        return {
+            ...d,
+            lang,
+        }
+    });
+};
+function set_color(val: Color) {
+    if (browser) localStorage.setItem('color', val);
+    if (val !== undefined) {
+        update(d => {
+            return {
+                ...d,
+                color: val,
+            }
+        });
     }
-})();
+};
+
+export default {
+    subscribe,
+    set_animation,
+    set_theme,
+    set_lang,
+    set_color,
+}
