@@ -8,7 +8,7 @@
 	import TreesIcon from '../icons/TreesIcon.svelte';
 	import AddIcon from '../icons/AddIcon.svelte';
 	import LeadersIcon from '../icons/LeadersIcon.svelte';
-	import UtilitiesIcon from '../icons/UtilitiesIcon.svelte';
+	import ResourcesIcon from '../icons/ResourcesIcon.svelte';
 </script>
 
 <footer>
@@ -24,8 +24,8 @@
     <FooterLink href="/leaders" page={$page.url.pathname}>
         <LeadersIcon />
     </FooterLink>
-    <FooterLink href="/utilities" page={$page.url.pathname}>
-        <UtilitiesIcon />
+    <FooterLink href="/resources" page={$page.url.pathname}>
+        <ResourcesIcon />
     </FooterLink>
 </footer>
 
