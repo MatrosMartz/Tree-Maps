@@ -1,13 +1,10 @@
-<script>
-    import panel from '../../stores/panel';
-    import options from '../../stores/options';
-
-    $: active = $panel === 'more' ? 'active' : '';
+<script lang="ts">  
+    export let active: boolean, animation: boolean;
 </script>
 
 <section
     class="panel-sect right"
     class:active
-    class:animation={$options.animation}>
+    class:animation>
     más
 </section>

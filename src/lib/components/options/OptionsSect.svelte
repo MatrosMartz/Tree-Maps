@@ -1,20 +1,19 @@
-<script>
-    import panel from '../../stores/panel';
+<script lang="ts">
     import AnimationIcon from '../icons/AnimationIcon.svelte';
     import DarkmodeIcon from '../icons/DarkmodeIcon.svelte';
     import LightmodeIcon from '../icons/LightmodeIcon.svelte';
     import NonAnimationIcon from '../icons/NonAnimationIcon.svelte';
+
     import RadioColors from './RadioColors.svelte';
     import SwitchBtn from './SwitchBtn.svelte';
-    import options from '../../stores/options';
 
-    $: active = $panel === 'opts' ? 'active' : '';
+    export let active: boolean, animation: boolean;
 </script>
 
 <section
     class="panel-sect right"
     class:active
-    class:animation={$options.animation}>
+    class:animation>
     <h5>Opciones</h5>
     <SwitchBtn id="theme">
         <legend slot="name">tema</legend>
@@ -30,13 +29,3 @@
 
     <RadioColors />
 </section>
-
-<style>
-    section {
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
-        gap: 1em;
-    }
-</style>

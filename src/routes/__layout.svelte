@@ -6,17 +6,35 @@
     import MoreSect from '$lib/components/more/MoreSect.svelte';
     import AddSect from '$lib/components/add/AddSect.svelte';
     import options from '$lib/stores/options';
+    import panel from '$lib/stores/panel';
+
+    import { browser } from '$app/env';
+
+    const root = browser ? document.documentElement : undefined;
+
+    $: {
+        root?.classList?.remove?.('darkmode','lightmode')
+        root?.classList?.add?.($options.theme);
+    }
+    $: {
+        root?.classList?.remove?.('green','orange','red','blue')
+        root?.classList?.add?.($options.color);
+    }
 </script>
-<div id="app" class="{$options.theme} {$options.color}">
     
-    <Header />
-    
-    <slot />
-    
-    <ProfileSect />
-    <OptionsSect />
-    <MoreSect />
-    <AddSect />
-    
-    <Footer />
-</div>
+<Header />
+
+<slot />
+
+<ProfileSect
+    active={$panel === 'prof'}
+    animation={$options.animation}/>
+<OptionsSect
+    active={$panel === 'opts'}
+    animation={$options.animation}/>
+<MoreSect
+    active={$panel === 'more'}
+    animation={$options.animation}/>
+<AddSect />
+
+<Footer />

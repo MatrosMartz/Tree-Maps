@@ -3,32 +3,32 @@
 	--g-nb:   hsl(144, 90%, 15%);  --g-sb:   hsl(144, 60%, 27%);
 	--g-sh:   hsl(144, 80%, 35%);  --g-bd:   hsl(144, 50%, 45%);
 	--g-ic:   hsl(144, 80%, 55%);  --g-al:   hsl(144, 50%, 59%);
-	--g-at:   hsl(144, 90%, 90%);  --g-pt:   hsl(144, 60%, 67%);
-	--g-t2:   hsl(144, 100%,97%);  --g-t1:   hsl(144, 70%, 75%);
+	--g-at:   hsl(144, 90%, 79%);  --g-pt:   hsl(144, 60%, 67%);
+	--g-t2:   hsl(144, 100%,97%);  --g-t1:   hsl(144, 70%, 85%);
 	--g-is: hsla(144,80%,35%,.1);  --g-rs: hsla(144,50%,70%,.1);
 
 	--o-bb:   hsl(025, 100%,03%);  --o-lb:   hsl(025, 70%, 15%); 
 	--o-nb:   hsl(025, 90%, 15%);  --o-sb:   hsl(025, 60%, 27%);
 	--o-sh:   hsl(025, 80%, 35%);  --o-bd:   hsl(025, 50%, 45%);
 	--o-ic:   hsl(025, 80%, 55%);  --o-al:   hsl(025, 50%, 59%);
-	--o-at:   hsl(025, 90%, 90%);  --o-pt:   hsl(025, 60%, 67%);
-	--o-t2:   hsl(025,100%, 97%);  --o-t1:   hsl(025, 70%, 75%);
+	--o-at:   hsl(025, 90%, 79%);  --o-pt:   hsl(025, 60%, 67%);
+	--o-t2:   hsl(025,100%, 97%);  --o-t1:   hsl(025, 70%, 85%);
 	--o-is: hsla(025,80%,35%,.1);  --o-rs: hsla(025,50%,70%,.1);
 
 	--r-bb:   hsl(353, 100%,03%);  --r-lb:   hsl(353, 70%, 15%); 
 	--r-nb:   hsl(353, 90%, 15%);  --r-sb:   hsl(353, 60%, 27%);
 	--r-sh:   hsl(353, 80%, 35%);  --r-bd:   hsl(353, 50%, 45%);
 	--r-ic:   hsl(353, 80%, 55%);  --r-al:   hsl(353, 50%, 59%);
-	--r-at:   hsl(353, 90%, 90%);  --r-pt:   hsl(353, 60%, 67%);
-	--r-t2:   hsl(353,100%, 97%);  --r-t1:   hsl(353, 70%, 75%);
+	--r-at:   hsl(353, 90%, 79%);  --r-pt:   hsl(353, 60%, 67%);
+	--r-t2:   hsl(353,100%, 97%);  --r-t1:   hsl(353, 70%, 85%);
 	--r-is: hsla(353,80%,35%,.1);  --r-rs: hsla(353,50%,70%,.1);
 
 	--b-bb:   hsl(207, 100%,03%);  --b-lb:   hsl(207, 70%, 15%); 
 	--b-nb:   hsl(207, 90%, 15%);  --b-sb:   hsl(207, 60%, 27%);
 	--b-sh:   hsl(207, 80%, 35%);  --b-bd:   hsl(207, 50%, 45%);
 	--b-ic:   hsl(207, 80%, 55%);  --b-al:   hsl(207, 50%, 59%);
-	--b-at:   hsl(207, 90%, 90%);  --b-pt:   hsl(207, 60%, 67%);
-	--b-t2:   hsl(207,100%, 97%);  --b-t1:   hsl(207, 70%, 75%);
+	--b-at:   hsl(207, 90%, 79%);  --b-pt:   hsl(207, 60%, 67%);
+	--b-t2:   hsl(207,100%, 97%);  --b-t1:   hsl(207, 70%, 85%);
 	--b-is: hsla(207,80%,35%,.1);  --b-rs: hsla(207,50%,70%,.1);
 
 
@@ -51,8 +51,6 @@
 }
 
 #app {
-	color: var(--pt);
-	background-color: var(--bb);
 	height: 100%;
 }
 
@@ -62,6 +60,9 @@ body {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
+	
+	color: var(--pt);
+	background-color: var(--bb);
 }
 
 body {
@@ -198,6 +199,12 @@ fieldset {
 	transition: transform 200ms;
 }
 .panel-sect {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	gap: 1em;
+	
 	position: fixed;
 	box-sizing: border-box;
 
@@ -222,16 +229,16 @@ fieldset {
 		filter 400ms cubic-bezier(0.5, -0.3, 0.5, 1.3);
 }
 .panel-sect.left {
-	filter: opacity(0);
-	transform: translateX(-110%) scale(80%);
+	filter: opacity(25%);
+	transform: translateX(-110%) scale(75%);
 }
 .panel-sect.right {
-	filter: opacity(0);
-	transform: translateX(110%) scale(80%);
+	filter: opacity(25%);
+	transform: translateX(110%) scale(75%);
 }
 .panel-sect.active {
 	filter: opacity(100%);
-	transform: rotateX(0) scale(100%);
+	transform: translateX(0) scale(100%);
 }
 
 .filter-transition.animation {
