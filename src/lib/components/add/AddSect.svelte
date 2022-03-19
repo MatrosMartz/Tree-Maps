@@ -1,6 +1,6 @@
 <script>
-    import state from '../../stores/state';
-    $: active = $state === 'add'
+    import panel from '../../stores/panel';
+    $: active = $panel === 'add'
 </script>
 
 <section class:active>

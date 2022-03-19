@@ -1,6 +1,13 @@
 <script lang="ts">
     export let id: string;
+
+    import options from '../../stores/options';
+
     let checked: boolean;
+    if (id === 'theme') checked = $options.theme === 'lightmode';
+    else if (id === 'animation') checked = $options.animation;
+    
+    $: options[`set_${id}`](checked);
 </script>
 
 <fieldset>
@@ -27,6 +34,7 @@
     label {
         display: flex;
         position: relative;
+        box-sizing: border-box;
 
         overflow: hidden;
         user-select: none;
@@ -34,30 +42,30 @@
 
         width: calc(var(--img-size) * 2);
         
-        border-radius: 7px;
+        border-radius: 12px;
+        border: 3px solid var(--sh);
 
-        background-color: var(--sb);
+        background-color: var(--lb);
     }
     label::after {
         content: '';
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 50%;
+        left: 25%;
         
-        width: var(--img-size);
-        height: var(--img-size);
+        width: calc(1rem * 2.2);
+        height: calc(1rem * 2.2);
         
         border-radius: 7px;
         
         color: var(--sh);
         background-color: var(--sh);
-        box-shadow: 0 0 15px currentColor;
 
-        transform: translateX(0);
+        transform: translate(-50%, -50%);
         transition: transform 200ms ease-in-out;
     }
     input:checked + label::after {
-        transform: translateX(100%);
+        transform: translate(75%, -50%);
     }
     label > :global(svg) {
         z-index: 10;

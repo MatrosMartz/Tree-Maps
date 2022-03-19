@@ -1,20 +1,20 @@
 <script>
     import ProfileIcon from '../icons/ProfileIcon.svelte';
 
-    import state from '../../stores/state';
+    import panel from '../../stores/panel';
 
     function onClick() {
-        if ($state === 'prof') {
-            state.setToNone();
+        if ($panel === 'prof') {
+            panel.setToNone();
         } else {
-            state.setToProf();
+            panel.setToProf();
         }
     }
 
-    $: selected = $state === 'prof' ? 'selected' : '';
+    $: selected = $panel === 'prof' ? 'selected' : '';
 </script>
 
-<button class="head-tag {selected}" on:click={onClick}>
+<button class="head-tag" class:selected on:click={onClick}>
     <ProfileIcon />
     <p>inicar sesión</p>
 </button>

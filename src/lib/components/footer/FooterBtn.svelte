@@ -1,17 +1,17 @@
 <script lang="ts">
-    import state from '../../stores/state';
+    import panel from '../../stores/panel';
 
     function onClick() {
-        if ($state === 'add') {
-            state.setToNone();
+        if ($panel === 'add') {
+            panel.setToNone();
         } else {
-            state.setToAdd();
+            panel.setToAdd();
         }
     }
-    $: selected = $state === 'add' ? 'selected' : '';
+    $: selected = $panel === 'add' ? 'selected' : '';
 </script>
 
-<button class="head-tag {selected}" on:click={onClick}>
+<button class="head-tag" class:selected on:click={onClick}>
     <slot />
 </button>
 

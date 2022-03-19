@@ -1,11 +1,11 @@
-import type { State } from '../types';
+import type { Panel } from '../types';
 
 import { writable } from 'svelte/store';
 const time = 250;
 
 export default (() => {
-    const { subscribe, set: setSub } = writable(<State>'none');
-	let timeoutID;
+    const { subscribe, set: setSub } = writable(<Panel>'none');
+	let timeoutID: ReturnType<typeof setTimeout>;
     const setToNone = () => {
     	if (timeoutID !== undefined) clearTimeout(timeoutID);
     	timeoutID = setTimeout(() => {

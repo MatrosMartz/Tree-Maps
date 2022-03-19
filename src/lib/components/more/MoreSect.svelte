@@ -1,9 +1,9 @@
 <script>
-    import store from '../../stores/state';
+    import panel from '../../stores/panel';
 
-    $: active = $store === 'more' ? 'active' : '';
+    $: active = $panel === 'more' ? 'active' : '';
 </script>
 
-<section class="state-sect right {active}">
+<section class="panel-sect right" class:active>
     más
 </section>

@@ -8,10 +8,10 @@
 <header>
     <ProfileTag />
     <section>
-        <HeaderBtn stateControler="opts">
+        <HeaderBtn panelControler="opts">
             <OptionsIcon />
         </HeaderBtn>
-        <HeaderBtn stateControler="more">
+        <HeaderBtn panelControler="more">
             <MoreIcon />
         </HeaderBtn>
     </section>

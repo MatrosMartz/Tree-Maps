@@ -1,9 +1,9 @@
 <script>
-    import store from '../../stores/state';
+    import panel from '../../stores/panel';
 
-    $: active = $store === 'prof' ? 'active' : '';
+    $: active = $panel === 'prof' ? 'active' : '';
 </script>
 
-<section class="state-sect left {active}">
+<section class="panel-sect left" class:active>
     perfil
 </section>

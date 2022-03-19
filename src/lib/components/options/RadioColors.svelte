@@ -1,20 +1,25 @@
 <script lang="ts">
-    let group: string;
-    let colors: string[] = [
+    import type { Color } from '../../types';
+    import options from '../../stores/options';
+
+    let group: Color = $options.color;
+    let colors: Color[] = [
         'green',
         'orange',
         'red',
         'blue',
     ];
+
+    $: options.set_color(group);
 </script>
 
 <fieldset>
     <legend>Esquema de colores</legend>
     {#each colors as id}
-    <label>
-        <p>{id}</p>
-        <input type="radio" name="color" {id} bind:group>
-    </label>
+        <label>
+            <p>{id}</p>
+            <input type="radio" name="color" {id} bind:group value={id} />
+        </label>
     {/each}
 </fieldset>
 
@@ -52,13 +57,18 @@
         top: 50%;
         left: 50%;
 
-        width: calc(1rem * 2.2);
-        height: calc(1rem * 2.2);
+        width: calc(1rem * 2);
+        height: calc(1rem * 2);
 
         background-color: currentColor;
 
         border-radius: 4px;
         transform: translate(-50%,-50%);
+        filter: opacity(0);
+        transition: filter 200ms ease-in-out;
+    }
+    input:checked::after {
+        filter: opacity(100%);
     }
     input#green {
         color: var(--g-sh);
@@ -81,8 +91,7 @@
         border: 3px solid currentColor;
     }
     input:checked {
-        border-radius: 10px;
-        filter: var(--p-fl);
+        border-radius: 12px;
         box-shadow: 0 0 4px currentColor;
     }
 </style>

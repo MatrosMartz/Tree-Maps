@@ -1,21 +1,21 @@
 <script lang="ts">
-    export let stateControler: string;
+    export let panelControler: string;
 
-    import state from '../../stores/state';
-    $: stateCapitalize = stateControler[0].toUpperCase() + stateControler.slice(1);
+    import panel from '../../stores/panel';
+    $: panelCapitalize = panelControler[0].toUpperCase() + panelControler.slice(1);
 
     function onClick() {
-        if ($state === stateControler) {
-            state.setToNone();
+        if ($panel === panelControler) {
+            panel.setToNone();
         } else {
-            state[`setTo${stateCapitalize}`]();
+            panel[`setTo${panelCapitalize}`]();
         }
     }
-    $: selected = $state === stateControler ? 'selected' : '';
+    $: selected = $panel === panelControler ? 'selected' : '';
 </script>
 
 
-<button class="head-tag {selected}" on:click={onClick}>
+<button class="head-tag" class:selected on:click={onClick}>
     <slot />
 </button>
 
