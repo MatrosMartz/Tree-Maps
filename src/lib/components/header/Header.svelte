@@ -19,7 +19,7 @@
 
 <style>
     header {
-        position: fixed;
+        position: sticky;
 
         display: flex;
         box-sizing: border-box;

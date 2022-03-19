@@ -2,33 +2,33 @@
 	--g-bb:   hsl(144, 100%,03%);  --g-lb:   hsl(144, 70%, 15%); 
 	--g-nb:   hsl(144, 90%, 15%);  --g-sb:   hsl(144, 60%, 27%);
 	--g-sh:   hsl(144, 80%, 35%);  --g-bd:   hsl(144, 50%, 45%);
-	--g-ic:   hsl(144, 80%, 62%);  --g-al:   hsl(144, 50%, 59%);
-	--g-at:   hsl(144, 90%, 85%);  --g-pt:   hsl(144, 60%, 70%);
-	--g-t2:   hsl(144, 100%,97%);  --g-t1:   hsl(144, 70%, 85%);
+	--g-ic:   hsl(144, 80%, 55%);  --g-al:   hsl(144, 50%, 59%);
+	--g-at:   hsl(144, 90%, 90%);  --g-pt:   hsl(144, 60%, 67%);
+	--g-t2:   hsl(144, 100%,97%);  --g-t1:   hsl(144, 70%, 75%);
 	--g-is: hsla(144,80%,35%,.1);  --g-rs: hsla(144,50%,70%,.1);
 
 	--o-bb:   hsl(025, 100%,03%);  --o-lb:   hsl(025, 70%, 15%); 
 	--o-nb:   hsl(025, 90%, 15%);  --o-sb:   hsl(025, 60%, 27%);
 	--o-sh:   hsl(025, 80%, 35%);  --o-bd:   hsl(025, 50%, 45%);
-	--o-ic:   hsl(025, 80%, 62%);  --o-al:   hsl(025, 50%, 59%);
-	--o-at:   hsl(025, 90%, 85%);  --o-pt:   hsl(025, 60%, 70%);
-	--o-t2:   hsl(025,100%, 97%);  --o-t1:   hsl(025, 70%, 85%);
+	--o-ic:   hsl(025, 80%, 55%);  --o-al:   hsl(025, 50%, 59%);
+	--o-at:   hsl(025, 90%, 90%);  --o-pt:   hsl(025, 60%, 67%);
+	--o-t2:   hsl(025,100%, 97%);  --o-t1:   hsl(025, 70%, 75%);
 	--o-is: hsla(025,80%,35%,.1);  --o-rs: hsla(025,50%,70%,.1);
 
 	--r-bb:   hsl(353, 100%,03%);  --r-lb:   hsl(353, 70%, 15%); 
 	--r-nb:   hsl(353, 90%, 15%);  --r-sb:   hsl(353, 60%, 27%);
 	--r-sh:   hsl(353, 80%, 35%);  --r-bd:   hsl(353, 50%, 45%);
-	--r-ic:   hsl(353, 80%, 62%);  --r-al:   hsl(353, 50%, 59%);
-	--r-at:   hsl(353, 90%, 85%);  --r-pt:   hsl(353, 60%, 70%);
-	--r-t2:   hsl(353,100%, 97%);  --r-t1:   hsl(353, 70%, 85%);
+	--r-ic:   hsl(353, 80%, 55%);  --r-al:   hsl(353, 50%, 59%);
+	--r-at:   hsl(353, 90%, 90%);  --r-pt:   hsl(353, 60%, 67%);
+	--r-t2:   hsl(353,100%, 97%);  --r-t1:   hsl(353, 70%, 75%);
 	--r-is: hsla(353,80%,35%,.1);  --r-rs: hsla(353,50%,70%,.1);
 
 	--b-bb:   hsl(207, 100%,03%);  --b-lb:   hsl(207, 70%, 15%); 
 	--b-nb:   hsl(207, 90%, 15%);  --b-sb:   hsl(207, 60%, 27%);
 	--b-sh:   hsl(207, 80%, 35%);  --b-bd:   hsl(207, 50%, 45%);
-	--b-ic:   hsl(207, 80%, 62%);  --b-al:   hsl(207, 50%, 59%);
-	--b-at:   hsl(207, 90%, 85%);  --b-pt:   hsl(207, 60%, 70%);
-	--b-t2:   hsl(207,100%, 97%);  --b-t1:   hsl(207, 70%, 85%);
+	--b-ic:   hsl(207, 80%, 55%);  --b-al:   hsl(207, 50%, 59%);
+	--b-at:   hsl(207, 90%, 90%);  --b-pt:   hsl(207, 60%, 67%);
+	--b-t2:   hsl(207,100%, 97%);  --b-t1:   hsl(207, 70%, 75%);
 	--b-is: hsla(207,80%,35%,.1);  --b-rs: hsla(207,50%,70%,.1);
 
 
@@ -72,9 +72,6 @@ body {
 	box-sizing: border-box;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
 		'Helvetica Neue', sans-serif;
-}
-main {
-	padding-top: calc(var(--img-size) + 4vh);
 }
 
 a {
@@ -137,6 +134,7 @@ h1 {
 	position: relative;
 	font-size: 1.6rem;
 	text-align: center;
+	margin-block: .2em;
 	color: var(--t1);
 }
 
@@ -144,7 +142,7 @@ h1::after {
 	content: '';
 
 	position: absolute;
-	bottom: -50%;
+	bottom: -7%;
 	left: 50%;
 	min-width: 80vw;
 	height: 2px;
@@ -203,7 +201,7 @@ fieldset {
 	position: fixed;
 	box-sizing: border-box;
 
-	top: calc(var(--img-size) + 4vh);
+	top: calc(1rem * 4.7);
 	left: 0;
 
 	border-radius: 7px;
@@ -212,7 +210,7 @@ fieldset {
 	padding: .5em 1em;
 
 	width: 92vw;
-	height: calc(90vh - (var(--img-size) * 1.7));
+	height: calc(90vh - (1rem * 5));
 
 	background-color: var(--nb);
 	box-shadow: 2px 4px 7px var(--is);
