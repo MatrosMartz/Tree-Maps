@@ -53,7 +53,7 @@
         height: var(--img-size);
 
         border-radius: 7px;
-        box-shadow: 0 0 4px transparent;
+        box-shadow: 0 0 2px transparent;
     }
     input.animation {
         transition: filter 200ms, box-shadow 200ms, border-radius 200ms ease-in-out;
@@ -98,6 +98,6 @@
     }
     input:checked {
         border-radius: 12px;
-        box-shadow: 0 0 4px currentColor;
+        box-shadow: 0 0 2px currentColor;
     }
 </style>

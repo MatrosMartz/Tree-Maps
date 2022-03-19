@@ -8,6 +8,7 @@
     class="panel-sect right"
     class:active
     class:animation>
+    <h5>paginas aledañas xd</h5>
     {#if $page.url.pathname === '/'}
         <a href="/">home</a>
         {:else if  $page.url.pathname === '/trees'}
@@ -20,7 +21,7 @@
         <a href="/leaders">leaders</a>
         <a href="/leaders/my-records">mis registros</a>
         <a href="/leaders/my-medals">mis medallas</a>
-        {:else if  $page.url.pathname === '/resources'}
+    {:else if  $page.url.pathname === '/resources'}
         <a href="/resources">recursos</a>
         <a href="/resources/about">sobre nosotros</a>
         <a href="/resources/api">API</a>

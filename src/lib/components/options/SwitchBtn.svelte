@@ -38,17 +38,34 @@
         display: flex;
         position: relative;
         box-sizing: border-box;
+        gap: 3px;
 
         overflow: hidden;
         user-select: none;
         cursor: pointer;
 
-        width: calc(var(--img-size) * 2);
+        width: calc((var(--img-size) * 2) + 3px);
         
         border-radius: 12px;
         border: 3px solid var(--sh);
 
         background-color: var(--lb);
+    }
+    label::before {
+        content: '';
+        position: absolute;
+
+        border-radius: 2px;
+        
+        top: 50%;
+        left: 50%;
+
+        width: 3px;
+        height: calc(1rem * 2.2);
+
+        background-color: var(--sh);
+        
+        transform: translate(-50%, -50%);
     }
     label::after {
         content: '';
@@ -63,14 +80,15 @@
         
         color: var(--sh);
         background-color: var(--sh);
-
-        transform: translate(-50%, -50%);
+        box-shadow: 0 0 2px var(--sh);
+        
+        transform: translate(-54%, -50%);
     }
     label.animation::after {
         transition: transform 200ms ease-in-out;
     }
     input:checked + label::after {
-        transform: translate(75%, -50%);
+        transform: translate(83%, -50%);
     }
     label > :global(svg) {
         z-index: 10;
