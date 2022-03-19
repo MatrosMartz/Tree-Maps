@@ -18,8 +18,12 @@ if (browser) {
 
     if (theme === 'darkmode' || theme === 'lightmode') opts.theme = theme;
     else if (matchMedia('(prefers-color-scheme: dark)').matches) opts.theme = 'darkmode';
+
     if (animation === 'true' || animation === 'false') opts.animation = animation === 'true';
+    else if (matchMedia('(prefers-reduced-motion)').matches) opts.animation = false;
+
     if (lang === 'es' || lang === 'en') opts.lang = lang;
+
     if (
         color === 'green' || color === 'orange' ||
         color === 'red'   || color === 'blue'
