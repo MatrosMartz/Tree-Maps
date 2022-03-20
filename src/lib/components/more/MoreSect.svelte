@@ -1,7 +1,12 @@
 <script lang="ts">  
     export let active: boolean, animation: boolean;
+    
+    import LeadersLinks from './LeadersLinks.svelte';
+    import ResourcesLinks from './ResourcesLinks.svelte';
+    import TreesLinks from './TreesLinks.svelte';
 
     import { page } from '$app/stores';
+    import { isAuth } from '../../stores/auth';
 </script>
 
 <section
@@ -12,21 +17,37 @@
     {#if $page.url.pathname === '/'}
         <a href="/">home</a>
         {:else if  $page.url.pathname === '/trees'}
-        <a href="/trees">arboles</a>
-        <a href="/trees/explored">explorados</a>
-        <a href="/trees/registered">registrados</a>
-        <a href="/trees/supervised">supervisados</a>
-        <a href="/trees/cared">cuidados</a>
+        <TreesLinks auth={$isAuth}/>
     {:else if  $page.url.pathname === '/leaders'}
-        <a href="/leaders">leaders</a>
-        <a href="/leaders/my-records">mis registros</a>
-        <a href="/leaders/my-medals">mis medallas</a>
+        <LeadersLinks auth={$isAuth}/>
     {:else if  $page.url.pathname === '/resources'}
-        <a href="/resources">recursos</a>
-        <a href="/resources/about">sobre nosotros</a>
-        <a href="/resources/api">API</a>
-        <a href="/resources/doc">doumentacion</a>
+        <ResourcesLinks />
     {:else}
         N / A
     {/if}
 </section>
+
+
+<style>
+    section > :global(a) {
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
+    section > :global(a):not(:last-child)::after {
+        content: '';
+        position: absolute;
+        bottom: -45%;
+        left: 0;
+        right: 0;
+
+        margin-inline: auto;
+
+        border-radius: 2px;
+
+        height: 3px;
+        width: 85%;
+
+        background-color: var(--sb);
+    }
+</style>
