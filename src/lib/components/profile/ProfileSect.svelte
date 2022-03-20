@@ -1,17 +1,12 @@
 <script lang="ts">
     export let active: boolean, animation: boolean;
 
-    import { onMount } from 'svelte';
-
     import {
         isAuth,
         user,
-        createClient,
         login,
         logout,
     } from '../../stores/auth';
-
-    onMount(createClient);
 </script>
 
 <section
@@ -27,3 +22,13 @@
         <button on:click={login()}>iniciar sesión</button>
     {/if}
 </section>
+
+<style>
+    button {
+        border-radius: 7px;
+
+        background-color: var(--at);
+        color: var(--nb);
+        box-shadow: 0 0 5px 5px var(--rs);
+    }
+</style>

@@ -1,12 +1,9 @@
 <script>
     import ProfileIcon from '../icons/ProfileIcon.svelte';
 
-    import { onMount } from 'svelte';
-
     import {
         isAuth,
         user,
-        createClient,
         login,
     } from '../../stores/auth';
 
@@ -21,8 +18,6 @@
         }
     }
 
-    onMount(createClient)
-
     $: selected = $panel === 'prof';
 </script>
 
@@ -35,7 +30,7 @@
         <img src={$user.picture} alt="user" />
         <section>
             <h5>{$user.nickname}</h5>
-            <p>Lorem, ipsum dolor.</p>
+            <p>{$user.email}</p>
         </section>
     {:else}
         <ProfileIcon />
