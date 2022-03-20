@@ -14,7 +14,7 @@
     class:active
     class:animation>
     {#if $isAuth}
-        <h5>{$user.name}</h5>
+        <h5 class="sect-h5">{$user.name}</h5>
         <span>{$user.email}</span>
         <button on:click={logout()}>salir de la sesión</button> 
     {:else}
@@ -29,6 +29,6 @@
 
         background-color: var(--at);
         color: var(--nb);
-        box-shadow: 0 0 5px 5px var(--rs);
+        box-shadow: 0 0 10px var(--rs);
     }
 </style>

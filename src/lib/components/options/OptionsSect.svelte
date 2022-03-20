@@ -14,7 +14,7 @@
     class="panel-sect right"
     class:active
     class:animation>
-    <h5>Opciones</h5>
+    <h5 class="sect-h5">Opciones</h5>
     <SwitchBtn id="theme">
         <legend slot="name">tema</legend>
         <DarkmodeIcon slot="first"/>

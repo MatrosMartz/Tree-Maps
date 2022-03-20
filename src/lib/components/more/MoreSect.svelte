@@ -13,7 +13,7 @@
     class="panel-sect right"
     class:active
     class:animation>
-    <h5>paginas aledañas xd</h5>
+    <h5 class="sect-h5">paginas aledañas xd</h5>
     {#if $page.url.pathname === '/'}
         <a href="/">home</a>
         {:else if  $page.url.pathname === '/trees'}
@@ -33,11 +33,12 @@
         position: relative;
         text-align: center;
         width: 100%;
+        height: 1.75em;
     }
     section > :global(a):not(:last-child)::after {
         content: '';
         position: absolute;
-        bottom: -45%;
+        bottom: -20%;
         left: 0;
         right: 0;
 

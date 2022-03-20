@@ -32,15 +32,16 @@
 <style>
     fieldset {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         flex-wrap: wrap;
+        width: 100%;
     }
     label {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 4em;
+        width: 3.5em;
     }
     input {
         appearance: none;
