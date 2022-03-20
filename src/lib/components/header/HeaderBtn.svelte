@@ -13,7 +13,7 @@
             panel[`setTo${panelCapitalize}`]();
         }
     }
-    $: selected = $panel === panelControler ? 'selected' : '';
+    $: selected = $panel === panelControler;
 </script>
 
 

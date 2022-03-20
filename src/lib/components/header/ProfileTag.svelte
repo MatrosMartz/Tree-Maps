@@ -1,6 +1,15 @@
 <script>
     import ProfileIcon from '../icons/ProfileIcon.svelte';
 
+    import { onMount } from 'svelte';
+
+    import {
+        isAuth,
+        user,
+        createClient,
+        login,
+    } from '../../stores/auth';
+
     import panel from '../../stores/panel';
     import options from '../../stores/options';
 
@@ -12,16 +21,28 @@
         }
     }
 
-    $: selected = $panel === 'prof' ? 'selected' : '';
+    onMount(createClient)
+
+    $: selected = $panel === 'prof';
 </script>
 
 <button
     class="head-tag filter-transition"
     class:selected
     class:animation={$options.animation}
-    on:click={onClick}>
-    <ProfileIcon />
-    <p>inicar sesión</p>
+    on:click={$isAuth ? onClick : login()}>
+    {#if $isAuth}
+        <img src={$user.picture} alt="user" />
+        <section>
+            <h5>{$user.nickname}</h5>
+            <p>Lorem, ipsum dolor.</p>
+        </section>
+    {:else}
+        <ProfileIcon />
+        <section>
+            <h5>inicar sesión</h5>
+        </section>
+    {/if}
 </button>
 
 <style>
@@ -30,6 +51,9 @@
         text-overflow: ellipsis;
         white-space: nowrap;
         padding-inline: .5em;
+    }
+    p {
+        font-size: 12px;
     }
     button {
         display: flex;
@@ -52,5 +76,12 @@
     }
     button > :global(svg) {
         width: var(--img-size);
+    }
+    img {
+        width: 48px;
+        height: 48px;
+    }
+    section {
+        overflow: hidden;
     }
 </style>

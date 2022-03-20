@@ -9,7 +9,7 @@
             panel.setToAdd();
         }
     }
-    $: selected = $panel === 'add' ? 'selected' : '';
+    $: selected = $panel === 'add';
 </script>
 
 <button

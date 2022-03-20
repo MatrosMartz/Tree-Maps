@@ -3,7 +3,7 @@
 
     import options from '../../stores/options';
 
-    $: selected = href === page
+    $: selected = href === page;
 </script>
 
 <a
