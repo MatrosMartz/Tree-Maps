@@ -1,22 +1,15 @@
 <script lang="ts">
-    import panel from '../../stores/panel';
+    export let panel: string;
+
     import options from '../../stores/options';
 
-    function onClick() {
-        if ($panel === 'add') {
-            panel.setToNone();
-        } else {
-            panel.setToAdd();
-        }
-    }
-    $: selected = $panel === 'add';
+    $: selected = panel === 'add';
 </script>
 
 <button
     class="head-tag filter-transition"
     class:selected
-    class:animation={$options.animation}
-    on:click={onClick}>
+    class:animation={$options.animation}>
     <slot />
 </button>
 

@@ -1,5 +1,6 @@
 <script lang="ts">
     import { page } from '$app/stores';
+    import panel from '../../stores/panel';
 
     import FooterLink from './FooterLink.svelte';
     import FooterBtn from './FooterBtn.svelte';
@@ -9,16 +10,24 @@
 	import AddIcon from '../icons/AddIcon.svelte';
 	import LeadersIcon from '../icons/LeadersIcon.svelte';
 	import ResourcesIcon from '../icons/ResourcesIcon.svelte';
+
+    function onClick(evt: MouseEvent) {
+        if ((evt.target instanceof HTMLButtonElement) && ($panel !== 'add')) {
+            panel.setToAdd();
+        } else {
+            panel.setToNone();
+        }
+    }
 </script>
 
-<footer>
+<footer on:click={onClick}>
     <FooterLink href="/" page={$page.url.pathname}>
         <HomeIcon />
     </FooterLink>
     <FooterLink href="/trees" page={$page.url.pathname}>
         <TreesIcon />
     </FooterLink>
-    <FooterBtn>
+    <FooterBtn panel={$panel}>
         <AddIcon />
     </FooterBtn>
     <FooterLink href="/leaders" page={$page.url.pathname}>

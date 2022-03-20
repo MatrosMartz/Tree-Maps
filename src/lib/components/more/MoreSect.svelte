@@ -7,20 +7,28 @@
 
     import { page } from '$app/stores';
     import { isAuth } from '../../stores/auth';
+    import panel from '../../stores/panel';
+
+    function onClick(evt: MouseEvent) {
+        if (evt.target instanceof HTMLAnchorElement) {
+            panel.setToNone();
+        }
+    }
 </script>
 
 <section
     class="panel-sect right"
     class:active
-    class:animation>
+    class:animation
+    on:click={onClick}>
     <h5 class="sect-h5">paginas aledañas xd</h5>
     {#if $page.url.pathname === '/'}
         <a href="/">home</a>
-        {:else if  $page.url.pathname === '/trees'}
+    {:else if $page.url.pathname.startsWith('/trees')}
         <TreesLinks auth={$isAuth}/>
-    {:else if  $page.url.pathname === '/leaders'}
+    {:else if $page.url.pathname.startsWith('/leaders')}
         <LeadersLinks auth={$isAuth}/>
-    {:else if  $page.url.pathname === '/resources'}
+    {:else if $page.url.pathname.startsWith('/resources')}
         <ResourcesLinks />
     {:else}
         N / A
