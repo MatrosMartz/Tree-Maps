@@ -53,11 +53,11 @@
         width: var(--img-size);
         height: var(--img-size);
 
-        border-radius: 7px;
+        border-radius: 10px;
         box-shadow: 0 0 2px transparent;
     }
     input.animation {
-        transition: filter 200ms, box-shadow 200ms, border-radius 200ms ease-in-out;
+        transition: filter 200ms ease-in-out, box-shadow 200ms ease-in-out;
     }
     input::after {
         content: '';
@@ -78,27 +78,26 @@
         filter: opacity(100%);
     }
     input#green {
-        color: var(--g-sh);
-        background-color: var(--g-lb);
+        color: var(--g-wc);
+        background-color: var(--g-wb);
         border: 3px solid currentColor;
     }
     input#orange {
-        color: var(--o-sh);
-        background-color: var(--o-lb);
+        color: var(--o-wc);
+        background-color: var(--o-wb);
         border: 3px solid currentColor;
     }
     input#red {
-        color: var(--r-sh);
-        background-color: var(--r-lb);
+        color: var(--r-wc);
+        background-color: var(--r-wb);
         border: 3px solid currentColor;
     }
     input#blue {
-        color: var(--b-sh);
-        background-color: var(--b-lb);
+        color: var(--b-wc);
+        background-color: var(--b-wb);
         border: 3px solid currentColor;
     }
     input:checked {
-        border-radius: 12px;
-        box-shadow: 0 0 2px currentColor;
+        box-shadow: 0 0 4px currentColor;
     }
 </style>
