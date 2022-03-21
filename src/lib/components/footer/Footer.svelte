@@ -12,7 +12,8 @@
 	import ResourcesIcon from '../icons/ResourcesIcon.svelte';
 
     function onClick(evt: MouseEvent) {
-        if ((evt.target instanceof HTMLButtonElement) && ($panel !== 'add')) {
+    	const path = evt.composedPath();
+        if ((path[1] instanceof HTMLButtonElement) && ($panel !== 'add')) {
             panel.setToAdd();
         } else {
             panel.setToNone();
