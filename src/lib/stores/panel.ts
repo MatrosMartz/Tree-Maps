@@ -45,4 +45,4 @@ export default {
 	setToAdd,
 	setToOpts,
 	setToProf,
-}
+};

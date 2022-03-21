@@ -1,9 +1,9 @@
 <script>
-    import { page } from '$app/stores';
-    console.log($page.error);
+	import { page } from '$app/stores';
+	console.log($page.error);
 </script>
 
 <main>
-    <h1>{$page.error.name}</h1>
-    <p>{$page.error.message}</p>
+	<h1>{$page.error.name}</h1>
+	<p>{$page.error.message}</p>
 </main>

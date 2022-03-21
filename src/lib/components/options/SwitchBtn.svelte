@@ -1,96 +1,93 @@
 <script lang="ts">
-    export let id: string;
+	export let id: string;
 
-    import options from '../../stores/options';
+	import options from '../../stores/options';
 
-    let checked: boolean;
-    if (id === 'theme') checked = $options.theme === 'lightmode';
-    else if (id === 'animation') checked = $options.animation;
-    
-    $: options[`set_${id}`](checked);
+	let checked: boolean;
+	if (id === 'theme') checked = $options.theme === 'lightmode';
+	else if (id === 'animation') checked = $options.animation;
+
+	$: options[`set_${id}`](checked);
 </script>
 
 <fieldset>
-    <slot name="name" />
-    <input type="checkbox" name={id} {id} bind:checked />
-    <label
-        for={id}
-        class="filter-transition"
-        class:animation={$options.animation}>
-        <slot name="first"/>
-        <slot name="last" />
-    </label>
+	<slot name="name" />
+	<input type="checkbox" name={id} {id} bind:checked />
+	<label for={id} class="filter-transition" class:animation={$options.animation}>
+		<slot name="first" />
+		<slot name="last" />
+	</label>
 </fieldset>
 
 <style>
-    fieldset {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-    }
-    input {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-    }
-    label {
-        display: flex;
-        position: relative;
-        box-sizing: border-box;
-        gap: 3px;
+	fieldset {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+	}
+	input {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+	}
+	label {
+		display: flex;
+		position: relative;
+		box-sizing: border-box;
+		gap: 3px;
 
-        overflow: hidden;
-        user-select: none;
-        cursor: pointer;
+		overflow: hidden;
+		user-select: none;
+		cursor: pointer;
 
-        width: calc((var(--img-size) * 2) + 3px);
-        
-        border-radius: 12px;
-        border: 3px solid var(--sh);
+		width: calc((var(--img-size) * 2) + 3px);
 
-        background-color: var(--lb);
-    }
-    label::before {
-        content: '';
-        position: absolute;
+		border-radius: 12px;
+		border: 3px solid var(--sh);
 
-        border-radius: 2px;
-        
-        top: 50%;
-        left: 50%;
+		background-color: var(--lb);
+	}
+	label::before {
+		content: '';
+		position: absolute;
 
-        width: 3px;
-        height: calc(1rem * 2.2);
+		border-radius: 2px;
 
-        background-color: var(--sh);
-        
-        transform: translate(-50%, -50%);
-    }
-    label::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 25%;
-        
-        width: calc(1rem * 2.2);
-        height: calc(1rem * 2.2);
-        
-        border-radius: 7px;
-        
-        color: var(--sh);
-        background-color: var(--sh);
-        box-shadow: 0 0 2px var(--sh);
-        
-        transform: translate(-50%, -50%);
-    }
-    label.animation::after {
-        transition: transform 200ms ease-in-out;
-    }
-    input:checked + label::after {
-        transform: translate(86%, -50%);
-    }
-    label > :global(svg) {
-        z-index: 10;
-    }
+		top: 50%;
+		left: 50%;
+
+		width: 3px;
+		height: calc(1rem * 2.2);
+
+		background-color: var(--sh);
+
+		transform: translate(-50%, -50%);
+	}
+	label::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 25%;
+
+		width: calc(1rem * 2.2);
+		height: calc(1rem * 2.2);
+
+		border-radius: 7px;
+
+		color: var(--sh);
+		background-color: var(--sh);
+		box-shadow: 0 0 2px var(--sh);
+
+		transform: translate(-50%, -50%);
+	}
+	label.animation::after {
+		transition: transform 200ms ease-in-out;
+	}
+	input:checked + label::after {
+		transform: translate(86%, -50%);
+	}
+	label > :global(svg) {
+		z-index: 10;
+	}
 </style>
