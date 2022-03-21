@@ -16,15 +16,14 @@
 
 	onMount(createClient);
 
-	const root = browser ? document.documentElement : undefined;
-
 	$: {
-		root?.classList?.remove?.('darkmode', 'lightmode');
-		root?.classList?.add?.($options.theme);
-	}
-	$: {
-		root?.classList?.remove?.('green', 'orange', 'red', 'blue');
-		root?.classList?.add?.($options.color);
+		if (browser) {
+			const root = document.documentElement;
+			root.classList.remove('darkmode', 'lightmode');
+			root.classList.add($options.theme);
+			root.classList.remove('green', 'orange', 'red', 'blue');
+			root.classList.add($options.color);
+		}
 	}
 </script>
 

@@ -59,7 +59,7 @@
 	--b-is: hsla(207, 80%, 35%, 0.2);
 	--b-rs: hsla(207, 50%, 55%, 0.2);
 
-	--l-filt: brightness(110%);
+	--l-filt: brightness(120%);
 	--d-filt: brightness(90%);
 
 	--bb: var(--g-bb);
