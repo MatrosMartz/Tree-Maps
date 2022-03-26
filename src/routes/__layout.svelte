@@ -16,14 +16,12 @@
 
 	onMount(createClient);
 
-	$: {
-		if (browser) {
-			const root = document.documentElement;
-			root.classList.remove('darkmode', 'lightmode');
-			root.classList.add($options.theme);
-			root.classList.remove('green', 'orange', 'red', 'blue');
-			root.classList.add($options.color);
-		}
+	$: if (browser) {
+		const root = document.documentElement;
+		root.classList.remove('darkmode', 'lightmode');
+		root.classList.add($options.theme);
+		root.classList.remove('green', 'orange', 'red', 'blue');
+		root.classList.add($options.color);
 	}
 </script>
 
@@ -34,6 +32,7 @@
 <ProfileSect active={$panel === 'prof'} animation={$options.animation} />
 <OptionsSect active={$panel === 'opts'} animation={$options.animation} />
 <MoreSect active={$panel === 'more'} animation={$options.animation} />
+
 <AddSect />
 
 <Footer />
