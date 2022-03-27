@@ -68,10 +68,10 @@
 		content: '';
 		position: absolute;
 		top: 50%;
-		left: 25%;
+		left: 50%;
 
-		width: calc(1rem * 2.2);
-		height: calc(1rem * 2.2);
+		width: 3rem;
+		height: 3rem;
 
 		border-radius: 7px;
 
@@ -79,13 +79,13 @@
 		background-color: var(--sh);
 		box-shadow: 0 0 2px var(--sh);
 
-		transform: translate(-50%, -50%);
+		transform: translate(-100%, -50%) scale(72%);
 	}
 	label.animation::after {
 		transition: transform 200ms ease-in-out;
 	}
 	input:checked + label::after {
-		transform: translate(86%, -50%);
+		transform: translate(0%, -50%) scale(72%);
 	}
 	label > :global(svg) {
 		z-index: 10;

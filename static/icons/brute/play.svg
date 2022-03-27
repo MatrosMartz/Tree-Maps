@@ -22,7 +22,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
-     showgrid="false"
+     showgrid="true"
      inkscape:showpageshadow="false"
      showguides="false"
      inkscape:lockguides="false"
@@ -31,9 +31,9 @@
      inkscape:bbox-nodes="true"
      inkscape:guide-bbox="true"
      inkscape:object-paths="false"
-     inkscape:zoom="1"
-     inkscape:cx="-274"
-     inkscape:cy="-129"
+     inkscape:zoom="4"
+     inkscape:cx="22"
+     inkscape:cy="18.5"
      inkscape:window-width="1366"
      inkscape:window-height="705"
      inkscape:window-x="-8"
@@ -545,10 +545,8 @@
      style="display:inline">
     <path
        style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 2.6458333,1.3229163 v 9.2604177 a 0.56395641,0.56395641 28.051914 0 0 0.8784691,0.468111 L 10.377733,6.4467955 a 0.59474854,0.59474854 89.999999 0 0 0,-0.9873415 L 3.5243024,0.8548045 A 0.56395644,0.56395644 151.94808 0 0 2.6458333,1.3229163 Z"
+       d="m 2.9104167,1.3229166 v 9.2604174 c 0,0.451348 0.5038275,0.719823 0.8784691,0.468111 L 10.642316,6.4467958 c 0.350751,-0.2356611 0.350751,-0.7516806 0,-0.9873416 L 3.7888858,0.85480484 C 3.414244,0.60309231 2.9104167,0.87156785 2.9104167,1.3229166 Z"
        id="path3125"
-       sodipodi:nodetypes="cccc"
-       inkscape:path-effect="#path-effect3373"
-       inkscape:original-d="M 2.6458333,0.264583 V 11.641667 L 11.112499,5.9531247 Z" />
+       sodipodi:nodetypes="csssssc" />
   </g>
 </svg>

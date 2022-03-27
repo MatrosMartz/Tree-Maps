@@ -1,13 +1,24 @@
 <script>
+	import HistoringTreeIcon from '../icons/HistoringTreeIcon.svelte';
+	import MapingTreeIcon from '../icons/MapingTreeIcon.svelte';
+	import TreesIcon from '../icons/TreesIcon.svelte';
+
 	import panel from '../../stores/panel';
 	import options from '../../stores/options';
+	
 	$: active = $panel === 'add';
 </script>
 
 <section class:active class:animation={$options.animation}>
-	<a href="#_">1</a>
-	<a href="#_">2</a>
-	<a href="#_">3</a>
+	<a href="#_">
+		<TreesIcon />
+	</a>
+	<a href="#_">
+		<HistoringTreeIcon />
+	</a>
+	<a href="#_">
+		<MapingTreeIcon />
+	</a>
 </section>
 
 <style>
