@@ -26,14 +26,18 @@ export async function createClient() {
 export function login() {
 	return async () => {
 		popupOpen.set(true);
-		try {
-			await get(client).loginWithPopup();
-			user.set(await get(client).getUser());
-			isAuth.set(true);
-		} catch (err) {
-			console.error(err);
-		} finally {
-			popupOpen.set(false);
+		if (get(client) == null) {
+			alert('no se puede conectar con Auth0');
+		} else {
+			try {
+				await get(client).loginWithPopup();
+				user.set(await get(client).getUser());
+				isAuth.set(true);
+			} catch (err) {
+				console.error(err);
+			} finally {
+				popupOpen.set(false);
+			}
 		}
 	};
 }
