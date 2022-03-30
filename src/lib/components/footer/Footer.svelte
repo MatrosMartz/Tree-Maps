@@ -14,19 +14,17 @@
 	import { isAuth } from '$lib/stores/auth';
 
 	function onClick(evt: MouseEvent) {
-		console.log($isAuth);
-		if ($isAuth) {
-			const path = evt.composedPath();
-			if (path[1] instanceof HTMLButtonElement && $panel !== 'add') {
+		const path = evt.composedPath();
+		if (path[1] instanceof HTMLButtonElement && $panel !== 'add') {
+			if ($isAuth) {
 				panel.setToAdd();
 			} else {
-				panel.setToNone();
+				alert('no ha inicado sesión');
 			}
+		} else {
+			panel.setToNone();
 		}
-		else {
-			alert('no ha inicado sesión');
-		}
-	}
+}
 </script>
 
 <footer on:click={onClick}>

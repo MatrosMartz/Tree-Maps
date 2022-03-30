@@ -1,0 +1,107 @@
+@keyframes one-animation {
+    0% {
+        transform: translateY(15%);
+    }
+    10% {
+        transform: translateY(0);
+    }
+}
+@keyframes two-animation {
+    0% {
+        transform: translateY(30%);
+    }
+    10% {
+        transform: translateY(30%);
+    }
+    20% {
+        transform: translateY(0);
+    }
+}
+@keyframes three-animation {
+    0% {
+        transform: translateY(45%);
+    }
+    20% {
+        transform: translateY(45%);
+    }
+    30% {
+        transform: translateY(0);
+    }
+}
+@keyframes four-animation {
+    0% {
+        transform: translateY(60%);
+    }
+    30% {
+        transform: translateY(60%);
+    }
+    40% {
+        transform: translateY(0);
+    }
+}
+@keyframes five-animation {
+    0% {
+        transform: translateY(75%);
+    }
+    40% {
+        transform: translateY(75%);
+    }
+    50% {
+        transform: translateY(0);
+    }
+}
+@keyframes six-animation {
+    0% {
+        transform: translateY(90%);
+    }
+    50% {
+        transform: translateY(90%);
+    }
+    60% {
+        transform: translateY(0);
+    }
+}
+@keyframes seven-animation {
+    0% {
+        transform: translateY(105%);
+    }
+    60% {
+        transform: translateY(105%);
+    }
+    70% {
+        transform: translateY(0);
+    }
+}
+@keyframes eight-animation {
+    0% {
+        transform: translateY(120%);
+    }
+    70% {
+        transform: translateY(120%);
+    }
+    80% {
+        transform: translateY(0);
+    }
+}
+@keyframes nine-animation {
+    0% {
+        transform: translateY(135%);
+    }
+    80% {
+        transform: translateY(135%);
+    }
+    90% {
+        transform: translateY(0);
+    }
+}
+@keyframes teen-animation {
+    0% {
+        transform: translateY(150%);
+    }
+    90% {
+        transform: translateY(150%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

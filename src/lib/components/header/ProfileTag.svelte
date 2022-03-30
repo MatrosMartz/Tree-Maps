@@ -17,15 +17,10 @@
 	$: selected = $panel === 'prof';
 </script>
 
-<button
-	class="head-tag filter-transition"
-	class:selected
-	class:animation={$options.animation}
-	on:click={$isAuth ? onClick : login()}
->
+<button class="head-tag filter-transition" on:click={$isAuth ? onClick : login()}>
 	{#if $isAuth}
 		<img src={$user.picture} alt="user" />
-		<section>
+		<section class:selected class:animation={$options.animation}>
 			<h5>{$user.nickname}</h5>
 			<p>{$user.email}</p>
 		</section>
