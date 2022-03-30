@@ -11,12 +11,20 @@
 	import LeadersIcon from '../icons/LeadersIcon.svelte';
 	import ResourcesIcon from '../icons/ResourcesIcon.svelte';
 
+	import { isAuth } from '$lib/stores/auth';
+
 	function onClick(evt: MouseEvent) {
-		const path = evt.composedPath();
-		if (path[1] instanceof HTMLButtonElement && $panel !== 'add') {
-			panel.setToAdd();
-		} else {
-			panel.setToNone();
+		console.log($isAuth);
+		if ($isAuth) {
+			const path = evt.composedPath();
+			if (path[1] instanceof HTMLButtonElement && $panel !== 'add') {
+				panel.setToAdd();
+			} else {
+				panel.setToNone();
+			}
+		}
+		else {
+			alert('no ha inicado sesión');
 		}
 	}
 </script>
