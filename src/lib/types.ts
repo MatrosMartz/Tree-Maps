@@ -1,10 +1,31 @@
-export type Panel = 'none' | 'opts' | 'more' | 'add' | 'prof';
+export enum Panel {
+	none = 'none',
+	opts = 'opts',
+	more = 'more',
+	add  =  'add',
+	prof = 'prof',
+}
 
-export type Color = 'green' | 'orange' | 'red' | 'blue';
+export enum Color {
+	g = 'green',
+	o = 'orange',
+	r = 'red',
+	b = 'blue',
+}
+
+export enum Theme {
+	dark = 'darkmode',
+	light = 'lightmode',
+}
+
+export enum Lang {
+	english = 'en',
+	spanish = 'es',
+}
 
 export interface Options {
-	theme: 'darkmode' | 'lightmode';
+	theme: Theme;
 	animation: boolean;
-	lang: 'en' | 'es';
+	lang: Lang;
 	color: Color;
 }

@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { Color } from '../../types';
+	import { Color } from '../../types';
 	import options from '../../stores/options';
 
 	let group: Color = $options.color;
-	let colors: Color[] = ['green', 'orange', 'red', 'blue'];
+	let colors: Color[] = [ Color.g, Color.o, Color.r, Color.b ];
 
 	$: options.set_color(group);
 </script>

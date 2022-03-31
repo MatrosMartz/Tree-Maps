@@ -1,37 +1,20 @@
-import type { Options, Color } from '../types';
+import type { Options } from '../types';
+import { Color, Lang, Theme } from '../types';
 
 import { browser } from '$app/env';
 import { writable } from 'svelte/store';
 
-const opts: Options = {
-	theme: 'lightmode',
-	animation: true,
-	lang: 'es',
-	color: 'green',
+export const opts: Options = {
+	theme: isDarkmode(localStorage?.getItem('theme')) ? Theme.dark : Theme.light,
+	animation: isNotReducedMotion(localStorage?.getItem('animation')),
+	lang: isLangNotSpanish(localStorage?.getItem('lang')) ?? Lang.spanish,
+	color: isColorNotGreen(localStorage?.getItem('color')) ?? Color.g,
 };
-
-if (browser) {
-	const theme = localStorage.getItem('theme');
-	const animation = localStorage.getItem('animation');
-	const lang = localStorage.getItem('lang');
-	const color = localStorage.getItem('color');
-
-	if (theme === 'darkmode' || theme === 'lightmode') opts.theme = theme;
-	else if (matchMedia('(prefers-color-scheme: dark)').matches) opts.theme = 'darkmode';
-
-	if (animation === 'true' || animation === 'false') opts.animation = animation === 'true';
-	else if (matchMedia('(prefers-reduced-motion)').matches) opts.animation = false;
-
-	if (lang === 'es' || lang === 'en') opts.lang = lang;
-
-	if (color === 'green' || color === 'orange' || color === 'red' || color === 'blue')
-		opts.color = color;
-}
 
 const { subscribe, update } = writable(opts);
 
 function set_theme(val: boolean) {
-	const theme = val ? 'lightmode' : 'darkmode';
+	const theme = val ? Theme.light : Theme.dark;
 	if (browser) localStorage.setItem('theme', theme);
 	update(d => {
 		return {
@@ -50,7 +33,7 @@ function set_animation(val: boolean) {
 	});
 }
 function set_lang(val: boolean) {
-	const lang = val ? 'en' : 'es';
+	const lang = val ? Lang.english : Lang.spanish;
 	if (browser) localStorage.setItem('lang', lang);
 	update(d => {
 		return {
@@ -69,6 +52,21 @@ function set_color(val: Color) {
 			};
 		});
 	}
+}
+
+function isDarkmode(t: string | undefined) {
+	return t === Theme.dark || matchMedia('(prefers-color-scheme: dark)').matches;
+}
+function isNotReducedMotion(m: string | undefined) {
+	return !(m === 'false' || matchMedia('(prefers-reduced-motion)').matches);
+}
+
+function isLangNotSpanish(l: string | undefined) {
+	return l === Lang.english ? l : null;
+}
+
+function isColorNotGreen(c: string | undefined) {
+	return c === Color.o || c === Color.r || c === Color.b ? c : null;
 }
 
 export default {

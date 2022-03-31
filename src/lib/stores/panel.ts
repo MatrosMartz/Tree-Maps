@@ -1,4 +1,4 @@
-import type { Panel } from '../types';
+import { Panel } from '../types';
 
 import { writable } from 'svelte/store';
 const time = 250;
@@ -10,31 +10,31 @@ let timeoutID: ReturnType<typeof setTimeout>;
 function setToNone() {
 	if (timeoutID != undefined) clearTimeout(timeoutID);
 	timeoutID = setTimeout(() => {
-		setSub('none');
+		setSub(Panel.none);
 	}, time);
 }
 function setToMore() {
 	if (timeoutID != undefined) clearTimeout(timeoutID);
 	timeoutID = setTimeout(() => {
-		setSub('more');
+		setSub(Panel.more);
 	}, time);
 }
 function setToAdd() {
 	if (timeoutID != undefined) clearTimeout(timeoutID);
 	timeoutID = setTimeout(() => {
-		setSub('add');
+		setSub(Panel.add);
 	}, time);
 }
 function setToOpts() {
 	if (timeoutID != undefined) clearTimeout(timeoutID);
 	timeoutID = setTimeout(() => {
-		setSub('opts');
+		setSub(Panel.opts);
 	}, time);
 }
 function setToProf() {
 	if (timeoutID != undefined) clearInterval(timeoutID);
 	timeoutID = setInterval(() => {
-		setSub('prof');
+		setSub(Panel.prof);
 	}, time);
 }
 
