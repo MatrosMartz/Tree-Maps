@@ -1,78 +1,72 @@
-import type { Options } from '../types';
-import { Color, Lang, Theme } from '../types';
+import type { SessionStore } from '../types';
+
+import { Color, Lang, Theme, type Options } from '../types/options';
 
 import { browser } from '$app/env';
-import { writable } from 'svelte/store';
+import { session } from '$app/stores';
 
-export const opts: Options = {
-	theme: isDarkmode(localStorage?.getItem('theme')) ? Theme.dark : Theme.light,
-	animation: isNotReducedMotion(localStorage?.getItem('animation')),
-	lang: isLangNotSpanish(localStorage?.getItem('lang')) ?? Lang.spanish,
-	color: isColorNotGreen(localStorage?.getItem('color')) ?? Color.g,
-};
+import { derived, get } from 'svelte/store';
 
-const { subscribe, update } = writable(opts);
+import { set_config, parseOptions, isOptions } from '../utilities/options';
 
-function set_theme(val: boolean) {
-	const theme = val ? Theme.light : Theme.dark;
-	if (browser) localStorage.setItem('theme', theme);
-	update(d => {
-		return {
-			...d,
-			theme,
-		};
-	});
+
+
+export function set_theme(t: boolean) {
+    if (browser) {
+        const newOptions: Options = {...get(options), theme: t ? Theme.dark : Theme.light };
+        const newSesstion = { opts: JSON.stringify(newOptions) };
+        set_config(newOptions);
+        session.update(() => newSesstion);
+    }
 }
-function set_animation(val: boolean) {
-	if (browser) localStorage.setItem('animation', val + '');
-	update(d => {
-		return {
-			...d,
-			animation: val,
-		};
-	});
-}
-function set_lang(val: boolean) {
-	const lang = val ? Lang.english : Lang.spanish;
-	if (browser) localStorage.setItem('lang', lang);
-	update(d => {
-		return {
-			...d,
-			lang,
-		};
-	});
-}
-function set_color(val: Color) {
-	if (browser) localStorage.setItem('color', val);
-	if (val !== undefined) {
-		update(d => {
-			return {
-				...d,
-				color: val,
-			};
-		});
-	}
+export function set_lang(l: boolean) {
+    if (browser) {
+        const newOptions: Options = {...get(options), lang: l ? Lang.english : Lang.spanish };
+        const newSesstion = { opts: JSON.stringify(newOptions) };
+        set_config(newOptions);
+        session.update(() => newSesstion);
+    }
 }
 
-function isDarkmode(t: string | undefined) {
-	return t === Theme.dark || matchMedia('(prefers-color-scheme: dark)').matches;
+export function set_animation(animation: boolean) {
+    if (browser) {
+        const newOptions: Options = {...get(options), animation };
+        const newSesstion = { opts: JSON.stringify(newOptions) };
+        set_config(newOptions);
+        session.update(() => newSesstion);
+    }
 }
-function isNotReducedMotion(m: string | undefined) {
-	return !(m === 'false' || matchMedia('(prefers-reduced-motion)').matches);
+export function set_color(color: Color) {
+    if (browser) {
+        const newOptions: Options = {...get(options), color };
+        const newSesstion = { opts: JSON.stringify(newOptions) };
+        set_config(newOptions);
+        session.update(() => newSesstion);
+    }
 }
 
-function isLangNotSpanish(l: string | undefined) {
-	return l === Lang.english ? l : null;
-}
+const options = derived<SessionStore, Options>(<SessionStore>session, ($session, set) => {
+    const optsOfSession = parseOptions($session.opts);
+    if (isOptions(optsOfSession)) {
+        set(optsOfSession);
+    } else if (browser) {
+        const opts = {
+            theme:  matchMedia('(prefers-color-scheme: dark)').matches ? Theme.dark : Theme.light,
+            animation: !(matchMedia('(prefers-reduced-motion)').matches),
+            lang: Lang.spanish,
+            color: Color.g,
+        }
+        set(opts);
+        set_config(opts);
+    } else {
+        set({
+            theme: Theme.light,
+            animation: true,
+            lang: Lang.spanish,
+            color: Color.g,
+        });
 
-function isColorNotGreen(c: string | undefined) {
-	return c === Color.o || c === Color.r || c === Color.b ? c : null;
-}
+    }
+});
 
-export default {
-	subscribe,
-	set_animation,
-	set_theme,
-	set_lang,
-	set_color,
-};
+export default options;

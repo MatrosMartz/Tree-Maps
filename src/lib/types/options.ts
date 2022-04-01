@@ -1,11 +1,3 @@
-export enum Panel {
-	none = 'none',
-	opts = 'opts',
-	more = 'more',
-	add  =  'add',
-	prof = 'prof',
-}
-
 export enum Color {
 	g = 'green',
 	o = 'orange',

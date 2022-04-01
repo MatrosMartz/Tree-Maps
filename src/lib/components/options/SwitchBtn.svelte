@@ -1,18 +1,22 @@
 <script lang="ts">
 	export let id: string;
 
-	import options from '../../stores/options';
+	import options, * as setter from '../../stores/options';
 
 	let checked: boolean;
 	if (id === 'theme') checked = $options.theme === 'lightmode';
 	else if (id === 'animation') checked = $options.animation;
 
-	$: options[`set_${id}`](checked);
+	
+	function onInput() {
+		console.log(checked);
+		setter[`set_${id}`](checked);
+	}
 </script>
 
 <fieldset>
 	<slot name="name" />
-	<input type="checkbox" name={id} {id} bind:checked />
+	<input type="checkbox" name={id} {id} bind:checked on:input={onInput} />
 	<label for={id} class="filter-transition" class:animation={$options.animation}>
 		<slot name="first" />
 		<slot name="last" />

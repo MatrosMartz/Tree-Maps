@@ -1,11 +1,11 @@
-import { Panel } from '../types';
+import { Panel, type TimeoutID } from '../types';
 
 import { writable } from 'svelte/store';
 const time = 250;
 
 const { subscribe, set: setSub } = writable(<Panel>'none');
 
-let timeoutID: ReturnType<typeof setTimeout>;
+let timeoutID: TimeoutID;
 
 function setToNone() {
 	if (timeoutID != undefined) clearTimeout(timeoutID);

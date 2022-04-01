@@ -1,11 +1,13 @@
 <script lang="ts">
-	import { Color } from '../../types';
-	import options from '../../stores/options';
+	import { Color } from '../../types/options';
+	import options, { set_color } from '../../stores/options';
 
 	let group: Color = $options.color;
-	let colors: Color[] = [ Color.g, Color.o, Color.r, Color.b ];
+	let colors = [ Color.g, Color.o, Color.r, Color.b ];
 
-	$: options.set_color(group);
+	function onClick() {
+		set_color(group);
+	};
 </script>
 
 <fieldset>
@@ -21,6 +23,7 @@
 				{id}
 				bind:group
 				value={id}
+				on:change={onClick}
 			/>
 		</label>
 	{/each}

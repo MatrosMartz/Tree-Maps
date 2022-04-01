@@ -20,8 +20,8 @@
 
 	<SwitchBtn id="animation">
 		<legend slot="name">animaciones</legend>
-		<NonAnimationIcon slot="first" />
 		<AnimationIcon slot="last" />
+		<NonAnimationIcon slot="first" />
 	</SwitchBtn>
 
 	<RadioColors />

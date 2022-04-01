@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { browser } from '$app/env';
 
 	import Header from '$lib/components/header/Header.svelte';
 	import Footer from '$lib/components/footer/Footer.svelte';
@@ -11,28 +12,23 @@
 	import options from '$lib/stores/options';
 	import panel from '$lib/stores/panel';
 	import { createClient } from '$lib/stores/auth';
-
-	import { browser } from '$app/env';
+	import { session } from '$app/stores';
 
 	onMount(createClient);
 
-	$: if (browser) {
-		const root = document.documentElement;
-		root.classList.remove('darkmode', 'lightmode');
-		root.classList.add($options.theme);
-		root.classList.remove('green', 'orange', 'red', 'blue');
-		root.classList.add($options.color);
-	}
+	$: console.log($session);
 </script>
 
-<Header />
+<div id="app" class="{$options.theme} {$options.color}">
+	<Header />
+	<slot />
+	
+	<ProfileSect active={$panel === 'prof'} animation={$options.animation} />
+	<OptionsSect active={$panel === 'opts'} animation={$options.animation} />
+	<MoreSect active={$panel === 'more'} animation={$options.animation} />
+	
+	<AddSect />
+	
+	<Footer />
+</div>
 
-<slot />
-
-<ProfileSect active={$panel === 'prof'} animation={$options.animation} />
-<OptionsSect active={$panel === 'opts'} animation={$options.animation} />
-<MoreSect active={$panel === 'more'} animation={$options.animation} />
-
-<AddSect />
-
-<Footer />
