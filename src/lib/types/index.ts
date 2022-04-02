@@ -8,6 +8,11 @@ export enum Panel {
 	prof = 'prof',
 }
 
+export enum Photo {
+	camera = 'camera',
+	file   =   'file',
+}
+
 export interface SessionInterface {
     opts: string;
 }

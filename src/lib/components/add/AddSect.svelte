@@ -5,18 +5,22 @@
 
 	import panel from '../../stores/panel';
 	import options from '../../stores/options';
+
+	function onClick() {
+		panel.setToNone();
+	}
 	
 	$: active = $panel === 'add';
 </script>
 
-<section class:active class:animation={$options.animation}>
+<section class:active class:animation={$options.animation} on:click={onClick}>
 	<a href="#_">
 		<TreesIcon />
 	</a>
 	<a href="#_">
 		<HistoringTreeIcon />
 	</a>
-	<a href="#_">
+	<a href="add/trees">
 		<MapingTreeIcon />
 	</a>
 </section>
