@@ -16,7 +16,6 @@
 
 	onMount(createClient);
 
-	$: console.log($session);
 </script>
 
 <div id="app" class="{$options.theme} {$options.color}">
@@ -31,4 +30,3 @@
 	
 	<Footer />
 </div>
-

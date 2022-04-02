@@ -1,6 +1,10 @@
 <script lang="ts">
+	import { browser } from '$app/env';
+
+	import Camera from '$lib/components/photos/Camera.svelte';
+	import InputImage from '$lib/components/photos/InputImage.svelte';
+
 	import { Photo } from '$lib/types';
-	import Camera from '$lib/components/Camera.svelte';
 
 	let photo: Photo = Photo.file;
 </script>
@@ -11,12 +15,25 @@
 		<fieldset>
 			<legend>foto</legend>
 			{#if photo === Photo.file}
-				a
+				<InputImage />
 			{:else}
 				<Camera />
 			{/if}
-			<input type="radio" name="photo" id={Photo.file} value={Photo.file} bind:group={photo} />
-			<input type="radio" name="photo" id={Photo.camera} value={Photo.camera} bind:group={photo} />
+			<input
+				type="radio"
+				name="photo"
+				id={Photo.file}
+				value={Photo.file}
+				bind:group={photo}
+			/>
+			<input
+				type="radio"
+				name="photo"
+				id={Photo.camera}
+				value={Photo.camera}
+				bind:group={photo}
+				disabled={!(browser && navigator.mediaDevices)}
+			/>
 		</fieldset>
 	</form>
 </main>
@@ -24,18 +41,20 @@
 <style>
 	form {
 		display: flex;
+		flex-direction: column;
 		align-items: center;
-		justify-content: center;
+		justify-content: space-between;
 
-		overflow: hidden;
+		overflow: hidden visible;
 		border-radius: 7px;
-		
-		width: 95vw;
+
+		width: 92vw;
 		min-height: 60vh;
-		
+
 		margin: 1rem auto;
-		
-		box-shadow: 0 4px 10px var(--rs);
+
+		box-shadow: 0 4px 10px var(--is);
+		background-color: var(--lb);
 	}
 	fieldset {
 		width: 90%;
