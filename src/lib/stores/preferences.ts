@@ -1,0 +1,75 @@
+import type { SessionStore } from '../types';
+
+import { Color, Lang, Theme, type Preferences } from '../types/preferences';
+
+import { browser } from '$app/env';
+import { session } from '$app/stores';
+
+import { derived, get } from 'svelte/store';
+
+import { set_config, parsePreferences, isPreferences } from '../utilities/preferences';
+
+export function set_theme(t: boolean) {
+	if (browser) {
+		const newPreferences: Preferences = {
+			...get(preferences),
+			theme: t ? Theme.dark : Theme.light,
+		};
+		const newSesstion = { prfs: JSON.stringify(newPreferences) };
+		set_config(newPreferences);
+		session.update(() => newSesstion);
+	}
+}
+export function set_lang(l: boolean) {
+	if (browser) {
+		const newPreferences: Preferences = {
+			...get(preferences),
+			lang: l ? Lang.english : Lang.spanish,
+		};
+		const newSesstion = { prfs: JSON.stringify(newPreferences) };
+		set_config(newPreferences);
+		session.update(() => newSesstion);
+	}
+}
+
+export function set_animation(animation: boolean) {
+	if (browser) {
+		const newPreferences: Preferences = { ...get(preferences), animation };
+		const newSesstion = { prfs: JSON.stringify(newPreferences) };
+		set_config(newPreferences);
+		session.update(() => newSesstion);
+	}
+}
+export function set_color(color: Color) {
+	if (browser) {
+		const newPreferences: Preferences = { ...get(preferences), color };
+		const newSesstion = { prfs: JSON.stringify(newPreferences) };
+		set_config(newPreferences);
+		session.update(() => newSesstion);
+	}
+}
+
+const preferences = derived<SessionStore, Preferences>(<SessionStore>session, ($session, set) => {
+	const prfsOfSession = parsePreferences($session.prfs);
+	if (isPreferences(prfsOfSession)) {
+		set(prfsOfSession);
+	} else if (browser) {
+		const prfs = {
+			theme: matchMedia('(prefers-color-scheme: dark)').matches ? Theme.dark : Theme.light,
+			animation: !matchMedia('(prefers-reduced-motion)').matches,
+			lang: Lang.spanish,
+			color: Color.g,
+		};
+		set(prfs);
+		set_config(prfs);
+	} else {
+		set({
+			theme: Theme.light,
+			animation: true,
+			lang: Lang.spanish,
+			color: Color.g,
+		});
+	}
+});
+
+export default preferences;

@@ -15,7 +15,7 @@ export enum Lang {
 	spanish = 'es',
 }
 
-export interface Options {
+export interface Preferences {
 	theme: Theme;
 	animation: boolean;
 	lang: Lang;

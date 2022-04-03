@@ -15,7 +15,10 @@
 
 	function onClick(evt: MouseEvent) {
 		const path = evt.composedPath();
-		if (path[1] instanceof HTMLButtonElement && $panel !== 'add') {
+		if (
+			(path[1] instanceof HTMLButtonElement || path[2] instanceof HTMLButtonElement) &&
+			$panel !== 'add'
+		) {
 			if ($isAuth) {
 				panel.setToAdd();
 			} else {
@@ -24,7 +27,7 @@
 		} else {
 			panel.setToNone();
 		}
-}
+	}
 </script>
 
 <footer on:click={onClick}>
@@ -47,12 +50,12 @@
 
 <style>
 	footer {
-		position: fixed;
+		position: absolute;
 		display: flex;
 		justify-content: space-evenly;
 
 		height: var(--img-size);
-		width: 100vw;
+		width: 100%;
 
 		background-color: var(--lb);
 

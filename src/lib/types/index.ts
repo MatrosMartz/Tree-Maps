@@ -4,17 +4,17 @@ export enum Panel {
 	none = 'none',
 	opts = 'opts',
 	more = 'more',
-	add  =  'add',
+	add = 'add',
 	prof = 'prof',
 }
 
 export enum Photo {
 	camera = 'camera',
-	file   =   'file',
+	file = 'file',
 }
 
 export interface SessionInterface {
-    opts: string;
+	prfs?: string;
 }
 
 export type SessionStore = Writable<SessionInterface>;

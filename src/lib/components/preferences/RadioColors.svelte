@@ -1,13 +1,13 @@
 <script lang="ts">
-	import { Color } from '../../types/options';
-	import options, { set_color } from '../../stores/options';
+	import { Color } from '../../types/preferences';
+	import preferences, { set_color } from '../../stores/preferences';
 
-	let group: Color = $options.color;
-	let colors = [ Color.g, Color.o, Color.r, Color.b ];
+	let group: Color = $preferences.color;
+	let colors = [Color.g, Color.o, Color.r, Color.b];
 
 	function onClick() {
 		set_color(group);
-	};
+	}
 </script>
 
 <fieldset>
@@ -19,7 +19,7 @@
 				type="radio"
 				name="color"
 				class="filter-transition"
-				class:animation={$options.animation}
+				class:animation={$preferences.animation}
 				{id}
 				bind:group
 				value={id}

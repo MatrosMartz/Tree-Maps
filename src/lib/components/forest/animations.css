@@ -1,72 +1,72 @@
 @keyframes one-animation {
-    0% {
-        transform: translateY(15%);
-    }
-    10% {
-        transform: translateY(0);
-    }
+	0% {
+		transform: translateY(15%);
+	}
+	10% {
+		transform: translateY(0);
+	}
 }
 @keyframes two-animation {
-    0% {
-        transform: translateY(30%) scale(0.26458333);
-    }
-    20% {
-        transform: translateY(0) scale(0.26458333);
-    }
+	0% {
+		transform: translateY(30%) scale(0.26458333);
+	}
+	20% {
+		transform: translateY(0) scale(0.26458333);
+	}
 }
 @keyframes three-animation {
-    0% {
-        transform: translateY(45%) scale(0.26458333);
-    }
-    30% {
-        transform: translateY(0) scale(0.26458333);
-    }
+	0% {
+		transform: translateY(45%) scale(0.26458333);
+	}
+	30% {
+		transform: translateY(0) scale(0.26458333);
+	}
 }
 @keyframes four-animation {
-    0% {
-        transform: translateY(60%) scale(0.26458333);
-    }
-    40% {
-        transform: translateY(0) scale(0.26458333);
-    }
+	0% {
+		transform: translateY(60%) scale(0.26458333);
+	}
+	40% {
+		transform: translateY(0) scale(0.26458333);
+	}
 }
 @keyframes five-animation {
-    0% {
-        transform: translateY(75%) scale(0.26458333);
-    }
-    50% {
-        transform: translateY(0) scale(0.26458333);
-    }
+	0% {
+		transform: translateY(75%) scale(0.26458333);
+	}
+	50% {
+		transform: translateY(0) scale(0.26458333);
+	}
 }
 @keyframes six-animation {
-    0% {
-        transform: translateY(90%) scale(0.26458333);
-    }
-    60% {
-        transform: translateY(0) scale(0.26458333);
-    }
+	0% {
+		transform: translateY(90%) scale(0.26458333);
+	}
+	60% {
+		transform: translateY(0) scale(0.26458333);
+	}
 }
 @keyframes seven-animation {
-    0% {
-        transform: translateY(105%) scale(0.26458333);
-    }
-    70% {
-        transform: translateY(0) scale(0.26458333);
-    }
+	0% {
+		transform: translateY(105%) scale(0.26458333);
+	}
+	70% {
+		transform: translateY(0) scale(0.26458333);
+	}
 }
 @keyframes eight-animation {
-    0% {
-        transform: translateY(120%) scale(0.26458333);
-    }
-    80% {
-        transform: translateY(0) scale(0.26458333);
-    }
+	0% {
+		transform: translateY(120%) scale(0.26458333);
+	}
+	80% {
+		transform: translateY(0) scale(0.26458333);
+	}
 }
 @keyframes nine-animation {
-    0% {
-        transform: translateY(135%) scale(0.26458333);
-    }
-    90% {
-        transform: translateY(0) scale(0.26458333);
-    }
+	0% {
+		transform: translateY(135%) scale(0.26458333);
+	}
+	90% {
+		transform: translateY(0) scale(0.26458333);
+	}
 }

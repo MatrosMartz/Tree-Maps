@@ -1,12 +1,12 @@
 <script lang="ts">
 	export let panel: string;
 
-	import options from '../../stores/options';
+	import preferences from '../../stores/preferences';
 
 	$: selected = panel === 'add';
 </script>
 
-<button class="head-tag filter-transition" class:selected class:animation={$options.animation}>
+<button class="head-tag filter-transition" class:selected class:animation={$preferences.animation}>
 	<slot />
 </button>
 

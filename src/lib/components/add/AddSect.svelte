@@ -4,16 +4,16 @@
 	import TreesIcon from '../icons/TreesIcon.svelte';
 
 	import panel from '../../stores/panel';
-	import options from '../../stores/options';
+	import preferences from '../../stores/preferences';
 
 	function onClick() {
 		panel.setToNone();
 	}
-	
+
 	$: active = $panel === 'add';
 </script>
 
-<section class:active class:animation={$options.animation} on:click={onClick}>
+<section class:active class:animation={$preferences.animation} on:click={onClick}>
 	<a href="#_">
 		<TreesIcon />
 	</a>
@@ -28,21 +28,21 @@
 <style>
 	section {
 		position: absolute;
-		bottom: -10%;
+		bottom: -8%;
 		left: 50%;
 
 		width: 160px;
 		height: 160px;
 
 		transform-origin: center;
-		transform: translate(-50%, 0) scale(20%) rotate(-90deg);
+		transform: translate(-50%, 0) scale(5%) rotate(-90deg);
 	}
 	.animation {
 		transition: transform 400ms cubic-bezier(0.5, -0.3, 0.5, 1.3);
 	}
 	.active {
 		transform-origin: center;
-		transform: translate(-50%, -50%) scale(100%) rotate(0);
+		transform: translate(-50%, -40%) scale(100%) rotate(0);
 	}
 	a {
 		display: flex;

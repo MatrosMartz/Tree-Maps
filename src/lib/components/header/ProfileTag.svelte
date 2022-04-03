@@ -4,7 +4,7 @@
 	import { isAuth, user, login } from '../../stores/auth';
 
 	import panel from '../../stores/panel';
-	import options from '../../stores/options';
+	import preferences from '../../stores/preferences';
 
 	function onClick() {
 		if ($panel === 'prof') {
@@ -20,7 +20,7 @@
 <button class="head-tag filter-transition" on:click={$isAuth ? onClick : login()}>
 	{#if $isAuth}
 		<img src={$user.picture} alt="user" />
-		<section class:selected class:animation={$options.animation}>
+		<section class:selected class:animation={$preferences.animation}>
 			<h5>{$user.nickname}</h5>
 			<p>{$user.email}</p>
 		</section>

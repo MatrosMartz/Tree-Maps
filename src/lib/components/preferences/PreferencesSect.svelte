@@ -11,7 +11,7 @@
 </script>
 
 <section class="panel-sect right" class:active class:animation>
-	<h5 class="sect-h5">Opciones</h5>
+	<h5 class="sect-h5">Preferencias</h5>
 	<SwitchBtn id="theme">
 		<legend slot="name">tema</legend>
 		<DarkmodeIcon slot="first" />
@@ -20,8 +20,8 @@
 
 	<SwitchBtn id="animation">
 		<legend slot="name">animaciones</legend>
-		<AnimationIcon slot="last" />
-		<NonAnimationIcon slot="first" />
+		<AnimationIcon slot="first" />
+		<NonAnimationIcon slot="last" />
 	</SwitchBtn>
 
 	<RadioColors />

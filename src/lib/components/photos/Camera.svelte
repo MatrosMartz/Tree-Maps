@@ -3,12 +3,12 @@
 
 	let deviceId: string;
 	let videoThis: HTMLVideoElement;
-	
+
 	const canvas = document.createElement('canvas');
 	const context = canvas.getContext('2d');
-    
+
 	async function media() {
-        try {
+		try {
 			if (browser) {
 				const Devices = (await navigator.mediaDevices.enumerateDevices()).filter(
 					device => device.kind === 'videoinput'
