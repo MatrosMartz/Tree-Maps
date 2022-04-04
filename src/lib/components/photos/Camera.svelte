@@ -1,6 +1,8 @@
 <script lang="ts">
-	import { browser } from '$app/env';
 	import files from '../../stores/images';
+	import { onMount } from 'svelte';
+
+	export let Devices: MediaDeviceInfo[], stream: MediaStream;
 
 	let deviceId: string;
 	let videoThis: HTMLVideoElement;
@@ -8,27 +10,6 @@
 	const canvas = document.createElement('canvas');
 	const context = canvas.getContext('2d');
 
-	async function media() {
-		try {
-			if (browser) {
-				const Devices = (await navigator.mediaDevices.enumerateDevices()).filter(
-					device => device.kind === 'videoinput'
-				);
-				const stream = await navigator.mediaDevices.getUserMedia({
-					video: { deviceId: Devices[0].deviceId },
-				});
-
-				videoThis.srcObject = stream;
-				videoThis.play();
-
-				return {
-					Devices,
-				};
-			}
-		} catch (err) {
-			console.error(err);
-		}
-	}
 	async function onInput() {
 		const stream = await navigator.mediaDevices.getDisplayMedia({ video: { deviceId } });
 		videoThis.srcObject = stream;
@@ -48,13 +29,16 @@
 
 		videoThis.play();
 	}
+
+	onMount(() => {
+		videoThis.srcObject = stream;
+		videoThis.play();
+	});
 </script>
 
 <div>
 	<video bind:this={videoThis} muted />
-	{#await media()}
-		<p>esperando...</p>
-	{:then { Devices }}
+	<section class="buttons">
 		<select
 			name="device"
 			id="device"
@@ -69,9 +53,7 @@
 			{/each}
 		</select>
 		<button on:click={onClick} type="button">tomar foto</button>
-	{:catch error}
-		{error}
-	{/await}
+	</section>
 </div>
 
 <style>
@@ -82,5 +64,16 @@
 		width: 100%;
 
 		border-radius: 7px;
+	}
+	.buttons {
+		display: flex;
+		justify-content: space-evenly;
+	}
+	.buttons > select {
+		width: 60%;
+		height: 2.5em;
+	}
+	.buttons > button {
+		height: 2.5em;
 	}
 </style>

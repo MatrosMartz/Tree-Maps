@@ -50,7 +50,7 @@
 
 <style>
 	footer {
-		position: absolute;
+		position: fixed;
 		display: flex;
 		justify-content: space-evenly;
 

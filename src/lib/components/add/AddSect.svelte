@@ -27,7 +27,7 @@
 
 <style>
 	section {
-		position: absolute;
+		position: fixed;
 		bottom: -8%;
 		left: 50%;
 
