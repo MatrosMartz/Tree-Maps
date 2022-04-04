@@ -42,7 +42,7 @@
 	}
 	.active {
 		transform-origin: center;
-		transform: translate(-50%, -40%) scale(100%) rotate(0);
+		transform: translate(-50%, -45%) scale(100%) rotate(0);
 	}
 	a {
 		display: flex;

@@ -6,7 +6,11 @@
 
 	import { Photo } from '$lib/types';
 
+	import files from '$lib/stores/images';
+
 	let photo: Photo = Photo.file;
+
+	$: console.log($files);
 </script>
 
 <main>

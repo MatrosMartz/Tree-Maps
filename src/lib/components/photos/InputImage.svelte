@@ -1,12 +1,15 @@
 <script lang="ts">
 	import AddImageIcon from '../icons/AddImageIcon.svelte';
+	import { filterImages } from '../../utilities/imagesFiles';
+	import filesStore from '../../stores/images';
 
 	let inputFileThis: HTMLInputElement;
 	let draging = false;
 
 	function onInput(evt: Event) {
 		evt.preventDefault();
-		const files = inputFileThis.files;
+		const files = filterImages(Array.from(inputFileThis.files));
+		filesStore.add(files.allowedFiles);
 		console.log(files);
 	}
 	function onDragLeave(evt: DragEvent) {
@@ -19,14 +22,18 @@
 	}
 	function onDrop(evt: DragEvent) {
 		evt.preventDefault();
-		const files = evt.dataTransfer.files;
+		const files = filterImages(Array.from(evt.dataTransfer.files));
+		filesStore.add(files.allowedFiles);
 		console.log(files);
 		draging = false;
+	}
+	function onClick() {
+		inputFileThis.click();
 	}
 </script>
 
 <div>
-	<input bind:this={inputFileThis} type="file" id="img" multiple on:change={onInput} />
+	<input bind:this={inputFileThis} type="file" id="img" multiple on:input={onInput} />
 	<label
 		for="img"
 		class:draging
@@ -37,7 +44,7 @@
 	>
 		<p>Arrasta fotos:</p>
 		<AddImageIcon />
-		<button type="button">Seleciona fotos</button>
+		<button type="button" on:click={onClick}>Seleciona fotos</button>
 	</label>
 </div>
 

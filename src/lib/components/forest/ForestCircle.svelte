@@ -45,7 +45,7 @@
 
 <style>
 	:root {
-		--animation-time: 3s;
+		--animation-time: 3s cubic-bezier(0, 0, 0.2, 1.25);
 	}
 	svg {
 		display: block;
@@ -74,19 +74,19 @@
 		filter: brightness(110%);
 	}
 	.animation > .one {
-		animation: one-animation var(--animation-time) ease-in-out;
+		animation: one-animation var(--animation-time);
 	}
 	.two {
 		filter: brightness(100%);
 	}
 	.animation > .two {
-		animation: two-animation var(--animation-time) ease-in-out;
+		animation: two-animation var(--animation-time);
 	}
 	.three {
 		filter: brightness(90%);
 	}
 	.animation > .three {
-		animation: three-animation var(--animation-time) ease-in-out;
+		animation: three-animation var(--animation-time);
 	}
 	.four {
 		filter: brightness(80%);

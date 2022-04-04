@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/env';
+	import files from '../../stores/images';
 
 	let deviceId: string;
 	let videoThis: HTMLVideoElement;
@@ -41,7 +42,9 @@
 		canvas.height = videoThis.videoHeight;
 		context.drawImage(videoThis, 0, 0);
 
-		const photo = canvas.toDataURL();
+		canvas.toBlob((blob: File) => {
+			files.add([blob]);
+		}, 'image/webp');
 
 		videoThis.play();
 	}
