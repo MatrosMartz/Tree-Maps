@@ -11,9 +11,18 @@
 	const context = canvas.getContext('2d');
 
 	async function onInput() {
-		const stream = await navigator.mediaDevices.getDisplayMedia({ video: { deviceId } });
+		try {
+		const newStream = await navigator.mediaDevices.getUserMedia({
+			video: {
+				deviceId
+			}
+		});
+		stream = newStream;
 		videoThis.srcObject = stream;
 		videoThis.play();
+		}catch(err) {
+			alert(err);
+		}
 	}
 
 	function onClick() {
@@ -42,7 +51,7 @@
 		<select
 			name="device"
 			id="device"
-			on:input={onInput}
+			on:change={onInput}
 			bind:value={deviceId}
 			disabled={Devices.length < 2}
 		>
@@ -61,7 +70,7 @@
 		width: 100%;
 	}
 	video {
-		width: 100%;
+		height: 10em;
 
 		border-radius: 7px;
 	}
