@@ -1,3 +1,4 @@
+
 import type { Writable } from 'svelte/store';
 
 import type { Auth0Client, User } from '@auth0/auth0-spa-js';
