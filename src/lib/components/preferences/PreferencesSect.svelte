@@ -14,14 +14,14 @@
 	<h5 class="sect-h5">Preferencias</h5>
 	<SwitchBtn id="theme">
 		<legend slot="name">tema</legend>
-		<DarkmodeIcon slot="first" />
-		<LightmodeIcon slot="last" />
+		<LightmodeIcon slot="first" />
+		<DarkmodeIcon slot="last" />
 	</SwitchBtn>
 
 	<SwitchBtn id="animation">
 		<legend slot="name">animaciones</legend>
-		<AnimationIcon slot="first" />
-		<NonAnimationIcon slot="last" />
+		<NonAnimationIcon slot="first" />
+		<AnimationIcon slot="last" />
 	</SwitchBtn>
 
 	<RadioColors />

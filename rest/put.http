@@ -1,0 +1,13 @@
+PUT http://localhost:3000/preferences
+Content-Type: application/json
+
+{
+    "theme": "darkmode",
+    "animation": true,
+    "lang": "es",
+    "color": "orange"
+}
+
+###
+
+GET google.com

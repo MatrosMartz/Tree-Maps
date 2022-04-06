@@ -81,13 +81,13 @@
 		background-color: var(--sh);
 		box-shadow: 0 0 2px var(--sh);
 
-		transform: translate(-100%, -50%) scale(72%);
+		transform: translate(-5%, -50%) scale(72%);
 	}
 	label.animation::after {
 		transition: transform 200ms ease-in-out;
 	}
 	input:checked + label::after {
-		transform: translate(0%, -50%) scale(72%);
+		transform: translate(-95%, -50%) scale(72%);
 	}
 	label > :global(svg) {
 		z-index: 10;

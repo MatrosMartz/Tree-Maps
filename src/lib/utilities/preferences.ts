@@ -2,7 +2,8 @@ import type { TimeoutID } from '../types';
 import type { Preferences } from '../types/preferences';
 
 let timeoutID: TimeoutID;
-const timeOfTimeout = 500;
+const timeOfTimeout = 0;
+
 
 export function parsePreferences(val: string) {
 	try {
@@ -13,24 +14,26 @@ export function parsePreferences(val: string) {
 	}
 }
 
-export function isPreferences(val: Record<string, string | boolean>) {
+export function isPreferences(val: unknown) {
 	return (
-		val != null &&
-		val.theme != null &&
-		val.animation != null &&
-		val.lang != null &&
-		val.color != null
+		typeof val === 'object' &&
+		['drakmode', 'lightmode'].includes(val.theme) &&
+		[true, false].includes(val.animation) &&
+		['en', 'es'].includes(val.lang) &&
+		['green', 'orange', 'red', 'blue'].includes(val.color)
 	);
 }
 
 export function set_config(prfs: Preferences) {
 	if (timeoutID) clearTimeout(timeoutID);
 	timeoutID = setTimeout(async () => {
-		await fetch('preferences', {
+		const res = await fetch('/preferences', {
 			method: 'PUT',
 			headers: {
-				'set-cookie': JSON.stringify(prfs),
+				'Content-Type': 'application/json'
 			},
+			body: JSON.stringify(prfs),
 		});
+		console.log(await res.json());
 	}, timeOfTimeout);
 }

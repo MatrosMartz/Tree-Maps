@@ -2,11 +2,10 @@ import type { RequestHandler } from '@sveltejs/kit';
 
 import * as cookie from 'cookie';
 
-export const put: RequestHandler = ({ request }) => {
-	const prfs = request.headers.get('set-cookie');
-
+export const put: RequestHandler = async ({ request }) => {
+	const prfs = await request.json();
 	const headers = {
-		'set-cookie': cookie.serialize('prfs', prfs, {
+		'set-cookie': cookie.serialize('prfs', JSON.stringify(prfs), {
 			httpOnly: true,
 			sameSite: 'lax',
 			maxAge: 60 * 60 * 24 * 7,
