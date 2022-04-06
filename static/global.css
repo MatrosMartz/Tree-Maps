@@ -80,7 +80,7 @@
 	--s-fl: var(--d-filt);
 
 	font-size: 16px;
-	--img-size: calc(1em * 3);
+	--img-size: calc((1em * 3) - 4px);
 
 	background-color: var(--bb);
 }

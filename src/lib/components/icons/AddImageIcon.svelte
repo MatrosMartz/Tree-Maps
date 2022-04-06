@@ -8,6 +8,6 @@
 <style>
 	svg {
 		fill: currentColor;
-		width: 4em;
+		width: 4.5em;
 	}
 </style>

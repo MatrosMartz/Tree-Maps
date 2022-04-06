@@ -32,21 +32,28 @@
 	}
 </script>
 
-<div>
-	<input bind:this={inputFileThis} type="file" id="img" multiple on:input={onInput} />
-	<label
-		for="img"
-		class:draging
-		on:drag={onDrag}
-		on:dragover={onDrag}
-		on:dragleave={onDragLeave}
-		on:drop={onDrop}
-	>
-		<p>Arrasta fotos:</p>
-		<AddImageIcon />
-		<button type="button" on:click={onClick}>Seleciona fotos</button>
-	</label>
-</div>
+<fieldset>
+	<legend>foto</legend>
+	<div>
+		<input bind:this={inputFileThis} type="file" id="img" multiple on:input={onInput} />
+		<label
+			for="img"
+			class:draging
+			on:drag={onDrag}
+			on:dragover={onDrag}
+			on:dragleave={onDragLeave}
+			on:drop={onDrop}
+		>
+			<p>Arrasta fotos:</p>
+			<AddImageIcon />
+			<div>
+				<span>o</span>
+				<button type="button" on:click={onClick}>Seleciona fotos</button>
+			</div>
+		</label>
+	</div>
+</fieldset>
+
 
 <style>
 	div {
@@ -60,11 +67,10 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		gap: 0.75em;
 		z-index: 100;
 
 		width: 100%;
-		height: 12em;
+		padding-block: 1em;
 		box-sizing: border-box;
 
 		border-radius: 7px;
@@ -78,6 +84,14 @@
 		background-color: var(--bd);
 		color: var(--lb);
 		border-radius: 7px;
+		height: var(--img-size);
+	}
+	span {
+		display: block;
+		font-weight: 700;
+		font-size: 1.5rem;
+		text-align: center;
+		padding-bottom: .25em;
 	}
 	.draging {
 		filter: var(--p-fl);
