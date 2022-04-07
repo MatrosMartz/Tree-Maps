@@ -54,7 +54,6 @@
 	</div>
 </fieldset>
 
-
 <style>
 	div {
 		position: relative;
@@ -91,7 +90,7 @@
 		font-weight: 700;
 		font-size: 1.5rem;
 		text-align: center;
-		padding-bottom: .25em;
+		padding-bottom: 0.25em;
 	}
 	.draging {
 		filter: var(--p-fl);

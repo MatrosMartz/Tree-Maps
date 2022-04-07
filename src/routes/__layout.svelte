@@ -7,6 +7,7 @@
 	import PreferencesSect from '$lib/components/preferences/PreferencesSect.svelte';
 	import MoreSect from '$lib/components/more/MoreSect.svelte';
 	import AddSect from '$lib/components/add/AddSect.svelte';
+	import Alert from '$lib/components/alert/Alert.svelte';
 
 	import preferences from '$lib/stores/preferences';
 	import panel from '$lib/stores/panel';
@@ -30,4 +31,6 @@
 	<AddSect />
 
 	<Footer />
+
+	<Alert />
 </div>

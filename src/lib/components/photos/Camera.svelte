@@ -12,15 +12,15 @@
 
 	async function onInput() {
 		try {
-		const newStream = await navigator.mediaDevices.getUserMedia({
-			video: {
-				deviceId
-			}
-		});
-		stream = newStream;
-		videoThis.srcObject = stream;
-		videoThis.play();
-		}catch(err) {
+			const newStream = await navigator.mediaDevices.getUserMedia({
+				video: {
+					deviceId,
+				},
+			});
+			stream = newStream;
+			videoThis.srcObject = stream;
+			videoThis.play();
+		} catch (err) {
 			alert(err);
 		}
 	}

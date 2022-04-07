@@ -1,5 +1,12 @@
 import type { Writable } from 'svelte/store';
 
+export enum Alert {
+	none = 'none',
+	cookies = 'cookies',
+	noSession = 'no session',
+	inalidPhoto = 'invalid photo',
+}
+
 export enum Panel {
 	none = 'none',
 	opts = 'opts',

@@ -4,7 +4,6 @@ import type { Preferences } from '../types/preferences';
 let timeoutID: TimeoutID;
 const timeOfTimeout = 0;
 
-
 export function parsePreferences(val: string) {
 	try {
 		return JSON.parse(val);
@@ -30,7 +29,7 @@ export function set_config(prfs: Preferences) {
 		const res = await fetch('/preferences', {
 			method: 'PUT',
 			headers: {
-				'Content-Type': 'application/json'
+				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify(prfs),
 		});
