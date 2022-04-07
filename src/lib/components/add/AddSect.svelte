@@ -4,7 +4,6 @@
 	import TreesIcon from '../icons/TreesIcon.svelte';
 
 	import panel from '../../stores/panel';
-	import preferences from '../../stores/preferences';
 
 	function onClick() {
 		panel.setToNone();
@@ -13,7 +12,7 @@
 	$: active = $panel === 'add';
 </script>
 
-<section class:active class:animation={$preferences.animation} on:click={onClick}>
+<section class:active on:click={onClick}>
 	<a href="#_">
 		<TreesIcon />
 	</a>
@@ -37,7 +36,7 @@
 		transform-origin: center;
 		transform: translate(-50%, 0) scale(5%) rotate(-90deg);
 	}
-	.animation {
+	:global(#app.animation) section {
 		transition: transform 400ms cubic-bezier(0.5, -0.3, 0.5, 1.3);
 	}
 	.active {

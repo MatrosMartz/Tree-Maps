@@ -7,10 +7,10 @@
 	import RadioColors from './RadioColors.svelte';
 	import SwitchBtn from './SwitchBtn.svelte';
 
-	export let active: boolean, animation: boolean;
+	export let active: boolean;
 </script>
 
-<section class="panel-sect right" class:active class:animation>
+<section class="panel-sect right" class:active>
 	<h5 class="sect-h5">Preferencias</h5>
 	<SwitchBtn id="theme">
 		<legend slot="name">tema</legend>

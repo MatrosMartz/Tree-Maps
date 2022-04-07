@@ -1,10 +1,10 @@
 <script lang="ts">
-	export let active: boolean, animation: boolean;
+	export let active: boolean;
 
 	import { isAuth, user, login, logout } from '../../stores/auth';
 </script>
 
-<section class="panel-sect left" class:active class:animation>
+<section class="panel-sect left" class:active>
 	{#if $isAuth}
 		<h5 class="sect-h5">{$user.name}</h5>
 		<span>{$user.email}</span>

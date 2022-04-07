@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let active: boolean, animation: boolean;
+	export let active: boolean;
 
 	import LeadersLinks from './LeadersLinks.svelte';
 	import ResourcesLinks from './ResourcesLinks.svelte';
@@ -16,7 +16,7 @@
 	}
 </script>
 
-<section class="panel-sect right" class:active class:animation on:click={onClick}>
+<section class="panel-sect right" class:active on:click={onClick}>
 	<h5 class="sect-h5">paginas aledañas xd</h5>
 	{#if $page.url.pathname === '/'}
 		<a href="/">home</a>

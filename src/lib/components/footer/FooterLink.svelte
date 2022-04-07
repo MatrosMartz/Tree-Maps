@@ -1,12 +1,10 @@
 <script lang="ts">
 	export let href: string, page: string;
 
-	import prefences from '../../stores/preferences';
-
 	$: selected = href === page;
 </script>
 
-<a {href} class="filter-transition" class:selected class:animation={$prefences.animation}>
+<a {href} class="filter-transition" class:selected>
 	<slot />
 </a>
 

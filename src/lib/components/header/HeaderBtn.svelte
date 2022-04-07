@@ -2,7 +2,6 @@
 	export let panelControler: string;
 
 	import panel from '../../stores/panel';
-	import preferences from '../../stores/preferences';
 
 	$: panelCapitalize = panelControler[0].toUpperCase() + panelControler.slice(1);
 
@@ -16,12 +15,7 @@
 	$: selected = $panel === panelControler;
 </script>
 
-<button
-	class="head-tag filter-transition"
-	class:selected
-	class:animation={$preferences.animation}
-	on:click={onClick}
->
+<button class="head-tag filter-transition" class:selected on:click={onClick}>
 	<slot />
 </button>
 

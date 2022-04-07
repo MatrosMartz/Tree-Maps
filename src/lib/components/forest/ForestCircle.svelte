@@ -1,10 +1,8 @@
 <script lang="ts">
 	import './animations.css';
-
-	import prefences from '../../stores/preferences';
 </script>
 
-<svg viewBox="0 0 39.687501 39.687501" class:animation={$prefences.animation}>
+<svg viewBox="0 0 39.687501 39.687501">
 	<path
 		class="nine"
 		d="M 35 -20.882812 C 33.902047 -20.882822 32.80383 -20.413441 32.041016 -19.474609 L 18.652344 -2.9980469 C 17.388681 -1.442797 18.496094 0.8828125 20.5 0.8828125 C 22.65294 0.8828125 23.948722 3.2710519 22.775391 5.0761719 L 15.769531 15.853516 C 14.361718 18.019387 15.9168 20.882812 18.5 20.882812 L 51.5 20.882812 C 54.083194 20.882812 55.638286 18.019387 54.230469 15.853516 L 47.224609 5.0761719 C 46.051285 3.2710519 47.347064 0.8828125 49.5 0.8828125 C 51.503921 0.8828125 52.611307 -1.4427569 51.347656 -2.9980469 L 37.958984 -19.474609 C 37.196185 -20.413454 36.097953 -20.882805 35 -20.882812 z M 75 -20.882812 C 73.902047 -20.882824 72.80383 -20.413444 72.041016 -19.474609 L 58.652344 -2.9980469 C 57.388681 -1.442797 58.496098 0.8828125 60.5 0.8828125 C 62.65294 0.8828125 63.948722 3.2710519 62.775391 5.0761719 L 55.769531 15.853516 C 54.361718 18.019387 55.91678 20.882812 58.5 20.882812 L 91.5 20.882812 C 94.083194 20.882812 95.638286 18.019387 94.230469 15.853516 L 87.224609 5.0761719 C 86.051285 3.2710519 87.347064 0.8828125 89.5 0.8828125 C 91.503921 0.8828125 92.611307 -1.4427569 91.347656 -2.9980469 L 77.958984 -19.474609 C 77.196185 -20.413455 76.097957 -20.882809 75 -20.882812 z M 115 -20.882812 C 113.90205 -20.882822 112.80383 -20.413441 112.04102 -19.474609 L 98.652344 -2.9980469 C 97.388681 -1.442797 98.496098 0.8828125 100.5 0.8828125 C 102.65294 0.8828125 103.94872 3.2710519 102.77539 5.0761719 L 95.769531 15.853516 C 94.361718 18.019387 95.916784 20.882812 98.5 20.882812 L 131.5 20.882812 C 134.08319 20.882812 135.63829 18.019387 134.23047 15.853516 L 127.22461 5.0761719 C 126.05128 3.2710519 127.34707 0.8828125 129.5 0.8828125 C 131.50392 0.8828125 132.61131 -1.4427569 131.34766 -2.9980469 L 117.95898 -19.474609 C 117.19619 -20.413454 116.09795 -20.882805 115 -20.882812 z "
@@ -43,7 +41,7 @@
 	/>
 </svg>
 
-<style>
+<style lang="scss">
 	:root {
 		--animation-time: 3s cubic-bezier(0, 0, 0.2, 1.25);
 	}
@@ -73,55 +71,57 @@
 	.one {
 		filter: brightness(110%);
 	}
-	.animation > .one {
-		animation: one-animation var(--animation-time);
-	}
 	.two {
 		filter: brightness(100%);
-	}
-	.animation > .two {
-		animation: two-animation var(--animation-time);
 	}
 	.three {
 		filter: brightness(90%);
 	}
-	.animation > .three {
-		animation: three-animation var(--animation-time);
-	}
 	.four {
 		filter: brightness(80%);
-	}
-	.animation > .four {
-		animation: four-animation var(--animation-time);
 	}
 	.five {
 		filter: brightness(70%);
 	}
-	.animation > .five {
-		animation: five-animation var(--animation-time);
-	}
 	.six {
 		filter: brightness(60%);
-	}
-	.animation > .six {
-		animation: six-animation var(--animation-time);
 	}
 	.seven {
 		filter: brightness(50%);
 	}
-	.animation > .seven {
-		animation: seven-animation var(--animation-time);
-	}
 	.eight {
 		filter: brightness(40%);
-	}
-	.animation > .eight {
-		animation: eight-animation var(--animation-time);
 	}
 	.nine {
 		filter: brightness(30%);
 	}
-	.animation > .nine {
-		animation: nine-animation var(--animation-time);
+	:global(#app.animation) {
+		& .one {
+			animation: one-animation var(--animation-time);
+		}
+		& .two {
+			animation: two-animation var(--animation-time);
+		}
+		& .three {
+			animation: three-animation var(--animation-time);
+		}
+		& .four {
+			animation: four-animation var(--animation-time);
+		}
+		& .five {
+			animation: five-animation var(--animation-time);
+		}
+		& .six {
+			animation: six-animation var(--animation-time);
+		}
+		& .seven {
+			animation: seven-animation var(--animation-time);
+		}
+		& .eight {
+			animation: eight-animation var(--animation-time);
+		}
+		& .nine {
+			animation: nine-animation var(--animation-time);
+		}
 	}
 </style>

@@ -4,7 +4,7 @@
 	import Header from '$lib/components/header/Header.svelte';
 	import Footer from '$lib/components/footer/Footer.svelte';
 	import ProfileSect from '$lib/components/profile/ProfileSect.svelte';
-	import OptionsSect from '$lib/components/preferences/PreferencesSect.svelte';
+	import PreferencesSect from '$lib/components/preferences/PreferencesSect.svelte';
 	import MoreSect from '$lib/components/more/MoreSect.svelte';
 	import AddSect from '$lib/components/add/AddSect.svelte';
 
@@ -13,17 +13,19 @@
 	import { createClient } from '$lib/stores/auth';
 
 	onMount(createClient);
-
-	let animation = $preferences.animation;
 </script>
 
-<div id="app" class="{$preferences.theme} {$preferences.color}">
+<div
+	id="app"
+	class="{$preferences.theme} {$preferences.color}"
+	class:animation={$preferences.animation}
+>
 	<Header />
 	<slot />
 
-	<ProfileSect active={$panel === 'prof'} {animation} />
-	<OptionsSect active={$panel === 'opts'} {animation} />
-	<MoreSect active={$panel === 'more'} {animation} />
+	<ProfileSect active={$panel === 'prof'} />
+	<PreferencesSect active={$panel === 'opts'} />
+	<MoreSect active={$panel === 'more'} />
 
 	<AddSect />
 

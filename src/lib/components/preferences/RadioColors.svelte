@@ -2,11 +2,11 @@
 	import { Color } from '../../types/preferences';
 	import preferences, { set_color } from '../../stores/preferences';
 
-	let group: Color = $preferences.color;
+	let currentColor: Color = $preferences.color;
 	let colors = [Color.g, Color.o, Color.r, Color.b];
 
 	function onClick() {
-		set_color(group);
+		set_color(currentColor);
 	}
 </script>
 
@@ -19,9 +19,8 @@
 				type="radio"
 				name="color"
 				class="filter-transition"
-				class:animation={$preferences.animation}
 				{id}
-				bind:group
+				bind:group={currentColor}
 				value={id}
 				on:change={onClick}
 			/>
@@ -56,7 +55,7 @@
 		border-radius: 10px;
 		box-shadow: 0 0 2px transparent;
 	}
-	input.animation {
+	:global(#app.animation) input {
 		transition: filter 200ms ease-in-out, box-shadow 200ms ease-in-out;
 	}
 	input::after {

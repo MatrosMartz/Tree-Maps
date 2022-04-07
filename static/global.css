@@ -267,7 +267,7 @@ fieldset {
 .icon-pre-rotate {
 	transform: rotate(0);
 }
-.icon-pre-rotate.animation {
+#app.animation .icon-pre-rotate {
 	transition: transform 200ms;
 }
 .panel-sect {
@@ -294,7 +294,7 @@ fieldset {
 	background-color: var(--nb);
 	box-shadow: 2px 4px 7px var(--is);
 }
-.panel-sect.animation {
+#app.animation .panel-sect {
 	transition: transform 400ms cubic-bezier(0.5, -0.3, 0.5, 1.3);
 }
 .panel-sect.left {
@@ -307,10 +307,10 @@ fieldset {
 	transform: translateX(0) scale(100%);
 }
 
-.filter-transition.animation {
+#app.animation .filter-transition {
 	transition: filter 200ms ease-in-out;
 }
-.filter-transition.animation::after {
+#app.animation .filter-transition::after {
 	transition: filter 200ms ease-in-out;
 }
 

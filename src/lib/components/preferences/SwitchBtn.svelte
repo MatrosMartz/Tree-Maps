@@ -15,7 +15,7 @@
 <fieldset>
 	<slot name="name" />
 	<input type="checkbox" name={id} {id} bind:checked on:input={onInput} />
-	<label for={id} class="filter-transition" class:animation={$preferences.animation}>
+	<label for={id} class="filter-transition">
 		<slot name="first" />
 		<slot name="last" />
 	</label>
@@ -83,7 +83,7 @@
 
 		transform: translate(-5%, -50%) scale(72%);
 	}
-	label.animation::after {
+	:global(#app.animation) label::after {
 		transition: transform 200ms ease-in-out;
 	}
 	input:checked + label::after {
