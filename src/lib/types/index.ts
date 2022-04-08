@@ -7,6 +7,11 @@ export enum Alert {
 	inalidPhoto = 'invalid photo',
 }
 
+export enum Cookies {
+	authenticate = 'auth',
+	preferences = 'prfs',
+}
+
 export enum Panel {
 	none = 'none',
 	opts = 'opts',

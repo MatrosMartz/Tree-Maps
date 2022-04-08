@@ -1,5 +1,5 @@
 :root {
-	--g-bb: hsl(144, 100%, 03%);
+	--g-bb: hsl(144, 100%, 02%);
 	--g-lb: hsl(144, 70%, 10%);
 	--g-nb: hsl(144, 90%, 10%);
 	--g-sb: hsl(144, 60%, 27%);
@@ -11,8 +11,8 @@
 	--g-pt: hsl(144, 60%, 75%);
 	--g-t2: hsl(144, 100%, 98%);
 	--g-t1: hsl(144, 70%, 90%);
-	--g-is: hsla(144, 80%, 35%, 0.5);
-	--g-rs: hsla(144, 50%, 55%, 0.5);
+	--g-is: hsla(144, 60%, 27%, 0.5);
+	--g-rs: hsla(144, 60%, 75%, 0.5);
 
 	--o-bb: hsl(025, 100%, 03%);
 	--o-lb: hsl(025, 70%, 10%);
@@ -26,8 +26,8 @@
 	--o-pt: hsl(025, 60%, 75%);
 	--o-t2: hsl(025, 100%, 98%);
 	--o-t1: hsl(025, 70%, 90%);
-	--o-is: hsla(025, 80%, 35%, 0.5);
-	--o-rs: hsla(025, 50%, 55%, 0.5);
+	--o-is: hsla(025, 60%, 27%, 0.5);
+	--o-rs: hsla(025, 60%, 75%, 0.5);
 
 	--r-bb: hsl(353, 100%, 03%);
 	--r-lb: hsl(353, 70%, 10%);
@@ -41,8 +41,8 @@
 	--r-pt: hsl(353, 60%, 75%);
 	--r-t2: hsl(353, 100%, 98%);
 	--r-t1: hsl(353, 70%, 90%);
-	--r-is: hsla(353, 80%, 35%, 0.5);
-	--r-rs: hsla(353, 50%, 55%, 0.5);
+	--r-is: hsla(353, 60%, 27%, 0.5);
+	--r-rs: hsla(353, 60%, 75%, 0.5);
 
 	--b-bb: hsl(207, 100%, 03%);
 	--b-lb: hsl(207, 70%, 10%);
@@ -56,8 +56,8 @@
 	--b-pt: hsl(207, 60%, 75%);
 	--b-t2: hsl(207, 100%, 98%);
 	--b-t1: hsl(207, 70%, 90%);
-	--b-is: hsla(207, 80%, 35%, 0.5);
-	--b-rs: hsla(207, 50%, 55%, 0.5);
+	--b-is: hsla(207, 60%, 27%, 0.5);
+	--b-rs: hsla(207, 60%, 75%, 0.5);
 
 	--l-filt: brightness(130%);
 	--d-filt: brightness(90%);
@@ -206,7 +206,7 @@ h5 {
 	font-size: 1.2rem;
 }
 h6 {
-	font-size: 1.1rem;
+	font-size: 1.05rem;
 }
 
 h2,
@@ -257,8 +257,18 @@ fieldset {
 .primary-btn {
 	box-sizing: border-box;
 	height: var(--img-size);
-	background-color: var(--bd);
+	background-color: var(--al);
 	color: var(--lb);
+	box-shadow: 0 0 10px var(--rs);
+	border-radius: 7px;
+}
+
+.secondary-btn {
+	box-sizing: border-box;
+	height: var(--img-size);
+	background-color: var(--lb);
+	color: var(--al);
+	border: 3px solid var(--al);
 	box-shadow: 0 0 10px var(--rs);
 	border-radius: 7px;
 }

@@ -1,13 +1,37 @@
+<script lang="ts">
+	import SwitchBtnAlert from './SwitchBtnAlert.svelte';
+
+	let authCheck = true,
+		prfsCheck = false;
+
+	$: console.log(authCheck, prfsCheck);
+
+	function clickAllow() {
+		authCheck = !authCheck;
+	}
+	function clickAccept() {}
+	function clickReject() {}
+</script>
+
 <div class="alert-background">
 	<section class="alert border-radius">
 		<h5>cookies</h5>
 		<span>
-			<p>las cookies este sitio web se usan para personalizar el contenido</p>
+			<p>
+				las cookies este sitio web se usan para personalizar el contenido
+				<a href="#theme">más información...</a>
+			</p>
 		</span>
+		<SwitchBtnAlert id="authCheck" checked={authCheck}>
+			<h6 slot="name">autentificación :3</h6>
+		</SwitchBtnAlert>
+		<SwitchBtnAlert id="prfsCheck" checked={prfsCheck}>
+			<h6 slot="name">preferencias :3</h6>
+		</SwitchBtnAlert>
 		<section class="buttons">
-			<button class="primary-btn"> permitir la selección </button>
-			<button class="primary-btn"> denegar todas </button>
-			<button class="primary-btn"> aceptar todas </button>
+			<button on:click={clickAllow} class="primary-btn"> permitir la selección </button>
+			<button on:click={clickAccept} class="secondary-btn"> aceptar todas </button>
+			<button on:click={clickReject} class="secondary-btn"> rechazar todas </button>
 		</section>
 	</section>
 </div>
@@ -31,19 +55,27 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
+		justify-content: space-around;
 
 		width: 90vw;
 		height: 80vh;
 
 		background-color: var(--t2);
-		color: var(--bd);
+		color: var(--sb);
 	}
-	h5 {
+	h5,
+	h6 {
 		color: var(--lb);
+	}
+	h6 {
+		font-weight: 500;
 	}
 	p {
 		color: inherit;
+	}
+	a {
+		color: inherit;
+		filter: var(--s-fl);
 	}
 	.buttons {
 		display: flex;
@@ -54,6 +86,7 @@
 	}
 	.buttons button {
 		font-size: calc(1rem * 0.8);
+		font-weight: 700;
 		flex-grow: 1;
 	}
 	.buttons :first-child {
