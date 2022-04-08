@@ -250,6 +250,19 @@ fieldset {
 	box-shadow: 0 0 10px 5px var(--is);
 }
 
+.border-radius {
+	border-radius: 7px;
+}
+
+.primary-btn {
+	box-sizing: border-box;
+	height: var(--img-size);
+	background-color: var(--bd);
+	color: var(--lb);
+	box-shadow: 0 0 10px var(--rs);
+	border-radius: 7px;
+}
+
 .svg {
 	fill: currentColor;
 	width: var(--img-size);
@@ -475,7 +488,7 @@ fieldset {
 	--rs: var(--b-is);
 }
 
-@media only screen and (min-width: 768px) and (min-height: 780px) {
+/* @media only screen and (min-width: 768px) and (min-height: 780px) {
 	:root {
 		font-size: 24px;
 	}
@@ -489,4 +502,4 @@ fieldset {
 	:root {
 		font-size: 64px;
 	}
-}
+} */

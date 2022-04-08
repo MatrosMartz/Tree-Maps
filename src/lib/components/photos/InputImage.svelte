@@ -38,6 +38,7 @@
 		<input bind:this={inputFileThis} type="file" id="img" multiple on:input={onInput} />
 		<label
 			for="img"
+			class="border-radius"
 			class:draging
 			on:drag={onDrag}
 			on:dragover={onDrag}
@@ -48,7 +49,9 @@
 			<AddImageIcon />
 			<div>
 				<span>o</span>
-				<button type="button" on:click={onClick}>Seleciona fotos</button>
+				<button type="button" class="primary-btn" on:click={onClick}>
+					Seleciona fotos
+				</button>
 			</div>
 		</label>
 	</div>
@@ -72,18 +75,11 @@
 		padding-block: 1em;
 		box-sizing: border-box;
 
-		border-radius: 7px;
 		border: 3px dotted var(--rs);
 		background-color: var(--lb);
 		filter: brightness(100%);
 
 		transition: filter 200ms ease-in-out;
-	}
-	button {
-		background-color: var(--bd);
-		color: var(--lb);
-		border-radius: 7px;
-		height: var(--img-size);
 	}
 	span {
 		display: block;

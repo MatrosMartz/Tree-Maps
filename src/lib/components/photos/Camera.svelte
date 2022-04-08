@@ -46,7 +46,7 @@
 </script>
 
 <div>
-	<video bind:this={videoThis} muted />
+	<video class="border-radius" bind:this={videoThis} muted />
 	<section class="buttons">
 		<select
 			name="device"
@@ -71,8 +71,6 @@
 	}
 	video {
 		height: 10em;
-
-		border-radius: 7px;
 	}
 	.buttons {
 		display: flex;

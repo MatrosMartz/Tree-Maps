@@ -4,9 +4,9 @@
 	$: photos = $files.map(files => URL.createObjectURL(files));
 </script>
 
-<section class="slides">
+<section class="slides border-radius">
 	{#each photos as photo}
-		<button class="slide">
+		<button class="slide border-radius">
 			<img src={photo} alt="arbol :D" />
 		</button>
 	{:else}
@@ -27,7 +27,6 @@
 		margin-inline: auto;
 		padding-block: 0.5em;
 		background-color: var(--lb);
-		border-radius: 7px;
 	}
 	.slide {
 		display: flex;
@@ -39,7 +38,6 @@
 		max-width: 40%;
 		height: 4em;
 		padding: 0;
-		border-radius: 7px;
 	}
 	img {
 		width: 100%;

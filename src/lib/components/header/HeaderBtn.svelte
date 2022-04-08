@@ -15,14 +15,12 @@
 	$: selected = $panel === panelControler;
 </script>
 
-<button class="head-tag filter-transition" class:selected on:click={onClick}>
+<button class="head-tag filter-transition border-radius" class:selected on:click={onClick}>
 	<slot />
 </button>
 
 <style>
 	button {
-		border-radius: 7px;
-
 		overflow: hidden;
 
 		padding: 0;

@@ -16,7 +16,7 @@
 	$: selected = $panel === 'prof';
 </script>
 
-<button class="head-tag filter-transition" on:click={$isAuth ? onClick : login()}>
+<button class="head-tag filter-transition border-radius" on:click={$isAuth ? onClick : login()}>
 	{#if $isAuth}
 		<img src={$user.picture} alt="user" />
 		<section class:selected>
@@ -45,8 +45,6 @@
 	button {
 		display: flex;
 		align-items: center;
-
-		border-radius: 7px;
 
 		overflow: hidden;
 
