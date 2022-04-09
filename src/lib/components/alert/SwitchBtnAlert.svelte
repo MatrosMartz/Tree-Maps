@@ -1,14 +1,10 @@
 <script lang="ts">
 	export let id: string, checked: boolean;
-	function onInput() {
-		checked = !checked;
-		console.log(`has clickado en el botton ${id} :D`);
-	}
 </script>
 
 <section>
 	<slot name="name" />
-	<input type="checkbox" name={id} {id} bind:checked on:input={onInput} />
+	<input type="checkbox" name={id} {id} bind:checked />
 	<label for={id} class="filter-transition" />
 </section>
 

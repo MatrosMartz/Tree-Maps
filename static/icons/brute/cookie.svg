@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="45"
+   height="45"
+   viewBox="0 0 11.906249 11.90625"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="cookie.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:showpageshadow="false"
+     showguides="false"
+     inkscape:lockguides="false"
+     units="px"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-nodes="true"
+     inkscape:guide-bbox="true"
+     inkscape:object-paths="true"
+     inkscape:zoom="4.0617529"
+     inkscape:cx="-12.679255"
+     inkscape:cy="15.756744"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid832" />
+    <sodipodi:guide
+       position="5.8208328,5.8208333"
+       orientation="0.70710678,-0.70710678"
+       id="guide2143" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="sketch"
+       id="path-effect10019"
+       is_visible="true"
+       lpeversion="1"
+       nbiter_approxstrokes="7"
+       strokelength="100"
+       strokelength_rdm="0.6;1817989305"
+       strokeoverlap="0.3"
+       strokeoverlap_rdm="0.3;1"
+       ends_tolerance="0.1;1"
+       parallel_offset="5;1"
+       tremble_size="5;1"
+       tremble_frequency="1"
+       nbtangents="5"
+       tgt_places_rdmness="1;2147101474"
+       tgtscale="10"
+       tgtlength="100"
+       tgtlength_rdm="0.3;1" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient9831">
+      <stop
+         style="stop-color:#a36629;stop-opacity:1;"
+         offset="0"
+         id="stop9827" />
+      <stop
+         style="stop-color:#95551d;stop-opacity:1"
+         offset="1"
+         id="stop9829" />
+    </linearGradient>
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect6480"
+       is_visible="true"
+       lpeversion="1"
+       satellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 | F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,1.2232934,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,1.2247154,0,1 @ F,0,0,1,0,0,0,1 | F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1"
+       unit="px"
+       method="auto"
+       mode="F"
+       radius="0"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect2539"
+       is_visible="true"
+       lpeversion="1"
+       satellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0.14924367,0,1 @ F,0,0,1,0,0.40103179,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0.40103169,0,1 @ F,0,0,1,0,0.14924377,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0.14924367,0,1 @ F,0,0,1,0,0.40103179,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0.40103172,0,1 @ F,0,0,1,0,0.14924387,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0.14925067,0,1 @ F,0,0,1,0,0.401025,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0.401025,0,1 @ F,0,0,1,0,0.14925067,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0.14705267,0,1 @ F,0,0,1,0,0.401031,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0.401032,0,1 @ F,0,0,1,0,0.14705167,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1"
+       unit="px"
+       method="auto"
+       mode="F"
+       radius="0"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect929"
+       is_visible="true"
+       lpeversion="1"
+       satellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,1.515625,0,1 @ F,0,0,1,0,0.56640615,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0.56640615,0,1 @ F,0,0,1,0,1.515625,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,1.515625,0,1 @ F,0,0,1,0,0.56640615,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0.56640652,0,1 @ F,0,0,1,0,1.5156245,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,1.5156245,0,1 @ F,0,0,1,0,0.56640652,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0.56640652,0,1 @ F,0,0,1,0,1.5156245,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,1.5156245,0,1 @ F,0,0,1,0,0.55664152,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0.55664055,0,1 @ F,0,0,1,0,1.515625,0,1"
+       unit="px"
+       method="auto"
+       mode="F"
+       radius="0"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9831"
+       id="radialGradient10017"
+       gradientUnits="userSpaceOnUse"
+       cx="5.953125"
+       cy="5.953125"
+       fx="5.953125"
+       fy="5.953125"
+       r="5.953125" />
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:url(#radialGradient10017);fill-opacity:1;stroke-width:1.32292;paint-order:markers stroke fill"
+       id="path1112"
+       cx="5.953125"
+       cy="5.953125"
+       r="5.953125" />
+    <ellipse
+       style="fill:#4d2a19;fill-opacity:1;stroke-width:2.64584;paint-order:markers stroke fill"
+       id="path2512-8-9-9-3-2"
+       cx="7.9375"
+       cy="5.8208332"
+       rx="1.0583333"
+       ry="1.0583334" />
+    <circle
+       style="fill:#4d2a19;fill-opacity:1;stroke-width:1.32292;paint-order:markers stroke fill"
+       id="path2512"
+       cx="5.2916665"
+       cy="7.1437502"
+       r="0.52916664" />
+    <circle
+       style="fill:#4d2a19;fill-opacity:1;stroke-width:1.32292;paint-order:markers stroke fill"
+       id="path2512-0"
+       cx="5.0270834"
+       cy="10.583333"
+       r="0.52916664" />
+    <circle
+       style="fill:#4d2a19;fill-opacity:1;stroke-width:1.32292;paint-order:markers stroke fill"
+       id="path2512-0-7"
+       cx="10.054167"
+       cy="7.6729169"
+       r="0.52916664" />
+    <ellipse
+       style="fill:#4d2a19;fill-opacity:1;stroke-width:1.98438;paint-order:markers stroke fill"
+       id="path2512-8"
+       cx="6.3499999"
+       cy="3.7041667"
+       rx="0.79374993"
+       ry="0.79374999" />
+    <ellipse
+       style="fill:#4d2a19;fill-opacity:1;stroke-width:1.98438;paint-order:markers stroke fill"
+       id="path2512-8-9"
+       ry="0.79374999"
+       rx="0.79374993"
+       cy="5.0270834"
+       cx="2.6458335" />
+    <ellipse
+       style="fill:#4d2a19;fill-opacity:1;stroke-width:1.98438;paint-order:markers stroke fill"
+       id="path2512-8-9-9"
+       cx="7.4083333"
+       cy="9.260417"
+       rx="0.79374993"
+       ry="0.79374999" />
+    <ellipse
+       style="fill:#4d2a19;fill-opacity:1;stroke-width:2.64584;paint-order:markers stroke fill"
+       id="path2512-8-9-9-3"
+       cx="2.6458333"
+       cy="8.2020836"
+       rx="1.0583333"
+       ry="1.0583334" />
+    <ellipse
+       style="fill:#4d2a19;fill-opacity:1;stroke-width:2.64584;paint-order:markers stroke fill"
+       id="path2512-8-9-9-3-4"
+       cx="3.96875"
+       cy="2.1166668"
+       rx="1.0583333"
+       ry="1.0583334" />
+    <ellipse
+       style="fill:#4d2a19;fill-opacity:1;stroke-width:2.64584;paint-order:markers stroke fill"
+       id="path2512-8-9-9-3-5"
+       cx="9.5249996"
+       cy="3.7041667"
+       rx="1.0583333"
+       ry="1.0583334" />
+  </g>
+</svg>

@@ -4,22 +4,13 @@ import type { Preferences } from '../types/preferences';
 let timeoutID: TimeoutID;
 const timeOfTimeout = 0;
 
-export function parsePreferences(val: string) {
-	try {
-		return JSON.parse(val);
-	} catch (err) {
-		if (err.name === 'SyntaxError') return undefined;
-		console.log(err);
-	}
-}
-
 export function isPreferences(val: unknown) {
 	return (
 		typeof val === 'object' &&
-		['drakmode', 'lightmode'].includes(val.theme) &&
-		[true, false].includes(val.animation) &&
-		['en', 'es'].includes(val.lang) &&
-		['green', 'orange', 'red', 'blue'].includes(val.color)
+		['drakmode', 'lightmode'].includes((<Preferences>val).theme) &&
+		[true, false].includes((<Preferences>val).animation) &&
+		['en', 'es'].includes((<Preferences>val).lang) &&
+		['green', 'orange', 'red', 'blue'].includes((<Preferences>val).color)
 	);
 }
 

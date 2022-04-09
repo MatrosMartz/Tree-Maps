@@ -1,4 +1,8 @@
-<script lang="ts">
+<script>
+	import { browser } from '$app/env';
+
+	import cookie from '$lib/stores/cookie';
+
 	import SwitchBtnAlert from './SwitchBtnAlert.svelte';
 
 	let authCheck = true,
@@ -7,7 +11,7 @@
 	$: console.log(authCheck, prfsCheck);
 
 	function clickAllow() {
-		authCheck = !authCheck;
+		if (browser) localStorage.setItem('cookies-accepted', JSON.stringify());
 	}
 	function clickAccept() {}
 	function clickReject() {}
@@ -22,10 +26,10 @@
 				<a href="#theme">más información...</a>
 			</p>
 		</span>
-		<SwitchBtnAlert id="authCheck" checked={authCheck}>
+		<SwitchBtnAlert id="authCheck" bind:checked={authCheck}>
 			<h6 slot="name">autentificación :3</h6>
 		</SwitchBtnAlert>
-		<SwitchBtnAlert id="prfsCheck" checked={prfsCheck}>
+		<SwitchBtnAlert id="prfsCheck" bind:checked={prfsCheck}>
 			<h6 slot="name">preferencias :3</h6>
 		</SwitchBtnAlert>
 		<section class="buttons">

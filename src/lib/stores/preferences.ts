@@ -7,7 +7,8 @@ import { session } from '$app/stores';
 
 import { derived, get } from 'svelte/store';
 
-import { set_config, parsePreferences, isPreferences } from '../utilities/preferences';
+import { parseString } from '../utilities';
+import { set_config, isPreferences } from '../utilities/preferences';
 
 export function set_theme(t: boolean) {
 	if (browser) {
@@ -50,8 +51,8 @@ export function set_color(color: Color) {
 }
 
 const preferences = derived<SessionStore, Preferences>(<SessionStore>session, ($session, set) => {
-	const prfsOfSession = parsePreferences($session.prfs);
-	if (isPreferences(prfsOfSession)) {
+	const prfsOfSession = parseString<Preferences>($session.prfs);
+	if (prfsOfSession != null && isPreferences(prfsOfSession)) {
 		set(prfsOfSession);
 	} else if (browser) {
 		const prfs = {
