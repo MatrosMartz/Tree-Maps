@@ -8,13 +8,27 @@
 	let authCheck = true,
 		prfsCheck = false;
 
-	$: console.log(authCheck, prfsCheck);
-
 	function clickAllow() {
-		if (browser) localStorage.setItem('cookies-accepted', JSON.stringify());
+		if (browser)
+			cookie.set({
+				auth: authCheck,
+				prfs: prfsCheck,
+			});
 	}
-	function clickAccept() {}
-	function clickReject() {}
+	function clickAccept() {
+		if (browser)
+			cookie.set({
+				auth: true,
+				prfs: true,
+			});
+	}
+	function clickReject() {
+		if (browser)
+			cookie.set({
+				auth: false,
+				prfs: false,
+			});
+	}
 </script>
 
 <div class="alert-background">
@@ -27,15 +41,15 @@
 			</p>
 		</span>
 		<SwitchBtnAlert id="authCheck" bind:checked={authCheck}>
-			<h6 slot="name">autentificación :3</h6>
+			<h6 slot="name">autentificación</h6>
 		</SwitchBtnAlert>
 		<SwitchBtnAlert id="prfsCheck" bind:checked={prfsCheck}>
-			<h6 slot="name">preferencias :3</h6>
+			<h6 slot="name">preferencias</h6>
 		</SwitchBtnAlert>
 		<section class="buttons">
 			<button on:click={clickAllow} class="primary-btn"> permitir la selección </button>
-			<button on:click={clickAccept} class="secondary-btn"> aceptar todas </button>
 			<button on:click={clickReject} class="secondary-btn"> rechazar todas </button>
+			<button on:click={clickAccept} class="secondary-btn"> aceptar todas </button>
 		</section>
 	</section>
 </div>
