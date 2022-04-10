@@ -7,15 +7,16 @@ import { parseString, objectPorperties } from '../utilities';
 
 import alert from './alert';
 
+const anteLocal = browser ? localStorage.getItem('cookies-accepted') : '';
+
 const localCookiesAccepted: Cookies | undefined = <Cookies>(
-	objectPorperties(parseString(localStorage.getItem('cookies-accepted')), [
+	objectPorperties(parseString(anteLocal), [
 		['auth', 'boolean'],
 		['prfs', 'boolean'],
 	])
 );
 
-const areCookiesAccepted =
-	(browser && localCookiesAccepted) ?? <Cookies>{ auth: false, prfs: false };
+const areCookiesAccepted = localCookiesAccepted ?? <Cookies>{ auth: false, prfs: false };
 
 const cookiesAccepted = writable(areCookiesAccepted);
 

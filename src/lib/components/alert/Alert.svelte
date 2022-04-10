@@ -1,7 +1,11 @@
 <script>
 	import { browser } from '$app/env';
+	import { fade } from 'svelte/transition';
 
-	import cookie from '$lib/stores/cookie';
+	import cookie from '../../stores/cookie';
+	import alertStore from '../../stores/alert';
+	import preferences from '../../stores/preferences';
+	import { set_config } from '../../utilities/preferences';
 
 	import SwitchBtnAlert from './SwitchBtnAlert.svelte';
 
@@ -9,29 +13,37 @@
 		prfsCheck = false;
 
 	function clickAllow() {
-		if (browser)
+		if (browser) {
 			cookie.set({
 				auth: authCheck,
 				prfs: prfsCheck,
 			});
+			if (prfsCheck) set_config($preferences);
+		}
+		alertStore.set_none();
 	}
 	function clickAccept() {
-		if (browser)
+		if (browser) {
 			cookie.set({
 				auth: true,
 				prfs: true,
 			});
+			set_config($preferences);
+		}
+		alertStore.set_none();
 	}
 	function clickReject() {
-		if (browser)
+		if (browser) {
 			cookie.set({
 				auth: false,
 				prfs: false,
 			});
+		}
+		alertStore.set_none();
 	}
 </script>
 
-<div class="alert-background">
+<div class="alert-background" transition:fade>
 	<section class="alert border-radius">
 		<h5>cookies</h5>
 		<span>

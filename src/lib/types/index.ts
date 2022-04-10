@@ -18,10 +18,6 @@ export enum Photo {
 	file = 'file',
 }
 
-export interface SessionInterface {
-	prfs?: string;
-}
-
-export type SessionStore = Writable<SessionInterface>;
+export type SessionStore = Writable<App.Session>;
 
 export type TimeoutID = ReturnType<typeof setTimeout>;

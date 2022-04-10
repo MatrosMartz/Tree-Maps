@@ -9,6 +9,7 @@ import { derived, get } from 'svelte/store';
 
 import { parseString } from '../utilities';
 import { set_config, isPreferences } from '../utilities/preferences';
+import cookie from './cookie';
 
 export function set_theme(t: boolean) {
 	if (browser) {
@@ -17,7 +18,7 @@ export function set_theme(t: boolean) {
 			theme: t ? Theme.dark : Theme.light,
 		};
 		const newSesstion = { prfs: JSON.stringify(newPreferences) };
-		set_config(newPreferences);
+		if (get(cookie).prfs) set_config(newPreferences);
 		session.update(() => newSesstion);
 	}
 }
@@ -28,7 +29,7 @@ export function set_lang(l: boolean) {
 			lang: l ? Lang.english : Lang.spanish,
 		};
 		const newSesstion = { prfs: JSON.stringify(newPreferences) };
-		set_config(newPreferences);
+		if (get(cookie).prfs) set_config(newPreferences);
 		session.update(() => newSesstion);
 	}
 }
@@ -37,7 +38,7 @@ export function set_animation(animation: boolean) {
 	if (browser) {
 		const newPreferences: Preferences = { ...get(preferences), animation };
 		const newSesstion = { prfs: JSON.stringify(newPreferences) };
-		set_config(newPreferences);
+		if (get(cookie).prfs) set_config(newPreferences);
 		session.update(() => newSesstion);
 	}
 }
@@ -45,12 +46,12 @@ export function set_color(color: Color) {
 	if (browser) {
 		const newPreferences: Preferences = { ...get(preferences), color };
 		const newSesstion = { prfs: JSON.stringify(newPreferences) };
-		set_config(newPreferences);
+		if (get(cookie).prfs) set_config(newPreferences);
 		session.update(() => newSesstion);
 	}
 }
 
-const preferences = derived<SessionStore, Preferences>(<SessionStore>session, ($session, set) => {
+const preferences = derived<SessionStore, Preferences>(session, ($session, set) => {
 	const prfsOfSession = parseString<Preferences>($session.prfs);
 	if (prfsOfSession != null && isPreferences(prfsOfSession)) {
 		set(prfsOfSession);
@@ -62,7 +63,6 @@ const preferences = derived<SessionStore, Preferences>(<SessionStore>session, ($
 			color: Color.g,
 		};
 		set(prfs);
-		set_config(prfs);
 	} else {
 		set({
 			theme: Theme.light,

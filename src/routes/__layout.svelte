@@ -10,7 +10,11 @@
 	import Alert from '$lib/components/alert/Alert.svelte';
 
 	import preferences from '$lib/stores/preferences';
+	import alertStore from '$lib/stores/alert';
 	import panel from '$lib/stores/panel';
+
+	import { Alert as AlertEnum } from '$lib/types/alert';
+
 	import { createClient } from '$lib/stores/auth';
 
 	onMount(createClient);
@@ -32,5 +36,7 @@
 
 	<Footer />
 
-	<Alert />
+	{#if $alertStore !== AlertEnum.none}
+		<Alert />
+	{/if}
 </div>
