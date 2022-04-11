@@ -4,6 +4,8 @@
 	import { isAuth, user, login } from '../../stores/auth';
 
 	import panel from '../../stores/panel';
+	import cookie from '$lib/stores/cookie';
+	import alertStore from '$lib/stores/alert';
 
 	function onClick() {
 		if ($panel === 'prof') {
@@ -16,7 +18,10 @@
 	$: selected = $panel === 'prof';
 </script>
 
-<button class="head-tag filter-transition border-radius" on:click={$isAuth ? onClick : login()}>
+<button
+	class="head-tag filter-transition border-radius"
+	on:click={$isAuth ? onClick : $cookie.auth === true ? login() : alertStore.set_cookies}
+>
 	{#if $isAuth}
 		<img src={$user.picture} alt="user" />
 		<section class:selected>

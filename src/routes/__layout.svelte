@@ -13,7 +13,7 @@
 	import alertStore from '$lib/stores/alert';
 	import panel from '$lib/stores/panel';
 
-	import { Alert as AlertEnum } from '$lib/types/alert';
+	import { AlertEnum } from '$lib/types/alert';
 
 	import { createClient } from '$lib/stores/auth';
 

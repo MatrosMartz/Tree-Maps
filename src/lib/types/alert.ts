@@ -1,4 +1,4 @@
-export enum Alert {
+export enum AlertEnum {
 	none = 'none',
 	cookies = 'cookies',
 	noSession = 'no session',

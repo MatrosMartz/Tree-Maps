@@ -1,4 +1,4 @@
-import { Alert } from '../types/alert';
+import { AlertEnum } from '../types/alert';
 
 import { writable } from 'svelte/store';
 
@@ -6,22 +6,22 @@ import { browser } from '$app/env';
 
 const cookiesAccepted = browser && localStorage.getItem('cookies-accepted');
 
-const alert = writable<Alert>(cookiesAccepted ? Alert.none : Alert.cookies);
+const alert = writable<AlertEnum>(cookiesAccepted ? AlertEnum.none : AlertEnum.cookies);
 
 function set_none() {
-	alert.set(Alert.none);
+	alert.set(AlertEnum.none);
 }
 
 function set_cookies() {
-	alert.set(Alert.cookies);
+	alert.set(AlertEnum.cookies);
 }
 
 function set_inalidPhoto() {
-	alert.set(Alert.inalidPhoto);
+	alert.set(AlertEnum.inalidPhoto);
 }
 
 function set_noSession() {
-	alert.set(Alert.noSession);
+	alert.set(AlertEnum.noSession);
 }
 
 export default {
