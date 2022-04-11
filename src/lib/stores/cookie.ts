@@ -5,24 +5,17 @@ import { browser } from '$app/env';
 
 import { parseString, objectPorperties } from '../utilities';
 
-import alert from './alert';
-
 const anteLocal = browser ? localStorage.getItem('cookies-accepted') : '';
 
-const localCookiesAccepted: Cookies | undefined = <Cookies>(
-	objectPorperties(parseString(anteLocal), [
-		['auth', 'boolean'],
-		['prfs', 'boolean'],
-	])
-);
-
-const areCookiesAccepted = localCookiesAccepted ?? <Cookies>{ auth: false, prfs: false };
+const areCookiesAccepted: Cookies | undefined = <Cookies>objectPorperties(parseString(anteLocal), [
+	['auth', 'boolean'],
+	['prfs', 'boolean'],
+]);
 
 const cookiesAccepted = writable(areCookiesAccepted);
 
 cookiesAccepted.subscribe(val => {
-	if (browser) localStorage.setItem('cookies-accepted', JSON.stringify(val));
-	if (val.auth || val.prfs) alert.set_cookies();
+	if (browser && val != undefined) localStorage.setItem('cookies-accepted', JSON.stringify(val));
 });
 
 function set(val: Cookies) {
