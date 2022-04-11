@@ -1,43 +1,43 @@
-# create-svelte
+# Tree Maps
 
-Everything you need to build a Svelte project, powered by
-[`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This is a proyect with the purpose of tree mapping and tracing via a PWA 
 
-## Creating a project
+## Prupose
 
-If you're seeing this, you've probably already done this step. Congrats!
+This is a small proyect for school.
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
+## Tecnologies
 
-# create a new project in my-app
-npm init svelte@next my-app
-```
+- [NodeJS](https://nodejs.org)
+- [Svelte/kit](https://kit.svelte.dev)
+- [Auth0](https://auth0.com)
+- [TypeScript](https://typescriptlang.org)
+- some [SCSS](https://sass-lang.com)
+> - MongoDB
+> - GraphQL
 
-> Note: the `@next` is temporary
+## TODO
 
-## Developing
+- [x] Layout :3
+- [ ] Cookies mensage
+- [ ] Accesibility
+  - [ ] Aria labels
+  - [ ] Responsive desing
+  - [x] Media prefers motion reduced
+  - [x] Media prefers color scheme
+  - [x] Rendering preferences via ssr
+- [ ] Tree mapping
+  - [ ] Tree name input, description, age, and etc.
+  - [x] Tree photos
+  - [ ] Tree location
+- [ ] User ranking
+- [ ] Interaction with trees registers
+- [ ] Search Trees
+- [ ] API for Trees
+- [ ] Databases
+  - [ ] Tree database with [mongoBD Atlas](https://mongodb.com/atlas/database)
+  - [x] Resgister with Auth0
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or
-`yarn`), start a development server:
+## License
 
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for
-> your target environment.
+The license is the MIT License (public domain and free for use)
