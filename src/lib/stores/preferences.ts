@@ -7,53 +7,23 @@ import { session } from '$app/stores';
 
 import { derived, get } from 'svelte/store';
 
-import { parseString } from '../utilities';
-import { set_config, isPreferences } from '../utilities/preferences';
+import { parseString, objectPorperties } from '../utilities';
+import { set_config } from '../utilities/preferences';
 import cookie from './cookie';
-
-export function set_theme(t: boolean) {
-	if (browser) {
-		const newPreferences: Preferences = {
-			...get(preferences),
-			theme: t ? Theme.dark : Theme.light,
-		};
-		const newSesstion = { prfs: JSON.stringify(newPreferences) };
-		if (get(cookie).prfs) set_config(newPreferences);
-		session.update(() => newSesstion);
-	}
-}
-export function set_lang(l: boolean) {
-	if (browser) {
-		const newPreferences: Preferences = {
-			...get(preferences),
-			lang: l ? Lang.english : Lang.spanish,
-		};
-		const newSesstion = { prfs: JSON.stringify(newPreferences) };
-		if (get(cookie).prfs) set_config(newPreferences);
-		session.update(() => newSesstion);
-	}
-}
-
-export function set_animation(animation: boolean) {
-	if (browser) {
-		const newPreferences: Preferences = { ...get(preferences), animation };
-		const newSesstion = { prfs: JSON.stringify(newPreferences) };
-		if (get(cookie).prfs) set_config(newPreferences);
-		session.update(() => newSesstion);
-	}
-}
-export function set_color(color: Color) {
-	if (browser) {
-		const newPreferences: Preferences = { ...get(preferences), color };
-		const newSesstion = { prfs: JSON.stringify(newPreferences) };
-		if (get(cookie).prfs) set_config(newPreferences);
-		session.update(() => newSesstion);
-	}
-}
 
 const preferences = derived<SessionStore, Preferences>(session, ($session, set) => {
 	const prfsOfSession = parseString<Preferences>($session.prfs);
-	if (prfsOfSession != null && isPreferences(prfsOfSession)) {
+	const isPreferences = <boolean>objectPorperties(
+		prfsOfSession,
+		[
+			['theme', 'string'],
+			['animation', 'boolean'],
+			['lang', 'string'],
+			['color', 'string'],
+		],
+		'boolean'
+	);
+	if (prfsOfSession != null && isPreferences) {
 		set(prfsOfSession);
 	} else if (browser) {
 		const prfs = {
@@ -73,4 +43,50 @@ const preferences = derived<SessionStore, Preferences>(session, ($session, set) 
 	}
 });
 
-export default preferences;
+function set_theme(t: boolean) {
+	if (browser) {
+		const newPreferences: Preferences = {
+			...get(preferences),
+			theme: t ? Theme.dark : Theme.light,
+		};
+		const newSesstion = { prfs: JSON.stringify(newPreferences) };
+		if (get(cookie).prfs) set_config(newPreferences);
+		session.update(() => newSesstion);
+	}
+}
+function set_lang(l: boolean) {
+	if (browser) {
+		const newPreferences: Preferences = {
+			...get(preferences),
+			lang: l ? Lang.english : Lang.spanish,
+		};
+		const newSesstion = { prfs: JSON.stringify(newPreferences) };
+		if (get(cookie).prfs) set_config(newPreferences);
+		session.update(() => newSesstion);
+	}
+}
+
+function set_animation(animation: boolean) {
+	if (browser) {
+		const newPreferences: Preferences = { ...get(preferences), animation };
+		const newSesstion = { prfs: JSON.stringify(newPreferences) };
+		if (get(cookie).prfs) set_config(newPreferences);
+		session.update(() => newSesstion);
+	}
+}
+function set_color(color: Color) {
+	if (browser) {
+		const newPreferences: Preferences = { ...get(preferences), color };
+		const newSesstion = { prfs: JSON.stringify(newPreferences) };
+		if (get(cookie).prfs) set_config(newPreferences);
+		session.update(() => newSesstion);
+	}
+}
+
+export default {
+	subscribe: preferences.subscribe,
+	set_theme,
+	set_lang,
+	set_color,
+	set_animation,
+};

@@ -1,4 +1,3 @@
 {
-	"prettier.configPath": ".prettierrc",
 	"eslint.format.enable": true
 }

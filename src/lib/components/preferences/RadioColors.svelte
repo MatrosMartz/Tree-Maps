@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { Color } from '../../types/preferences';
-	import preferences, { set_color } from '../../stores/preferences';
+	import preferences from '../../stores/preferences';
 
 	let currentColor: Color = $preferences.color;
 	let colors = [Color.g, Color.o, Color.r, Color.b];
 
 	function onClick() {
-		set_color(currentColor);
+		preferences.set_color(currentColor);
 	}
 </script>
 

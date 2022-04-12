@@ -18,6 +18,16 @@ export enum Photo {
 	file = 'file',
 }
 
+export type Types =
+	| 'string'
+	| 'number'
+	| 'bigint'
+	| 'boolean'
+	| 'symbol'
+	| 'undefined'
+	| 'object'
+	| 'function';
+
 export type SessionStore = Writable<App.Session>;
 
 export type TimeoutID = ReturnType<typeof setTimeout>;

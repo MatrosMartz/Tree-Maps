@@ -1,14 +1,14 @@
 <script lang="ts">
 	export let id: string;
 
-	import preferences, * as setter from '../../stores/preferences';
+	import preferences from '../../stores/preferences';
 
 	let checked: boolean;
 	if (id === 'theme') checked = $preferences.theme === 'lightmode';
 	else if (id === 'animation') checked = $preferences.animation;
 
 	function onInput() {
-		setter[`set_${id}`](checked);
+		preferences[`set_${id}`](checked);
 	}
 </script>
 
