@@ -2,10 +2,10 @@
 	import { browser } from '$app/env';
 	import { fade } from 'svelte/transition';
 
-	import cookie from '../../stores/cookie';
-	import alertStore from '../../stores/alert';
-	import preferences from '../../stores/preferences';
-	import { set_config } from '../../utilities/preferences';
+	import cookie from '../../../stores/cookie';
+	import alertStore from '../../../stores/alert';
+	import preferences from '../../../stores/preferences';
+	import { set_config } from '../../../utilities/preferences';
 
 	import SwitchBtnAlert from './SwitchBtnAlert.svelte';
 
@@ -46,12 +46,10 @@
 <div class="alert-background" transition:fade>
 	<section class="alert border-radius">
 		<h5>cookies</h5>
-		<span>
-			<p>
-				las cookies este sitio web se usan para personalizar el contenido
-				<a href="#theme">más información...</a>
-			</p>
-		</span>
+		<p>
+			las cookies este sitio web se usan para personalizar el contenido
+			<a href="#theme">más información...</a>
+		</p>
 		<SwitchBtnAlert id="authCheck" bind:checked={authCheck}>
 			<h6 slot="name">autentificación</h6>
 		</SwitchBtnAlert>
@@ -67,32 +65,6 @@
 </div>
 
 <style>
-	.alert-background {
-		position: absolute;
-		top: 0;
-		left: 0;
-
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		width: 100%;
-		height: 100vh;
-
-		backdrop-filter: grayscale(0.75) blur(5px);
-	}
-	.alert {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-around;
-
-		width: 90vw;
-		height: 80vh;
-
-		background-color: var(--t2);
-		color: var(--sb);
-	}
 	h5,
 	h6 {
 		color: var(--lb);

@@ -12,6 +12,7 @@
 	import ResourcesIcon from '../icons/ResourcesIcon.svelte';
 
 	import { isAuth } from '$lib/stores/auth';
+	import alertStore from '$lib/stores/alert';
 
 	function onClick(evt: MouseEvent) {
 		const path = evt.composedPath();
@@ -22,7 +23,7 @@
 			if ($isAuth) {
 				panel.setToAdd();
 			} else {
-				alert('no ha inicado sesión');
+				alertStore.set_noSession();
 			}
 		} else {
 			panel.setToNone();

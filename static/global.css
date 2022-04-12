@@ -333,8 +333,40 @@ fieldset {
 #app.animation .filter-transition {
 	transition: filter 200ms ease-in-out;
 }
+
 #app.animation .filter-transition::after {
 	transition: filter 200ms ease-in-out;
+}
+
+.alert-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 100%;
+	height: 100vh;
+
+	backdrop-filter: grayscale(0.75) blur(5px);
+}
+
+.alert {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	box-sizing: border-box;
+
+	width: 90vw;
+	height: 80vh;
+
+	padding-inline: 1rem;
+
+	background-color: var(--t2);
+	color: var(--sb);
 }
 
 .darkmode {

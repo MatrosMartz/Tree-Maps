@@ -7,7 +7,7 @@
 	import PreferencesSect from '$lib/components/preferences/PreferencesSect.svelte';
 	import MoreSect from '$lib/components/more/MoreSect.svelte';
 	import AddSect from '$lib/components/add/AddSect.svelte';
-	import Alert from '$lib/components/alert/Alert.svelte';
+	import CookieAlert from '$lib/components/alert/Cookie/CookieAlert.svelte';
 
 	import preferences from '$lib/stores/preferences';
 	import alertStore from '$lib/stores/alert';
@@ -16,6 +16,7 @@
 	import { AlertEnum } from '$lib/types/alert';
 
 	import { createClient } from '$lib/stores/auth';
+	import NoRegisterAlert from '$lib/components/alert/noRegister/NoRegisterAlert.svelte';
 
 	onMount(createClient);
 </script>
@@ -36,7 +37,9 @@
 
 	<Footer />
 
-	{#if $alertStore !== AlertEnum.none}
-		<Alert />
+	{#if $alertStore === AlertEnum.cookies}
+		<CookieAlert />
+	{:else if $alertStore === AlertEnum.noSession}
+		<NoRegisterAlert />
 	{/if}
 </div>
