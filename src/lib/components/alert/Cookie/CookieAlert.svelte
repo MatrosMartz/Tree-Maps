@@ -8,6 +8,7 @@
 	import { set_config } from '../../../utilities/preferences';
 
 	import SwitchBtnAlert from './SwitchBtnAlert.svelte';
+	import CookieIcon from '$lib/components/icons/CookieIcon.svelte';
 
 	let authCheck = true,
 		prfsCheck = false;
@@ -45,6 +46,7 @@
 
 <div class="alert-background" transition:fade>
 	<section class="alert border-radius">
+		<CookieIcon />
 		<h5>cookies</h5>
 		<p>
 			las cookies este sitio web se usan para personalizar el contenido
@@ -93,5 +95,10 @@
 	}
 	.buttons :first-child {
 		width: 100%;
+	}
+	.alert :global(svg) {
+		position: absolute;
+		width: 6rem;
+		top: -12%;
 	}
 </style>
