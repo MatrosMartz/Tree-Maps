@@ -96,9 +96,4 @@
 	.buttons :first-child {
 		width: 100%;
 	}
-	.alert :global(svg) {
-		position: absolute;
-		width: 6rem;
-		top: -12%;
-	}
 </style>

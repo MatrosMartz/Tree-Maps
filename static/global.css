@@ -370,6 +370,11 @@ fieldset {
 	background-color: var(--t2);
 	color: var(--sb);
 }
+.alert svg {
+	position: absolute;
+	width: 6rem;
+	top: -12%;
+}
 
 .darkmode {
 	--g-wc: var(--g-sh);
