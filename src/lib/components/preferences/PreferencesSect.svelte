@@ -26,13 +26,13 @@
 		<LightmodeIcon slot="first" />
 		<DarkmodeIcon slot="last" />
 	</SwitchBtn>
-	
+
 	<SwitchBtn id="animation">
 		<legend slot="name">animaciones</legend>
 		<NonAnimationIcon slot="first" />
 		<AnimationIcon slot="last" />
 	</SwitchBtn>
-	
+
 	<RadioColors />
 
 	<button type="button" class="terciary-btn" on:click={onClick}>modificar las cookies</button>

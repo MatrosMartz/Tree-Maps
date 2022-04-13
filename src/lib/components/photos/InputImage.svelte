@@ -9,8 +9,7 @@
 	function onInput(evt: Event) {
 		evt.preventDefault();
 		const files = filterImages(Array.from(inputFileThis.files));
-		filesStore.add(files.allowedFiles);
-		console.log(files);
+		filesStore.add(files);
 	}
 	function onDragLeave(evt: DragEvent) {
 		evt.preventDefault();
@@ -23,8 +22,7 @@
 	function onDrop(evt: DragEvent) {
 		evt.preventDefault();
 		const files = filterImages(Array.from(evt.dataTransfer.files));
-		filesStore.add(files.allowedFiles);
-		console.log(files);
+		filesStore.add(files);
 		draging = false;
 	}
 	function onClick() {

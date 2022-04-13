@@ -16,7 +16,8 @@ function set_cookies() {
 	alert.set(AlertEnum.cookies);
 }
 
-function set_inalidPhoto() {
+function set_invalidPhoto(invalidTypes: Set<string>) {
+	console.log(invalidTypes);
 	alert.set(AlertEnum.inalidPhoto);
 }
 
@@ -28,6 +29,6 @@ export default {
 	subscribe: alert.subscribe,
 	set_none,
 	set_cookies,
-	set_inalidPhoto,
+	set_invalidPhoto,
 	set_noSession,
 };

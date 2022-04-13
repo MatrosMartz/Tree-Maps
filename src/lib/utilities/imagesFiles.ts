@@ -1,3 +1,5 @@
+import alertStore from '../stores/alert';
+
 const allowedImageTypes = ['image/png', 'image/gif', 'image/jpeg', 'image/webp'];
 
 export function filterImages(files: File[]) {
@@ -9,8 +11,9 @@ export function filterImages(files: File[]) {
 		else notAllowedFileTypes.add(f.type);
 	}
 
-	return {
-		allowedFiles,
-		notAllowedFileTypes,
-	};
+	if (notAllowedFileTypes.size > 0) {
+		alertStore.set_invalidPhoto(notAllowedFileTypes);
+	}
+
+	return allowedFiles;
 }
