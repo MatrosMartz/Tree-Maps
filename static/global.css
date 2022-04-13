@@ -370,6 +370,20 @@ fieldset {
 	background-color: var(--t2);
 	color: var(--sb);
 }
+.alert h5,
+.alert h6 {
+	color: var(--lb);
+}
+.alert h6 {
+	font-weight: 500;
+}
+.alert p {
+	color: inherit;
+}
+.alert a {
+	color: inherit;
+	filter: var(--s-fl);
+}
 .alert svg {
 	position: absolute;
 	width: 6rem;

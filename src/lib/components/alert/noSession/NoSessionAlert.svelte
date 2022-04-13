@@ -13,16 +13,7 @@
 	<section class="alert border-radius">
 		<AuthAlertIcon />
 		<h5>No ha inicado sesión</h5>
-		<p>Debe iniciar sesión para aceder a esto</p>
+		<p>Debe iniciar sesión para aceder a esta funcionalidad.</p>
 		<button on:click={onClick} class="primary-btn"> aceptar </button>
 	</section>
 </div>
-
-<style>
-	h5 {
-		color: var(--lb);
-	}
-	p {
-		color: inherit;
-	}
-</style>

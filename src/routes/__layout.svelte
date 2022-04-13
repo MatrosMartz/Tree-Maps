@@ -16,7 +16,7 @@
 	import { AlertEnum } from '$lib/types/alert';
 
 	import { createClient } from '$lib/stores/auth';
-	import NoRegisterAlert from '$lib/components/alert/noRegister/NoRegisterAlert.svelte';
+	import NoRegisterAlert from '$lib/components/alert/noSession/NoSessionAlert.svelte';
 
 	onMount(createClient);
 </script>

@@ -20,15 +20,18 @@ This is a small proyect for school.
 ## TODO
 
 -   [x] Layout :3
--   [ ] Cookies mensage
+-   [ ] alerts
+    -   [x] Cookies alert
+    -   [x] No Session alert
+    -   [ ] Invalid Photo alert
 -   [ ] Accesibility
     -   [ ] Aria labels
     -   [ ] Responsive desing
     -   [x] Media prefers motion reduced
     -   [x] Media prefers color scheme
     -   [x] Rendering preferences via ssr
--   [ ] Tree mapping
-    -   [ ] Tree name input, description, age, and etc.
+-   [ ] Tree register
+    -   [ ] Tree name, description, age, and etc.
     -   [x] Tree photos
     -   [ ] Tree location
 -   [ ] User ranking

@@ -67,20 +67,6 @@
 </div>
 
 <style>
-	h5,
-	h6 {
-		color: var(--lb);
-	}
-	h6 {
-		font-weight: 500;
-	}
-	p {
-		color: inherit;
-	}
-	a {
-		color: inherit;
-		filter: var(--s-fl);
-	}
 	.buttons {
 		display: flex;
 		flex-wrap: wrap;
