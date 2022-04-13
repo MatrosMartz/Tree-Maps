@@ -273,6 +273,15 @@ fieldset {
 	border-radius: 7px;
 }
 
+.terciary-btn {
+	box-sizing: border-box;
+	height: var(--img-size);
+	background-color: var(--sb);
+	color: var(--at);
+	box-shadow: 0 0 10px var(--is);
+	border-radius: 7px;
+}
+
 .svg {
 	fill: currentColor;
 	width: var(--img-size);
@@ -365,7 +374,7 @@ fieldset {
 	height: 80vh;
 
 	margin-top: 1rem;
-	padding: 2rem 1rem 0 1rem;
+	padding: 2rem 1rem 1.2rem 1rem;
 
 	background-color: var(--t2);
 	color: var(--sb);
