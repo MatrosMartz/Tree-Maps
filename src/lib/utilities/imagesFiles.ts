@@ -4,15 +4,20 @@ const allowedImageTypes = ['image/png', 'image/gif', 'image/jpeg', 'image/webp']
 
 export function filterImages(files: File[]) {
 	const allowedFiles: File[] = [];
-	const notAllowedFileTypes = new Set<string>();
+	const notAllowedFileTypes: string[] = [];
 
 	for (const f of files) {
 		if (allowedImageTypes.includes(f.type)) allowedFiles.push(f);
-		else notAllowedFileTypes.add(f.type);
+		else if (!notAllowedFileTypes.includes(f.type)) notAllowedFileTypes.push(f.type);
 	}
+	console.log(notAllowedFileTypes);
 
-	if (notAllowedFileTypes.size > 0) {
-		alertStore.set_invalidPhoto(notAllowedFileTypes);
+	if (notAllowedFileTypes.length > 0) {
+		alertStore.set_invalidPhoto(
+			notAllowedFileTypes.map((v): [string, string] => {
+				return [v.match(/^\w*(?=\/)/)?.[0], v.match(/[A-z+]*$/)?.[0]];
+			})
+		);
 	}
 
 	return allowedFiles;

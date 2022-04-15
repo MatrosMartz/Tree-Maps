@@ -7,6 +7,7 @@ import { browser } from '$app/env';
 const cookiesAccepted = browser && localStorage.getItem('cookies-accepted');
 
 const alert = writable<AlertEnum>(cookiesAccepted ? AlertEnum.none : AlertEnum.cookies);
+export const invalidTypes = writable<[string, string][]>();
 
 function set_none() {
 	alert.set(AlertEnum.none);
@@ -16,9 +17,9 @@ function set_cookies() {
 	alert.set(AlertEnum.cookies);
 }
 
-function set_invalidPhoto(invalidTypes: Set<string>) {
-	console.log(invalidTypes);
-	alert.set(AlertEnum.inalidPhoto);
+function set_invalidPhoto(invalid: [string, string][]) {
+	invalidTypes.set(invalid);
+	alert.set(AlertEnum.invalidPhoto);
 }
 
 function set_noSession() {

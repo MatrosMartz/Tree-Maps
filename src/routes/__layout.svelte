@@ -8,6 +8,8 @@
 	import MoreSect from '$lib/components/more/MoreSect.svelte';
 	import AddSect from '$lib/components/add/AddSect.svelte';
 	import CookieAlert from '$lib/components/alert/Cookie/CookieAlert.svelte';
+	import NoRegisterAlert from '$lib/components/alert/noSession/NoSessionAlert.svelte';
+	import InvalidSessionAlert from '$lib/components/alert/invalidSession/InvalidSessionAlert.svelte';
 
 	import preferences from '$lib/stores/preferences';
 	import alertStore from '$lib/stores/alert';
@@ -16,8 +18,8 @@
 	import { AlertEnum } from '$lib/types/alert';
 
 	import { createClient } from '$lib/stores/auth';
-	import NoRegisterAlert from '$lib/components/alert/noSession/NoSessionAlert.svelte';
 
+	$: console.log($alertStore);
 	onMount(createClient);
 </script>
 
@@ -41,5 +43,7 @@
 		<CookieAlert />
 	{:else if $alertStore === AlertEnum.noSession}
 		<NoRegisterAlert />
+	{:else if $alertStore === AlertEnum.invalidPhoto}
+		<InvalidSessionAlert />
 	{/if}
 </div>

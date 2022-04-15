@@ -2,7 +2,7 @@ export enum AlertEnum {
 	none = 'none',
 	cookies = 'cookies',
 	noSession = 'no session',
-	inalidPhoto = 'invalid photo',
+	invalidPhoto = 'invalid photo',
 }
 
 export interface Cookies {
