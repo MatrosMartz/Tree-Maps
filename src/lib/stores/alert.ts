@@ -4,9 +4,13 @@ import { writable } from 'svelte/store';
 
 import { browser } from '$app/env';
 
-const cookiesAccepted = browser && localStorage.getItem('cookies-accepted');
-
-const alert = writable<AlertEnum>(cookiesAccepted ? AlertEnum.none : AlertEnum.cookies);
+const alert = writable<AlertEnum>(
+	!browser
+		? AlertEnum.loading
+		: localStorage.getItem('cookies-accepted')
+		? AlertEnum.none
+		: AlertEnum.cookies
+);
 export const invalidTypes = writable<[string, string][]>();
 
 function set_none() {

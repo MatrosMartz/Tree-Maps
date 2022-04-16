@@ -1,5 +1,6 @@
 export enum AlertEnum {
 	none = 'none',
+	loading = 'loading',
 	cookies = 'cookies',
 	noSession = 'no session',
 	invalidPhoto = 'invalid photo',

@@ -1,6 +1,5 @@
 <script>
 	import { browser } from '$app/env';
-	import { fade } from 'svelte/transition';
 
 	import cookie from '../../../stores/cookie';
 	import alertStore from '../../../stores/alert';
@@ -44,27 +43,25 @@
 	}
 </script>
 
-<div class="alert-background" transition:fade>
-	<section class="alert border-radius">
-		<CookieIcon />
-		<h5>cookies</h5>
-		<p>
-			las cookies este sitio web se usan para personalizar el contenido
-			<a href="#theme">más información...</a>
-		</p>
-		<SwitchBtnAlert id="authCheck" bind:checked={authCheck}>
-			<h6 slot="name">autentificación</h6>
-		</SwitchBtnAlert>
-		<SwitchBtnAlert id="prfsCheck" bind:checked={prfsCheck}>
-			<h6 slot="name">preferencias</h6>
-		</SwitchBtnAlert>
-		<section class="buttons">
-			<button on:click={clickAllow} class="primary-btn"> permitir la selección </button>
-			<button on:click={clickReject} class="secondary-btn"> rechazar todas </button>
-			<button on:click={clickAccept} class="secondary-btn"> aceptar todas </button>
-		</section>
+<section class="alert border-radius">
+	<CookieIcon />
+	<h5>cookies</h5>
+	<p>
+		las cookies este sitio web se usan para personalizar el contenido
+		<a href="#theme">más información...</a>
+	</p>
+	<SwitchBtnAlert id="authCheck" bind:checked={authCheck}>
+		<h6 slot="name">autentificación</h6>
+	</SwitchBtnAlert>
+	<SwitchBtnAlert id="prfsCheck" bind:checked={prfsCheck}>
+		<h6 slot="name">preferencias</h6>
+	</SwitchBtnAlert>
+	<section class="buttons">
+		<button on:click={clickAllow} class="primary-btn"> permitir la selección </button>
+		<button on:click={clickReject} class="secondary-btn"> rechazar todas </button>
+		<button on:click={clickAccept} class="secondary-btn"> aceptar todas </button>
 	</section>
-</div>
+</section>
 
 <style>
 	.buttons {

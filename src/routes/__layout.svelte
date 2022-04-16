@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 
 	import Header from '$lib/components/header/Header.svelte';
 	import Footer from '$lib/components/footer/Footer.svelte';
@@ -8,8 +9,8 @@
 	import MoreSect from '$lib/components/more/MoreSect.svelte';
 	import AddSect from '$lib/components/add/AddSect.svelte';
 	import CookieAlert from '$lib/components/alert/Cookie/CookieAlert.svelte';
-	import NoRegisterAlert from '$lib/components/alert/noSession/NoSessionAlert.svelte';
-	import InvalidSessionAlert from '$lib/components/alert/invalidSession/InvalidSessionAlert.svelte';
+	import NoSessionAlert from '$lib/components/alert/noSession/NoSessionAlert.svelte';
+	import InvalidPhotoAlert from '$lib/components/alert/invalidPhoto/InvalidPhotoAlert.svelte';
 
 	import preferences from '$lib/stores/preferences';
 	import alertStore from '$lib/stores/alert';
@@ -19,7 +20,6 @@
 
 	import { createClient } from '$lib/stores/auth';
 
-	$: console.log($alertStore);
 	onMount(createClient);
 </script>
 
@@ -39,11 +39,15 @@
 
 	<Footer />
 
-	{#if $alertStore === AlertEnum.cookies}
-		<CookieAlert />
-	{:else if $alertStore === AlertEnum.noSession}
-		<NoRegisterAlert />
-	{:else if $alertStore === AlertEnum.invalidPhoto}
-		<InvalidSessionAlert />
+	{#if $alertStore !== AlertEnum.none}
+		<div class="alert-background" transition:fade>
+			{#if $alertStore === AlertEnum.cookies}
+				<CookieAlert />
+			{:else if $alertStore === AlertEnum.noSession}
+				<NoSessionAlert />
+			{:else if $alertStore === AlertEnum.invalidPhoto}
+				<InvalidPhotoAlert />
+			{/if}
+		</div>
 	{/if}
 </div>

@@ -1,5 +1,5 @@
 {
-	"name": "new-tree-maps",
+	"name": "Tree Maps",
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "svelte-kit dev",

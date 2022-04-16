@@ -5,7 +5,7 @@
 
 	let checked: boolean;
 	if (id === 'theme') checked = $preferences.theme === 'lightmode';
-	else if (id === 'animation') checked = $preferences.animation;
+	else if (id === 'animation') checked = !$preferences.animation;
 
 	function onInput() {
 		preferences[`set_${id}`](checked);
