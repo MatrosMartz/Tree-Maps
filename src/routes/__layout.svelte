@@ -40,7 +40,7 @@
 	<Footer />
 
 	{#if $alertStore !== AlertEnum.none}
-		<div class="alert-background" transition:fade>
+		<div class="alert-background" class:backdrop-filter={$alertStore !== AlertEnum.loading}>
 			{#if $alertStore === AlertEnum.cookies}
 				<CookieAlert />
 			{:else if $alertStore === AlertEnum.noSession}

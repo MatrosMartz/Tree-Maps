@@ -61,6 +61,8 @@
 		background-color: var(--lb);
 
 		bottom: 0;
+
+		z-index: 10;
 	}
 	footer :global(svg) {
 		width: var(--img-size);

@@ -26,7 +26,7 @@
 		height: 4em;
 		margin-inline: auto;
 		padding-block: 0.5em;
-		background-color: var(--lb);
+		background-color: var(--nb);
 	}
 	.slide {
 		display: flex;

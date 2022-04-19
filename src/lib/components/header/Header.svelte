@@ -20,6 +20,7 @@
 <style>
 	header {
 		position: sticky;
+		top: 0;
 
 		display: flex;
 		box-sizing: border-box;
@@ -27,6 +28,8 @@
 		width: 100%;
 		padding: 0.9rem;
 		color: var(--t1);
+
+		z-index: 10;
 	}
 	section {
 		display: flex;

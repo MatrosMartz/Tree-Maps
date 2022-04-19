@@ -358,7 +358,9 @@ fieldset {
 
 	width: 100%;
 	height: 100vh;
+}
 
+.backdrop-filter {
 	backdrop-filter: grayscale(0.75) blur(5px);
 }
 

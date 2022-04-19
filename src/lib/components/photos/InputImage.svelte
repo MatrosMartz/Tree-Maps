@@ -74,7 +74,7 @@
 		box-sizing: border-box;
 
 		border: 3px dotted var(--rs);
-		background-color: var(--lb);
+		background-color: var(--nb);
 		filter: brightness(100%);
 
 		transition: filter 200ms ease-in-out;
