@@ -1,5 +1,5 @@
 <script>
-	import HomeMap from '$lib/components/registerTree/Map.svelte';
+	import HomeMap from '$lib/components/registerTree/TreeMap.svelte';
 	import DetailsTree from '$lib/components/registerTree/DetailsTree.svelte';
 	import InputImage from '$lib/components/registerTree/InputImage.svelte';
 	import Slider from '$lib/components/registerTree/Slider.svelte';
@@ -10,12 +10,18 @@
 <main>
 	<h1>agregar un arbol</h1>
 	<form method="post">
-		<DetailsTree />
-		<InputImage />
-		<Slider />
-		{#if browser && window?.navigator?.geolocation}
-			<HomeMap />
-		{/if}
+		<fieldset>
+			<legend>datos basicos</legend>
+			<DetailsTree />
+			<InputImage />
+			<Slider />
+		</fieldset>
+		<fieldset>
+			<legend>seleccionar ubicación del arbol</legend>
+			{#if browser && window?.navigator?.geolocation}
+				<HomeMap />
+			{/if}
+		</fieldset>
 	</form>
 </main>
 
