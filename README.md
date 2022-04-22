@@ -10,6 +10,7 @@ This is a small proyect for school.
 
 -   [NodeJS](https://nodejs.org)
 -   [Svelte/kit](https://kit.svelte.dev)
+-   [leaflet](https://leafletjs.com)
 -   [Auth0](https://auth0.com)
 -   [TypeScript](https://typescriptlang.org)
 -   some [SCSS](https://sass-lang.com)

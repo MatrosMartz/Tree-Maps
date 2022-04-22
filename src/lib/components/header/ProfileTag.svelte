@@ -57,7 +57,6 @@
 		padding: 0;
 
 		height: var(--img-size);
-		box-shadow: none;
 
 		filter: none;
 	}

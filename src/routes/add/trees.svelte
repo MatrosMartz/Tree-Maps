@@ -1,8 +1,8 @@
 <script>
-	import HomeMap from '$lib/components/maps/HomeMap.svelte';
-	import DetailsTree from '$lib/components/photos/DetailsTree.svelte';
-	import InputImage from '$lib/components/photos/InputImage.svelte';
-	import Slider from '$lib/components/photos/Slider.svelte';
+	import HomeMap from '$lib/components/registerTree/Map.svelte';
+	import DetailsTree from '$lib/components/registerTree/DetailsTree.svelte';
+	import InputImage from '$lib/components/registerTree/InputImage.svelte';
+	import Slider from '$lib/components/registerTree/Slider.svelte';
 
 	import { browser } from '$app/env';
 </script>
@@ -13,7 +13,7 @@
 		<DetailsTree />
 		<InputImage />
 		<Slider />
-		{#if browser}
+		{#if browser && window?.navigator?.geolocation}
 			<HomeMap />
 		{/if}
 	</form>
