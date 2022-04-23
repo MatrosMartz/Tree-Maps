@@ -13,9 +13,9 @@
 		<fieldset>
 			<legend>datos basicos</legend>
 			<DetailsTree />
-			<InputImage />
-			<Slider />
 		</fieldset>
+		<InputImage />
+		<Slider />
 		<fieldset>
 			<legend>seleccionar ubicación del arbol</legend>
 			{#if browser && window?.navigator?.geolocation}
@@ -45,5 +45,6 @@
 	}
 	form :global(fieldset) {
 		width: 80vmin;
+		margin: 0;
 	}
 </style>

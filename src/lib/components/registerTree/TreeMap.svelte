@@ -11,12 +11,17 @@
 	}
 
 	let coords: [number, number] = [51.505, -0.09];
-	let marker = L.marker(coords);
+	let iconMarker = L.icon({
+		iconUrl: '/icons/brute/treeMarker.svg',
+		iconSize: [44, 44],
+	});
+	let marker = L.marker(coords, {
+		icon: iconMarker,
+	});
 
 	navigator.geolocation.getCurrentPosition(
 		pos => {
-			coords[0] = pos.coords.latitude;
-			coords[1] = pos.coords.longitude;
+			coords = [pos.coords.latitude, pos.coords.longitude];
 			marker.setLatLng(coords);
 		},
 		err => {
@@ -37,6 +42,7 @@
 		marker.addTo(map);
 
 		map.addEventListener('click', (e: leafletClickEvent) => {
+			coords = [e.latlng.lat, e.latlng.lng];
 			marker.setLatLng([e.latlng.lat, e.latlng.lng]);
 		});
 	});
@@ -46,6 +52,7 @@
 </script>
 
 <div id="map" />
+<div class="coords">latitud: {coords[0]} y longitud: {coords[1]}</div>
 
 <style>
 	#map {
