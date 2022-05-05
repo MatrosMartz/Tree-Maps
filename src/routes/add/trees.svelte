@@ -1,5 +1,13 @@
+<!-- <script context="module" lang="ts">
+	export async function load(req) {
+		console.log(
+			req.session.prfs,
+		);
+		return {};
+	}
+</script> -->
 <script>
-	import HomeMap from '$lib/components/registerTree/TreeMap.svelte';
+	import TreeMap from '$lib/components/registerTree/TreeMap.svelte';
 	import DetailsTree from '$lib/components/registerTree/DetailsTree.svelte';
 	import InputImage from '$lib/components/registerTree/InputImage.svelte';
 	import Slider from '$lib/components/registerTree/Slider.svelte';
@@ -19,7 +27,7 @@
 		<fieldset>
 			<legend>seleccionar ubicación del arbol</legend>
 			{#if browser && window?.navigator?.geolocation}
-				<HomeMap />
+				<TreeMap />
 			{/if}
 		</fieldset>
 	</form>
