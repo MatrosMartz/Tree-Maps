@@ -14,7 +14,7 @@ export const getSession: GetSession = ({ request }) => {
 export const handle: Handle = async ({ event, resolve }) => {
 	if (
 		isProtectedRoute(event.url.pathname) ||
-		isAuthenticated(event.request.headers.get('Cookie'))
+		!isAuthenticated(event.request.headers.get('Cookie'))
 	) {
 		return new Response('', {
 			status: 301,
