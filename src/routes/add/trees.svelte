@@ -1,35 +1,20 @@
-<!-- <script context="module" lang="ts">
-	export async function load(req) {
-		console.log(
-			req.session.prfs,
-		);
-		return {};
-	}
-</script> -->
 <script>
-	import TreeMap from '$lib/components/registerTree/TreeMap.svelte';
 	import DetailsTree from '$lib/components/registerTree/DetailsTree.svelte';
 	import InputImage from '$lib/components/registerTree/InputImage.svelte';
 	import Slider from '$lib/components/registerTree/Slider.svelte';
-
-	import { browser } from '$app/env';
+	import RequiredData from '$lib/components/registerTree/RequiredData.svelte';
 </script>
 
 <main>
 	<h1>agregar un arbol</h1>
 	<form method="post">
-		<fieldset>
+		<RequiredData />
+		<!-- <fieldset>
 			<legend>datos basicos</legend>
 			<DetailsTree />
 		</fieldset>
 		<InputImage />
-		<Slider />
-		<fieldset>
-			<legend>seleccionar ubicación del arbol</legend>
-			{#if browser && window?.navigator?.geolocation}
-				<TreeMap />
-			{/if}
-		</fieldset>
+		<Slider /> -->
 	</form>
 </main>
 

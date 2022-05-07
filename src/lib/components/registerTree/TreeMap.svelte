@@ -32,7 +32,7 @@
 	let map: L.Map;
 
 	onMount(() => {
-		map = new L.Map('map').setView([51.505, -0.09], 18);
+		map = new L.Map('map').setView([51.505, -0.09], 20);
 
 		L.tileLayer(
 			'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
@@ -49,16 +49,22 @@
 	$: if (coords != null && map != null) {
 		map.setView(coords);
 	}
+
+	$: marker.setLatLng(coords);
 </script>
 
 <div id="map" />
-<div class="coords">latitud: {coords[0]} y longitud: {coords[1]}</div>
+
+<label for="lat"> Latidud: </label>
+<input name="lat" id="lat" type="number" bind:value={coords[0]} />
+<label for="lng"> Longitud: </label>
+<input name="lng" id="lng" type="number" bind:value={coords[1]} />
 
 <style>
 	#map {
+		margin: 0;
 		width: 80vw;
-		height: 360px;
-		margin: 2em auto;
+		height: 17rem;
 		z-index: 0;
 	}
 </style>
