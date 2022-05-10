@@ -7,7 +7,3 @@ Content-Type: application/json
     "lang": "es",
     "color": "orange"
 }
-
-###
-
-GET google.com

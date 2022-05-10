@@ -1,0 +1,12 @@
+GET http://localhost:3000/api/species
+Content-Type: application/json
+
+###
+
+GET http://localhost:3000/api/species/Platanus-mexicana
+Content-Type: application/json
+
+###
+
+GET http://localhost:3000/api/species/no-exist
+Content-Type: application/json
