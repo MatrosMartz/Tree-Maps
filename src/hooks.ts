@@ -2,7 +2,7 @@ import type { GetSession, Handle } from '@sveltejs/kit';
 
 import { parse as cookieParse } from 'cookie';
 
-// import { isAuthenticated, isProtectedRoute } from '$lib/utilities/hooks';
+import { isAuthenticated, isProtectedRoute } from '$lib/utilities/hooks';
 
 export const getSession: GetSession = ({ request }) => {
 	const cookies = <App.Session>cookieParse(request.headers.get('cookie') ?? 'a');
@@ -11,7 +11,7 @@ export const getSession: GetSession = ({ request }) => {
 	};
 };
 
-/* export const handle: Handle = async ({ event, resolve }) => {
+export const handle: Handle = async ({ event, resolve }) => {
 	if (
 		isProtectedRoute(event.url.pathname) &&
 		!isAuthenticated(event.request.headers.get('Cookie'))
@@ -28,4 +28,3 @@ export const getSession: GetSession = ({ request }) => {
 
 	return response;
 };
- */

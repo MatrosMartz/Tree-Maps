@@ -7,91 +7,79 @@
 ### State Conservation
 
 ```ts
-
 enum Conservation {
-    // Extinct
-    EX = 'extinct'
-    EW = 'extinct in wild'
-    // Treatened
-    CR = 'critically endangered'
-    EN = 'endangered'
-    VU = 'vunerable'
-    // Lower Risk
-    NT = 'near threatened'
-    CD = 'conservation dependent'
-    LC = 'least concern'
-    // Other
-    DD = 'data deficient' // default value
-    NE = 'not evaluated'
+	// Extinct
+	EX = 'extinct',
+	EW = 'extinct in wild',
+	// Treatened
+	CR = 'critically endangered',
+	EN = 'endangered',
+	VU = 'vunerable',
+	// Lower Risk
+	NT = 'near threatened',
+	CD = 'conservation dependent',
+	LC = 'least concern',
+	// Other
+	DD = 'data deficient', // default value
+	NE = 'not evaluated',
 }
-
 ```
 
 ### StateValidate
 
 ```ts
-
 enum StateValidable {
-    IN = 'inspected' // default value
-    VL = 'validated'
-    RF = 'refussed'
+	IN = 'inspected', // default value
+	VL = 'validated',
+	RF = 'refussed',
 }
-
 ```
 
 ### Taxon
 
 ```ts
-
 // without kindom and domain
 enum Taxons {
-	PH = 'phylum'
-	CL = 'class'
-	OR = 'order'
-	TR = 'tribe'
-	FM = 'Family'
-	GN = 'genus' // deaulf value
+	PH = 'phylum',
+	CL = 'class',
+	OR = 'order',
+	TR = 'tribe',
+	FM = 'Family',
+	GN = 'genus', // deaulf value
 }
-
 ```
 
 ### StateUser
 
 ```ts
-
 enum StateUser {
-    NR = 'normal' // default value
-    BN = 'banned'
-    SH = 'shadow'
-    HD = 'hidden'
+	NR = 'normal', // default value
+	BN = 'banned',
+	SH = 'shadow',
+	HD = 'hidden',
 }
-
 ```
 
 ### StateActivity
 
 ```ts
-
 enum StateActivity {
-    NR = 'normal' // default value
-    RM = 'remove'
-    HD = 'hidden'
+	NR = 'normal', // default value
+	RM = 'remove',
+	HD = 'hidden',
 }
-
 ```
 
 ### State and Type
 
 ```ts
-
-enum Poblationtype {
-    NA = 'native'
-    IN = 'introducided and naturalized'
-    NE = 'not evalued'
+enum PoblationType {
+	NA = 'native',
+	IN = 'introducided and naturalized',
+	NE = 'not evalued',
 }
 
-type StateAndType = [string, PoblationType]
-
+type StatePoblation = [string, PoblationType];
 ```
 
 ---
