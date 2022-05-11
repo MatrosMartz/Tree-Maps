@@ -7,5 +7,7 @@ node_modules
 .env.*
 !.env.example
 
-src/lib/auth/config.ts
-src/lib/utilities/db.ts
+src/lib/auth
+src/lib/database
+
+.vercel
