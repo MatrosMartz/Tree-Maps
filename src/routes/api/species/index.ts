@@ -24,7 +24,6 @@ export const get: RequestHandler = async () => {
 				};
 			else return;
 		});
-		console.log(data);
 		return {
 			status: 200,
 			headers: {
@@ -33,7 +32,7 @@ export const get: RequestHandler = async () => {
 			body: JSON.stringify(data),
 		};
 	} catch (err) {
-		console.log(err);
+		if (err.name !== 'TypeError') console.log(err);
 		return {
 			status: 404,
 			headers: {

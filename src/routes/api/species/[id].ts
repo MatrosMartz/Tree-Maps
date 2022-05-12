@@ -5,12 +5,21 @@ import type { Specie } from '$lib/types/database/models';
 import { getCollection } from '$lib/database/conection';
 import { StateValidable } from '$lib/types/database/enums';
 
-export const get: RequestHandler = async ({ params }) => {
-	const cientificName = params.name.replace('-', ' ');
+export const get: RequestHandler = async ({ params: { id } }) => {
+	if (id.match(/[+\s*@]/))
+		return {
+			status: 400,
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({ error: `Not Correct "${id}" Specie` }),
+		};
 	try {
 		const collection = await getCollection('species');
 
-		const specie = <Specie>await collection.findOne({ cientificName });
+		const specie = <Specie>(
+			await collection.findOne({ $or: [{ _id: id }, { cientificName: id }] })
+		);
 
 		if (specie.state !== StateValidable.VL) {
 			return {
@@ -18,7 +27,7 @@ export const get: RequestHandler = async ({ params }) => {
 				headers: {
 					'Content-Type': 'application/json',
 				},
-				body: JSON.stringify({ error: `Not Validate "${cientificName}" Specie` }),
+				body: JSON.stringify({ error: `Is Not Validated "${id}" Specie` }),
 			};
 		}
 
@@ -46,7 +55,7 @@ export const get: RequestHandler = async ({ params }) => {
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify({ error: `Not Found "${cientificName}" Specie` }),
+			body: JSON.stringify({ error: `Not Found "${id}" Specie` }),
 		};
 	}
 };
