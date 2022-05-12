@@ -203,37 +203,37 @@ type StatePoblation = [string, PoblationType];
 [
 	// geners
 	{
-		type: 'gener'
+		type: 'gener',
 		name: 'Ficus',
 		sup: 'Moraceae',
 		description: '',
 	},
 	{
-		type: 'gener'
+		type: 'gener',
 		name: 'Platanus',
 		sup: 'Planaceae',
 		description: '',
 	},
 	{
-		type: 'gener'
+		type: 'gener',
 		name: 'Plumeria',
 		sup: 'Plumerieae',
 		description: '',
 	},
 	{
-		type: 'gener'
+		type: 'gener',
 		name: 'Cojoba',
 		sup: 'Ingeae',
 		description: '',
 	},
 	{
-		type: 'gener'
+		type: 'gener',
 		name: 'Taxodium',
 		sup: 'Cupressaceae',
 		description: '',
 	},
 	{
-		type: 'gener'
+		type: 'gener',
 		name: 'Inga',
 		sup: 'Ingeae',
 		description: '',
@@ -347,7 +347,7 @@ type StatePoblation = [string, PoblationType];
 		cientificName: 'Ficus sycomorus',
 		name: 'Sicómoro',
 		state: 'validated',
-		conservation: 'least Concern',
+		conservation: 'least concern',
 		distribution: [],
 		gener: 'Ficus',
 		subgener: 'Sycomorus',
@@ -360,7 +360,7 @@ type StatePoblation = [string, PoblationType];
 		state: 'validated',
 		conservation: 'least concern',
 		distribution: [
-            ['Mexico', 'native'],
+			['Mexico', 'native'],
 			['Guatemala', 'native'],
 		],
 		gener: 'Platanus',
@@ -379,7 +379,7 @@ type StatePoblation = [string, PoblationType];
 			['Jamaica', 'native'],
 			['Brasil', 'native'],
 			['Belice', 'native'],
-            ['Ecuador', 'native'],
+			['Ecuador', 'native'],
 			['Perú', 'native'],
 		],
 		gener: 'Ficus',
@@ -389,7 +389,8 @@ type StatePoblation = [string, PoblationType];
 	{
 		cientificName: 'Cojoba arborea',
 		name: 'Frijolillo',
-		state: 'validated',conservation: 'least concern',
+		state: 'validated',
+		conservation: 'least concern',
 		distribution: [
 			['Mexíco', 'native'],
 			['Ecuador', 'native'],
@@ -432,7 +433,7 @@ type StatePoblation = [string, PoblationType];
 		cientificName: 'Ficus Carica',
 		name: 'Higuera',
 		state: 'validated',
-		conservation 'least concern',
+		conservation: 'least concern',
 		distribution: [],
 		gener: 'Ficus',
 		description:
@@ -442,7 +443,7 @@ type StatePoblation = [string, PoblationType];
 		cientificName: 'Cochlospermum vitifolium',
 		name: 'Rosa Amarilla',
 		state: 'validated',
-		conservation 'least concern',
+		conservation: 'least concern',
 		distribution: [
 			['Mexíco', 'native'],
 			['Perú', 'native'],
@@ -459,7 +460,7 @@ type StatePoblation = [string, PoblationType];
 		cientificName: 'Inga jinicuil',
 		name: 'Algodoncillo',
 		state: 'validated',
-		conservation 'least concern',
+		conservation: 'least concern',
 		distribution: [],
 		gener: 'Inga',
 		description:
@@ -469,7 +470,7 @@ type StatePoblation = [string, PoblationType];
 		cientificName: 'Taxodium huegelii',
 		name: 'Ahuehuete',
 		state: 'validated',
-		conservation 'least concern',
+		conservation: 'least concern',
 		distribution: [],
 		gener: 'Taxodium',
 		description:
@@ -479,18 +480,17 @@ type StatePoblation = [string, PoblationType];
 		cientificName: 'Tabebuia Rosea',
 		name: 'Apamate',
 		state: 'validated',
-		conservation 'least concern',
+		conservation: 'least concern',
 		distribution: [],
 		gener: 'Tabebuia',
 		description:
 			'Llega a medir de 6 a 10m de altura, aunque en su hábitat nativo puede superar los 25m. Tronco corto de corteza grisácea, algo fisurada. Hojas palmadas, compuestas de 3 a 5 foliolos elípticos a oblongos grandes (hasta 34 cm de largo). Las inflorescencias surgen en panículas terminales. Las flores tienen cáliz acampanado y bilabiado con pétalos rosa, lavanda o magenta. El fruto es una cápsula lineal, cilíndrica de 22 a 35cm de longitud y con 7 a 10 semillas aladas.',
 	},
 	{
-		cientificName: 'Pinus devoniana
-',
+		cientificName: 'Pinus devoniana',
 		name: 'Pino Blanco Mexicano',
 		state: 'validated',
-		conservation 'least concern',
+		conservation: 'least concern',
 		distribution: [],
 		gener: 'Pinus',
 		description:
