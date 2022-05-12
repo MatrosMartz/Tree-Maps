@@ -1,14 +1,14 @@
 <script lang="ts">
 	import 'leaflet/dist/leaflet.css';
 
+	import type { leafletClickEvent } from '$lib/types/maps';
+
 	import { onMount } from 'svelte';
+	import { browser } from '$app/env';
+
 	import L from 'leaflet';
 
 	import options from '../../maps/layerOptions';
-
-	interface leafletClickEvent extends L.LeafletEvent {
-		latlng: L.LatLng;
-	}
 
 	let coords: [number, number] = [51.505, -0.09];
 	let iconMarker = L.icon({
@@ -56,9 +56,9 @@
 <div id="map" />
 
 <label for="lat"> Latidud: </label>
-<input name="lat" id="lat" type="number" bind:value={coords[0]} />
+<input class="input border-radius" name="lat" id="lat" type="number" bind:value={coords[0]} />
 <label for="lng"> Longitud: </label>
-<input name="lng" id="lng" type="number" bind:value={coords[1]} />
+<input class="input border-radius" name="lng" id="lng" type="number" bind:value={coords[1]} />
 
 <style>
 	#map {
