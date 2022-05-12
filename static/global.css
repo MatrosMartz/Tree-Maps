@@ -1,16 +1,28 @@
 :root {
-	--g-bb: hsl(144, 100%, 02%);
-	--g-lb: hsl(144, 70%, 10%);
-	--g-nb: hsl(144, 90%, 10%);
-	--g-sb: hsl(144, 60%, 27%);
-	--g-sh: hsl(144, 80%, 35%);
-	--g-bd: hsl(144, 50%, 40%);
-	--g-ic: hsl(144, 80%, 55%);
-	--g-al: hsl(144, 50%, 55%);
-	--g-at: hsl(144, 90%, 87%);
-	--g-pt: hsl(144, 60%, 75%);
-	--g-t2: hsl(144, 100%, 98%);
-	--g-t1: hsl(144, 70%, 90%);
+	--g-bb: hsl(140, 100%, 02%);
+	--g-lb: hsl(140, 70%, 10%);
+	--g-nb: hsl(140, 90%, 10%);
+	--g-sb: hsl(140, 60%, 27%);
+	--g-sh: hsl(140, 80%, 35%);
+	--g-bd: hsl(140, 50%, 40%);
+	--g-ic: hsl(140, 80%, 55%);
+	--g-al: hsl(140, 50%, 55%);
+	--g-at: hsl(140, 90%, 90%);
+	--g-pt: hsl(140, 60%, 87%);
+	--g-t2: hsl(140, 100%, 98%);
+	--g-t1: hsl(140, 70%, 90%);
+	--G-bb: hsl(160, 100%, 02%);
+	--G-lb: hsl(160, 70%, 10%);
+	--G-nb: hsl(160, 90%, 10%);
+	--G-sb: hsl(160, 60%, 27%);
+	--G-sh: hsl(160, 80%, 35%);
+	--G-bd: hsl(160, 50%, 40%);
+	--G-ic: hsl(160, 80%, 55%);
+	--G-al: hsl(160, 50%, 55%);
+	--G-at: hsl(160, 90%, 90%);
+	--G-pt: hsl(160, 60%, 87%);
+	--G-t2: hsl(160, 100%, 98%);
+	--G-t1: hsl(160, 70%, 90%);
 	--g-is: hsla(144, 60%, 27%, 0.5);
 	--g-rs: hsla(144, 60%, 75%, 0.5);
 
@@ -22,10 +34,22 @@
 	--o-bd: hsl(025, 50%, 40%);
 	--o-ic: hsl(025, 80%, 55%);
 	--o-al: hsl(025, 50%, 55%);
-	--o-at: hsl(025, 90%, 87%);
-	--o-pt: hsl(025, 60%, 75%);
+	--o-at: hsl(025, 90%, 90%);
+	--o-pt: hsl(025, 60%, 87%);
 	--o-t2: hsl(025, 100%, 98%);
 	--o-t1: hsl(025, 70%, 90%);
+	--O-bb: hsl(040, 100%, 03%);
+	--O-lb: hsl(040, 70%, 10%);
+	--O-nb: hsl(040, 90%, 10%);
+	--O-sb: hsl(040, 60%, 27%);
+	--O-sh: hsl(040, 80%, 35%);
+	--O-bd: hsl(040, 50%, 40%);
+	--O-ic: hsl(040, 80%, 55%);
+	--O-al: hsl(040, 50%, 55%);
+	--O-at: hsl(040, 90%, 90%);
+	--O-pt: hsl(040, 60%, 87%);
+	--O-t2: hsl(040, 100%, 98%);
+	--O-t1: hsl(040, 70%, 90%);
 	--o-is: hsla(025, 60%, 27%, 0.5);
 	--o-rs: hsla(025, 60%, 75%, 0.5);
 
@@ -41,6 +65,18 @@
 	--r-pt: hsl(353, 60%, 75%);
 	--r-t2: hsl(353, 100%, 98%);
 	--r-t1: hsl(353, 70%, 90%);
+	--R-bb: hsl(340, 100%, 03%);
+	--R-lb: hsl(340, 70%, 10%);
+	--R-nb: hsl(340, 90%, 10%);
+	--R-sb: hsl(340, 60%, 27%);
+	--R-sh: hsl(340, 80%, 35%);
+	--R-bd: hsl(340, 50%, 40%);
+	--R-ic: hsl(340, 80%, 55%);
+	--R-al: hsl(340, 50%, 55%);
+	--R-at: hsl(340, 90%, 87%);
+	--R-pt: hsl(340, 60%, 75%);
+	--R-t2: hsl(340, 100%, 98%);
+	--R-t1: hsl(340, 70%, 90%);
 	--r-is: hsla(353, 60%, 27%, 0.5);
 	--r-rs: hsla(353, 60%, 75%, 0.5);
 
@@ -56,6 +92,18 @@
 	--b-pt: hsl(207, 60%, 75%);
 	--b-t2: hsl(207, 100%, 98%);
 	--b-t1: hsl(207, 70%, 90%);
+	--B-bb: hsl(220, 100%, 03%);
+	--B-lb: hsl(220, 70%, 10%);
+	--B-nb: hsl(220, 90%, 10%);
+	--B-sb: hsl(220, 60%, 27%);
+	--B-sh: hsl(220, 80%, 35%);
+	--B-bd: hsl(220, 50%, 40%);
+	--B-ic: hsl(220, 80%, 55%);
+	--B-al: hsl(220, 50%, 55%);
+	--B-at: hsl(220, 90%, 87%);
+	--B-pt: hsl(220, 60%, 75%);
+	--B-t2: hsl(220, 100%, 98%);
+	--B-t1: hsl(220, 70%, 90%);
 	--b-is: hsla(207, 60%, 27%, 0.5);
 	--b-rs: hsla(207, 60%, 75%, 0.5);
 
@@ -76,11 +124,24 @@
 	--t1: var(--g-t1);
 	--is: var(--g-is);
 	--rs: var(--g-rs);
+
+	--bb-2: var(--G-bb);
+	--lb-2: var(--G-lb);
+	--nb-2: var(--G-nb);
+	--sb-2: var(--G-sb);
+	--sh-2: var(--G-sh);
+	--bd-2: var(--G-bd);
+	--ic-2: var(--G-ic);
+	--al-2: var(--G-al);
+	--at-2: var(--G-at);
+	--pt-2: var(--G-pt);
+	--t2-2: var(--G-t2);
+	--t1-2: var(--G-t1);
 	--p-fl: var(--l-filt);
 	--s-fl: var(--d-filt);
 
 	font-size: 16px;
-	--img-size: calc((1em * 3) - 4px);
+	--img-size: 40px;
 
 	background-color: var(--bb);
 }
@@ -401,6 +462,16 @@ fieldset {
 	top: -12%;
 }
 
+.input {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0 0;
+	background-color: var(--bb-2);
+	border: 3px solid var(--lb-2);
+	height: var(--img-size);
+}
+
 .darkmode {
 	--g-wc: var(--g-sh);
 	--g-wb: var(--g-lb);
@@ -439,6 +510,19 @@ fieldset {
 	--t2: var(--g-t2);
 	--t1: var(--g-t1);
 
+	--bb-2: var(--G-bb);
+	--lb-2: var(--G-lb);
+	--nb-2: var(--G-nb);
+	--sb-2: var(--G-sb);
+	--sh-2: var(--G-sh);
+	--bd-2: var(--G-bd);
+	--ic-2: var(--G-ic);
+	--al-2: var(--G-al);
+	--at-2: var(--G-at);
+	--pt-2: var(--G-pt);
+	--t2-2: var(--G-t2);
+	--t1-2: var(--G-t1);
+
 	--is: var(--g-is);
 	--rs: var(--g-rs);
 }
@@ -455,6 +539,19 @@ fieldset {
 	--pt: var(--g-sb);
 	--t2: var(--g-bb);
 	--t1: var(--g-lb);
+
+	--bb-2: var(--G-t2);
+	--lb-2: var(--G-t1);
+	--nb-2: var(--G-at);
+	--sb-2: var(--G-pt);
+	--sh-2: var(--G-ic);
+	--bd-2: var(--G-al);
+	--ic-2: var(--G-sh);
+	--al-2: var(--G-bd);
+	--at-2: var(--G-nb);
+	--pt-2: var(--G-sb);
+	--t2-2: var(--G-bb);
+	--t1-2: var(--G-lb);
 
 	--is: var(--g-rs);
 	--rs: var(--g-is);
@@ -473,6 +570,19 @@ fieldset {
 	--t2: var(--o-t2);
 	--t1: var(--o-t1);
 
+	--bb-2: var(--O-bb);
+	--lb-2: var(--O-lb);
+	--nb-2: var(--O-nb);
+	--sb-2: var(--O-sb);
+	--sh-2: var(--O-sh);
+	--bd-2: var(--O-bd);
+	--ic-2: var(--O-ic);
+	--al-2: var(--O-al);
+	--at-2: var(--O-at);
+	--pt-2: var(--O-pt);
+	--t2-2: var(--O-t2);
+	--t1-2: var(--O-t1);
+
 	--is: var(--o-is);
 	--rs: var(--o-rs);
 }
@@ -489,6 +599,19 @@ fieldset {
 	--pt: var(--o-sb);
 	--t2: var(--o-bb);
 	--t1: var(--o-lb);
+
+	--bb-2: var(--O-t2);
+	--lb-2: var(--O-t1);
+	--nb-2: var(--O-at);
+	--sb-2: var(--O-pt);
+	--sh-2: var(--O-ic);
+	--bd-2: var(--O-al);
+	--ic-2: var(--O-sh);
+	--al-2: var(--O-bd);
+	--at-2: var(--O-nb);
+	--pt-2: var(--O-sb);
+	--t2-2: var(--O-bb);
+	--t1-2: var(--O-lb);
 
 	--is: var(--o-rs);
 	--rs: var(--o-is);
@@ -507,6 +630,19 @@ fieldset {
 	--t2: var(--r-t2);
 	--t1: var(--r-t1);
 
+	--bb-2: var(--R-bb);
+	--lb-2: var(--R-lb);
+	--nb-2: var(--R-nb);
+	--sb-2: var(--R-sb);
+	--sh-2: var(--R-sh);
+	--bd-2: var(--R-bd);
+	--ic-2: var(--R-ic);
+	--al-2: var(--R-al);
+	--at-2: var(--R-at);
+	--pt-2: var(--R-pt);
+	--t2-2: var(--R-t2);
+	--t1-2: var(--R-t1);
+
 	--is: var(--r-is);
 	--rs: var(--r-rs);
 }
@@ -523,6 +659,19 @@ fieldset {
 	--pt: var(--r-sb);
 	--t2: var(--r-bb);
 	--t1: var(--r-lb);
+
+	--bb-2: var(--R-t2);
+	--lb-2: var(--R-t1);
+	--nb-2: var(--R-at);
+	--sb-2: var(--R-pt);
+	--sh-2: var(--R-ic);
+	--bd-2: var(--R-al);
+	--ic-2: var(--R-sh);
+	--al-2: var(--R-bd);
+	--at-2: var(--R-nb);
+	--pt-2: var(--R-sb);
+	--t2-2: var(--R-bb);
+	--t1-2: var(--R-lb);
 
 	--is: var(--r-rs);
 	--rs: var(--r-is);
@@ -541,6 +690,19 @@ fieldset {
 	--t2: var(--b-t2);
 	--t1: var(--b-t1);
 
+	--bb-2: var(--B-bb);
+	--lb-2: var(--B-lb);
+	--nb-2: var(--B-nb);
+	--sb-2: var(--B-sb);
+	--sh-2: var(--B-sh);
+	--bd-2: var(--B-bd);
+	--ic-2: var(--B-ic);
+	--al-2: var(--B-al);
+	--at-2: var(--B-at);
+	--pt-2: var(--B-pt);
+	--t2-2: var(--B-t2);
+	--t1-2: var(--B-t1);
+
 	--is: var(--b-is);
 	--rs: var(--b-rs);
 }
@@ -557,6 +719,19 @@ fieldset {
 	--pt: var(--b-sb);
 	--t2: var(--b-bb);
 	--t1: var(--b-lb);
+
+	--bb-2: var(--B-t2);
+	--lb-2: var(--B-t1);
+	--nb-2: var(--B-at);
+	--sb-2: var(--B-pt);
+	--sh-2: var(--B-ic);
+	--bd-2: var(--B-al);
+	--ic-2: var(--B-sh);
+	--al-2: var(--B-bd);
+	--at-2: var(--B-nb);
+	--pt-2: var(--B-sb);
+	--t2-2: var(--B-bb);
+	--t1-2: var(--B-lb);
 
 	--is: var(--b-rs);
 	--rs: var(--b-is);
