@@ -1,21 +1,13 @@
 <script lang="ts">
-	import type { TimeoutID } from '$lib/types';
-
 	import { getSpecies } from '$lib/stores/api';
 
 	let name = '';
-	let timeoutSearch: TimeoutID;
 
 	const { species, fetchSpecies, searchSpecies } = getSpecies();
 
 	fetchSpecies();
 
-	$: (function () {
-		clearTimeout(timeoutSearch);
-		timeoutSearch = setTimeout(() => {
-			searchSpecies(name);
-		}, 500);
-	})();
+	$: searchSpecies(name);
 </script>
 
 <svelte:head>

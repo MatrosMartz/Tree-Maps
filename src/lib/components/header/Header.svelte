@@ -26,7 +26,7 @@
 		box-sizing: border-box;
 		justify-content: space-between;
 		width: 100%;
-		padding: 0.9rem;
+		padding: 0.5rem 0.9rem;
 		color: var(--t1);
 
 		z-index: 10;
