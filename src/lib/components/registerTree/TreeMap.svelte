@@ -42,18 +42,17 @@
 
 				markerMap.setLatLng([e.latlng.lat, e.latlng.lng]);
 			});
+			navigator.geolocation.getCurrentPosition(
+				pos => {
+					localCoords = [pos.coords.latitude, pos.coords.longitude];
+					coords = [...localCoords];
+					markerMap.setLatLng(coords);
+				},
+				err => {
+					console.log(err);
+				}
+			);
 		})();
-
-	navigator.geolocation.getCurrentPosition(
-		pos => {
-			localCoords = [pos.coords.latitude, pos.coords.longitude];
-			coords = [...localCoords];
-			markerMap.setLatLng(coords);
-		},
-		err => {
-			console.log(err);
-		}
-	);
 
 	function onClick() {
 		console.log('hola');
@@ -70,7 +69,7 @@
 	}
 </script>
 
-<div id="map" />
+<div class="border-radius" id="map" />
 
 <button class="reset input border-radius" on:click={onClick} type="button">reset</button>
 
@@ -101,8 +100,8 @@
 		margin: 0 auto;
 	}
 	#map {
-		margin: 0;
-		width: 80vw;
+		margin: 0 auto;
+		width: 75vw;
 		height: 15rem;
 		z-index: 0;
 	}
