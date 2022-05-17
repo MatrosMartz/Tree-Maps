@@ -15,6 +15,7 @@
 		</fieldset>
 		<InputImage />
 		<Slider /> -->
+		<button class="primary-btn" type="submit">enviar</button>
 	</form>
 </main>
 
@@ -24,6 +25,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-between;
+		gap: 0.5em;
 
 		overflow: hidden visible;
 		border-radius: 7px;

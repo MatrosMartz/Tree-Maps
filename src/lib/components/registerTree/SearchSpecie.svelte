@@ -12,17 +12,20 @@
 	$: searchSpecies(searchValue);
 
 	function onClickSpecie() {
-		activeSelect = true;
+		activeSelect = !activeSelect;
 	}
 	function onClickOption() {
 		activeSelect = false;
 	}
 </script>
 
-<div class="search-contain">
-	<div on:click={onClickSpecie} class="selected-specie border-radius">{speciesGroup}</div>
+<div class:active={activeSelect} class="search-contain">
+	<div class="select-contain" on:click={onClickSpecie}>
+		<p class="start">Especie:</p>
+		<div class="selected-specie border-radius">{speciesGroup}</div>
+	</div>
 
-	<section class="select border-radius" class:active={activeSelect}>
+	<section class="select border-radius">
 		<label class="label-contain">
 			<input
 				type="search"
@@ -40,18 +43,19 @@
 				class:selected={cientificName === speciesGroup}
 			>
 				<input
+					required
 					type="radio"
 					name="species"
 					value={cientificName}
 					bind:group={speciesGroup}
 				/>
-				<h6>{name}</h6>
+				<h6 class="start">{name}</h6>
 				/
-				<p>{cientificName}</p>
+				<p class="start">{cientificName}</p>
 			</label>
 		{/each}
 		<div class="label-contain">
-			<a href="add/specie" class="link border-radius hoverable">
+			<a href="add/specie" class="link border-radius hoverable quaternary-btn">
 				<h6>agrega una nueva especie</h6>
 			</a>
 		</div>
@@ -67,7 +71,8 @@
 		z-index: 4;
 	}
 	.selected-specie {
-		margin-bottom: 0.3em;
+		box-sizing: border-box;
+		border: 3px solid var(--lb);
 	}
 	.select,
 	.selected-specie {
@@ -77,13 +82,13 @@
 	.select {
 		position: absolute;
 		display: none;
-		top: 3.2em;
+		top: 4.7em;
 		max-height: 15.5em;
 		overflow-y: scroll;
 		font-size: 14px;
 	}
-	.select.active {
-		display: contents;
+	.active .select {
+		display: block;
 	}
 	.select h6 {
 		font-size: 14px;
@@ -91,6 +96,7 @@
 	.label-contain,
 	.option,
 	.selected-specie {
+		position: relative;
 		box-sizing: border-box;
 		display: flex;
 		align-items: center;
@@ -102,6 +108,21 @@
 		cursor: pointer;
 		z-index: 10;
 	}
+	.selected-specie::after {
+		content: '';
+		position: absolute;
+		background-color: var(--lb);
+		right: 0.5em;
+		width: 1.5em;
+		height: 2em;
+		clip-path: polygon(10% 50%, 85% 0%, 85% 85%);
+		transform: rotate(0);
+		transition: transform 200ms;
+	}
+	.active .selected-specie::after {
+		transform: rotate(-90deg);
+	}
+
 	.label-contain {
 		position: sticky;
 		height: 3em;
@@ -118,7 +139,10 @@
 	.option h6,
 	.option p {
 		display: contents;
-		text-align: start;
+	}
+	.search-specie {
+		background-color: var(--bb-2);
+		border: 3px solid var(--nb);
 	}
 	.search-specie,
 	.link {
@@ -126,18 +150,12 @@
 		margin: 0;
 		height: 2em;
 		width: 100%;
-		background-color: var(--bb-2);
-		border: 3px solid var(--nb);
-	}
-	.link {
-		background-color: var(--sh);
-		border: 3px solid var(--sh);
 	}
 	.link:hover {
 		text-decoration: none;
 	}
 	.link h6 {
-		color: var(--bb);
+		color: inherit;
 	}
 	.hoverable:hover {
 		filter: var(--p-fl);
@@ -145,7 +163,7 @@
 	.option.selected {
 		filter: var(--p-fl);
 	}
-	p {
+	.option p {
 		font-style: italic;
 	}
 </style>

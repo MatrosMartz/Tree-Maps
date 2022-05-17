@@ -13,3 +13,11 @@
 		<TreeMap />
 	{/if}
 </fieldset>
+
+<style>
+	fieldset {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5em;
+	}
+</style>

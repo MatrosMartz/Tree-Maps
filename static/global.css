@@ -180,6 +180,10 @@ body {
 		Cantarell, 'Helvetica Neue', sans-serif;
 }
 
+main {
+	padding-bottom: 2em;
+}
+
 a {
 	color: var(--at);
 	text-decoration: none;
@@ -350,6 +354,13 @@ fieldset {
 	box-shadow: 0 0 10px var(--is);
 	border-radius: 7px;
 }
+.quaternary-btn {
+	width: 100%;
+	background-color: var(--sh);
+	border: 3px solid var(--sh);
+	color: var(--bb);
+	box-shadow: 0 0 10px var(--is);
+}
 
 .svg {
 	fill: currentColor;
@@ -478,6 +489,9 @@ fieldset {
 	background-color: var(--bb-2);
 	border: 3px solid var(--lb-2);
 	height: var(--img-size);
+}
+.start {
+	text-align: start;
 }
 
 .darkmode {

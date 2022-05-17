@@ -69,33 +69,45 @@
 	}
 </script>
 
-<div class="border-radius" id="map" />
+<div>
+	<p class="start">Locación:</p>
+	<div class="border-radius" id="map" />
+</div>
 
-<button class="reset input border-radius" on:click={onClick} type="button">reset</button>
+<button class="quaternary-btn reset border-radius" on:click={onClick} type="button">reset</button>
 
-<label for="lat"> Latidud: </label>
-<input
-	class="input border-radius"
-	name="lat"
-	id="lat"
-	type="number"
-	bind:value={coords[0]}
-	min="-90"
-	max="90"
-/>
-<label for="lng"> Longitud: </label>
-<input
-	class="input border-radius"
-	name="lng"
-	id="lng"
-	type="number"
-	bind:value={coords[1]}
-	min="-180"
-	max="180"
-/>
+<label>
+	<p class="start">Latidud:</p>
+	<input
+		required
+		class="input border-radius"
+		name="lat"
+		id="lat"
+		type="number"
+		bind:value={coords[0]}
+		min="-90"
+		max="90"
+		step="any"
+	/>
+</label>
+<label>
+	<p class="start">Longitud:</p>
+	<input
+		required
+		class="input border-radius"
+		name="lng"
+		id="lng"
+		type="number"
+		bind:value={coords[1]}
+		min="-180"
+		max="180"
+		step="any"
+	/>
+</label>
 
 <style>
 	.reset {
+		display: block;
 		width: 75%;
 		margin: 0 auto;
 	}
