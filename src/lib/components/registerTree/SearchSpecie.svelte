@@ -1,10 +1,12 @@
 <script lang="ts">
+	import ChevronLeftIcon from '../icons/ChevronLeftIcon.svelte';
+
 	import { getSpeciesNames } from '../../stores/api';
 
 	const { species, fetchSpecies, searchSpecies } = getSpeciesNames();
 
 	let searchValue = '';
-	let speciesGroup = '';
+	let speciesGroup = 'Selecione una especie...';
 	let activeSelect = false;
 
 	fetchSpecies();
@@ -22,7 +24,10 @@
 <div class:active={activeSelect} class="search-contain">
 	<div class="select-contain" on:click={onClickSpecie}>
 		<p class="start">Especie:</p>
-		<div class="selected-specie border-radius">{speciesGroup}</div>
+		<div class="selected-specie input border-radius">
+			{speciesGroup}
+			<ChevronLeftIcon />
+		</div>
 	</div>
 
 	<section class="select border-radius">
@@ -55,7 +60,7 @@
 			</label>
 		{/each}
 		<div class="label-contain">
-			<a href="add/specie" class="link border-radius hoverable quaternary-btn">
+			<a href="add/specie" class="link hoverable quaternary-btn">
 				<h6>agrega una nueva especie</h6>
 			</a>
 		</div>
@@ -70,10 +75,6 @@
 		position: relative;
 		z-index: 4;
 	}
-	.selected-specie {
-		box-sizing: border-box;
-		border: 3px solid var(--lb);
-	}
 	.select,
 	.selected-specie {
 		background-color: var(--bb);
@@ -82,13 +83,13 @@
 	.select {
 		position: absolute;
 		display: none;
-		top: 4.7em;
+		top: 5em;
 		max-height: 15.5em;
 		overflow-y: scroll;
 		font-size: 14px;
 	}
 	.active .select {
-		display: block;
+		display: initial;
 	}
 	.select h6 {
 		font-size: 14px;
@@ -108,18 +109,18 @@
 		cursor: pointer;
 		z-index: 10;
 	}
-	.selected-specie::after {
-		content: '';
+	.selected-specie :global(svg) {
 		position: absolute;
-		background-color: var(--lb);
+
 		right: 0.5em;
 		width: 1.5em;
-		height: 2em;
-		clip-path: polygon(10% 50%, 85% 0%, 85% 85%);
+
+		color: var(--nb-2);
+
 		transform: rotate(0);
 		transition: transform 200ms;
 	}
-	.active .selected-specie::after {
+	.active .selected-specie :global(svg) {
 		transform: rotate(-90deg);
 	}
 
@@ -161,7 +162,7 @@
 		filter: var(--p-fl);
 	}
 	.option.selected {
-		filter: var(--p-fl);
+		filter: var(--t-fl);
 	}
 	.option p {
 		font-style: italic;
