@@ -28,6 +28,8 @@
 		width: 100%;
 		padding: 0.5rem 0.9rem;
 		color: var(--t1);
+		background-color: var(--bb);
+		box-shadow: 0 -14px 21px var(--rs);
 
 		z-index: 10;
 	}
