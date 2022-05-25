@@ -12,6 +12,23 @@ export interface Specie {
 	conservation: ConservationCodes;
 	gener: string;
 	subgener?: string;
-	description: string;
+	description?: string;
 	distribution: StatePoblation[];
+}
+
+export interface Tree {
+	userRecorder: string;
+	userValidate?: string;
+	state: StateValidable;
+	age?: number;
+	width?: number;
+	diameter?: number;
+	name?: string;
+	location: [number, number];
+	specie: string;
+	description?: string;
+}
+
+export interface TreeWhitId extends Tree {
+	_id: ObjectId;
 }

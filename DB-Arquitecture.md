@@ -101,7 +101,7 @@ type StatePoblation = [string, PoblationType];
 |     **Width**      | _Number_ |     Meters     |   Yes    |   No    |  No  | Validate |   Yes   |
 |    **Diameter**    | _Number_ |     Meters     |   Yes    |   No    |  No  | Validate |   Yes   |
 |      **Name**      | _String_ |    Letters     |   Yes    |   No    |  No  | Validate |   Yes   |
-|    **Location**    | _String_ |    Lat&Lng     |   Yes    |   No    |  No  | Register |   Yes   |
+|    **Location**    | _String_ |    Location    |   Yes    |   No    |  No  | Register |   Yes   |
 |     **Specie**     | _String_ |  Specie.Name   |   Yes    | Foreing | Yes  | Register |   Yes   |
 |  **Description**   | _String_ |      N/A       |   Yes    |   No    |  No  | Optional |   Yes   |
 
