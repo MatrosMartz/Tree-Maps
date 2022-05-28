@@ -1,21 +1,25 @@
-<script>
-	import DetailsTree from '$lib/components/registerTree/DetailsTree.svelte';
-	import InputImage from '$lib/components/registerTree/InputImage.svelte';
-	import Slider from '$lib/components/registerTree/Slider.svelte';
+<script lang="ts">
 	import RequiredData from '$lib/components/registerTree/RequiredData.svelte';
+
+	import { postJSONData, type FormDataWithentries } from '$lib/utilities/feching';
+
+	function onSumit(evt: SubmitEvent) {
+		postJSONData(
+			'api/tree',
+			<FormDataWithentries>new FormData(<HTMLFormElement>evt.currentTarget)
+		);
+	}
 </script>
 
 <main>
 	<h1>agregar un arbol</h1>
-	<form method="post">
+	<form on:submit|preventDefault={onSumit} method="post">
 		<RequiredData />
-		<!-- <fieldset>
-			<legend>datos basicos</legend>
-			<DetailsTree />
-		</fieldset>
-		<InputImage />
-		<Slider /> -->
-		<button class="primary-btn" type="submit">enviar</button>
+		<div>
+			<button class="primary-btn" type="submit">enviar</button>
+			o
+			<button class="quaternary-btn" disabled>sigiente</button>
+		</div>
 	</form>
 </main>
 
@@ -33,7 +37,7 @@
 		width: 92vw;
 
 		margin: 1rem auto;
-		padding-block: 0.5em;
+		padding-block: 0.75em;
 
 		box-shadow: 0 4px 10px var(--is);
 		background-color: var(--nb);
