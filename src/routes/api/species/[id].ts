@@ -3,7 +3,7 @@ import type { RequestHandler } from '@sveltejs/kit';
 import { getOneSpecies } from '$lib/database/species';
 
 export const get: RequestHandler = async ({ params: { id } }) => {
-	if (id.match(/[+\s*@]/))
+	if (!/^[A-z-]+$/.test(id))
 		return {
 			status: 400,
 			headers: {
@@ -12,9 +12,7 @@ export const get: RequestHandler = async ({ params: { id } }) => {
 			body: JSON.stringify({ error: 'Not Correct id or cientific name for Specie' }),
 		};
 	try {
-		const specie = await getOneSpecies({
-			$or: [{ _id: id }, { cientificName: id }],
-		});
+		const specie = await getOneSpecies({ scientificName: id });
 		return {
 			status: 200,
 			headers: {

@@ -6,7 +6,7 @@ export type StatePoblation = [string, Poblationtype];
 
 export interface Specie {
 	_id: ObjectId;
-	cientificName: string;
+	scientificName: string;
 	name: string;
 	state: StateValidable;
 	conservation: ConservationCodes;
