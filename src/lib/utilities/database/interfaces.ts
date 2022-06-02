@@ -1,4 +1,4 @@
-type types = 'string' | '[number, number]' | 'number' | 'stateValidate';
+type types = 'string' | 'location' | 'number' | 'stateValidate' | 'email';
 
 export const treeRequiredKeys = ['userRecorder', 'state', 'location', 'specie'];
 
@@ -14,9 +14,9 @@ export const allTreeKeys = [
 ];
 
 export const treeKeysTypes: Record<string, types> = {
-	userRecorder: 'string',
+	userRecorder: 'email',
 	state: 'string',
-	location: '[number, number]',
+	location: 'location',
 	specie: 'string',
 	_id: 'string',
 	userValidate: 'string',

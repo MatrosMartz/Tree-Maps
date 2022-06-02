@@ -9,6 +9,8 @@ export const post: RequestHandler = async ({ request }) => {
 
 		requiredKeysTreeValidate(tree);
 
+		console.log(tree);
+
 		return {
 			status: 302,
 			headers: {
