@@ -1,7 +1,10 @@
 import type { Tree } from '$lib/types/database/models';
+import { StateValidable } from '$lib/types/database/enums';
 import { requiredKeysTreeValidate } from '$lib/utilities/database';
+import { getSpecieScientificName } from '$lib/database/species';
 
 import type { RequestHandler } from '@sveltejs/kit';
+getSpecieScientificName();
 
 export const post: RequestHandler = async ({ request }) => {
 	try {
@@ -9,14 +12,17 @@ export const post: RequestHandler = async ({ request }) => {
 
 		requiredKeysTreeValidate(tree);
 
-		console.log(tree);
+		tree.state = StateValidable.IN;
 
 		return {
 			status: 302,
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: '{ "message": "ok" }',
+			body: JSON.stringify({
+				message: 'ok',
+				value: tree,
+			}),
 		};
 	} catch (err) {
 		console.log((<Error>err).name, (<Error>err).message);

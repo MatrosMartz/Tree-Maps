@@ -4,6 +4,20 @@ import type { Specie } from '../types/database/models';
 
 import db from './conection';
 
+export const speciesScientificNames: string[] = [];
+
+export async function getSpecieScientificName() {
+	if (!speciesScientificNames.length) {
+		const collection = (await db()).collection('species');
+
+		const newSpeciesNames = (<Specie[]>(
+			await collection.find(undefined, { projection: { scientificName: 1 } }).toArray()
+		)).map(({ scientificName }) => scientificName);
+
+		speciesScientificNames.push(...newSpeciesNames);
+	}
+}
+
 export async function getManySpecies(filter?: FilterSpecie) {
 	const collection = (await db()).collection('species');
 

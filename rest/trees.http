@@ -39,7 +39,6 @@ Content-Type: application/json
 
 {
     "userRecorder": "juanito@gmail.com",
-    "state": "hola",
     "location": [2,1],
-    "specie": "sis"
+    "specie": "Platanus-Mexicana"
 }
