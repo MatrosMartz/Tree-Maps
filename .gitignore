@@ -8,7 +8,5 @@ node_modules
 !.env.example
 
 svg
-src/lib/auth/config.ts
-src/lib/database/conection.ts
 
 .vercel
