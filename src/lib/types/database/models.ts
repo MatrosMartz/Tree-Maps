@@ -5,7 +5,6 @@ import type { ConservationCodes, Poblationtype, StateValidable } from './enums';
 export type StatePoblation = [string, Poblationtype];
 
 export interface Specie {
-	_id: ObjectId;
 	scientificName: string;
 	name: string;
 	state: StateValidable;
@@ -27,8 +26,4 @@ export interface Tree {
 	location: [number, number];
 	specie: string;
 	description?: string;
-}
-
-export interface TreeWhitId extends Tree {
-	_id: ObjectId;
 }
