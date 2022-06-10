@@ -14,9 +14,11 @@ export const post: RequestHandler = async ({ request }) => {
 
 		requiredKeysTreeValidate(tree);
 
+		
 		tree.state = StateValidable.IN;
-
-		await postTree(tree);
+		
+		// mongo insertOne mutete the document that is passed to it
+		await postTree({...tree});
 
 		return {
 			status: 302,
